@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "es5",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "jsx": "react",
+        "traceResolution": true,
+        "diagnostics": false,
+        "resolveJsonModule": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "baseUrl": "src",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+            "@utils/*": [
+                "utils/*"
+            ],
+            "@/*":[
+                "*"
+            ]
+        },
+        "typeRoots": [
+            "node_modules/@types",
+            "src/components/types"
+        ],
+        "types": [
+            "node"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "env"
+    ]
+}

@@ -1,0 +1,143 @@
+// 此处存放重构之后主页的样式
+.home {
+    > ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:nth-child(2) {
+        > li {
+          height: 50px;
+          // height: 75px;
+        }
+      }
+      &:not(:nth-child(2)) {
+        > li {
+          // 设置每一个li的宽度 中间的方向元素
+          &:nth-child(2), &:nth-child(4) {
+            width: 60px;
+            text-align: center;
+          }
+          // 1，3，5的元素
+          &:nth-child(1), &:nth-child(3), &:nth-child(5) {
+            width: 320px;
+            height: 200px;
+          }
+        }
+      }
+      > li {
+        // 展示内容的区域
+        > div.item {
+          background-color: #fff;
+          border-radius: 3px;
+          box-shadow: 0 0 20px #D8DCEA;
+          padding: 30px;
+          height: 100%;
+          display: flex;
+          // align-items: center;
+          justify-content: space-between;
+          position: relative;
+          &:hover {
+            >div.mask {
+              display: block;
+            }
+          }
+          // 左侧的文本展示区域
+          >div.left {
+            >h1 {
+              font-size: 20px;
+              color: #272727;
+              letter-spacing: 1.2px;
+            }
+            // 自定义的内容展示区域
+            >p {
+              font-size: 14px;
+              color: #999999;
+              letter-spacing: 0;
+              line-height: 14px;
+              &:nth-of-type(1) {
+                display: inline-block;
+                margin-top: 10px;
+              }
+            }
+          }
+          // 右侧的图片样式区域
+          >div.right {
+            display: flex;
+            align-items: center;
+          }
+          >div.mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0, 0.8);
+            border-radius: 3px;
+            padding: 30px;
+            text-align: center;
+            > p {
+              text-align: left;
+              color: #fff;
+              font-size: 14px;
+            }
+            // > button {
+              // margin-top: 5px;
+            // }
+          }
+        }
+      }
+    }
+    // 操作按钮组
+    > div.btnGroup {
+      // margin-top: 80px;
+      margin-top: 35px;
+      text-align: center;
+      >button {
+        width: 232px;
+        height: 56px;
+        color: #fff;
+        background-image: linear-gradient(-48deg, #219FFF 0%, #0566EB 100%);
+        box-shadow: 0 6px 20px 0 #9FD6FF;
+        border-radius: 8px;
+        font-size: 20px;
+        &:last-child {
+          margin-left: 84px;
+        }
+      }
+    }
+    // 单独设置对应图片的样式
+    img {
+      &.img1 {
+        width: 150px;
+      }
+      &.img2 {
+        // width: 150px;
+        width: 140px;
+      }
+      &.img3 {
+        width: 80px;
+      }
+      &.img4 {
+        width: 135px;
+      }
+      &.img5 {
+        width: 60px;
+      }
+      &.img6 {
+        width: 125px;
+      }
+      &.ankhoz {
+        width: 36px;
+        &.right {
+          transform: rotate(90deg);
+        }
+        &.left {
+          transform: rotate(-90deg);
+        }
+      }
+      &.ankver {
+        width: 39px;
+      }
+    }
+}
