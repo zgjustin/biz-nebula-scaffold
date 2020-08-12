@@ -1,0 +1,528 @@
+.btnType() {
+	&-1 {
+		color: #ff5337;
+	}
+	&-2 {
+		color: #0091ff;
+	}
+	&-3 {
+		color: #5252f1;
+	}
+	&-4 {
+		color: #7169ff;
+	}
+	&-5 {
+		color: #0091ff;
+	}
+	&-6 {
+		color: #00d46a;
+	}
+	&-7 {
+		color: #0091ff;
+	}
+	&-8 {
+		color: #666666;
+	}
+	&-9 {
+		color: #ff5337;
+	}
+	&-10 {
+		color: #0091ff;
+	}
+	&-11 {
+		color: #feab16;
+	}
+	&-12 {
+		color: #0091ff;
+	}
+}
+.nebula-table-btn-dropdown {
+	.nebula-table-col-btn {
+		width: 100%;
+		color:@text-color;
+		font-size: @table-font-size;
+		display: inline-block;
+		padding: 5px 16px;
+		&.btn-disabled {
+			color: #bcbcbc;
+			cursor: no-drop;
+		}
+	}
+	.ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title{
+		padding:0;
+	}
+	.ant-dropdown-menu-item-active {
+		.nebula-table-col-btn {
+			color: #fff;
+		}	
+	}
+}
+.nebula-form-group {
+	.nebula-table {
+		border-radius: @table-border-radius;
+		&-header {
+			.nebula-table-search .nebula-form-group {
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+.nebula-table-content {
+	border-radius: @table-border-radius !important;
+}
+.nebula-table {
+	&-container{
+		height: 100%;
+	}
+	.ant-spin-container{
+		position: relative;
+		.ant-table-footer{
+			border-radius:0;
+			height: 32px;
+			padding:0;
+			text-align:@table-footer-align;
+			line-height: 32px;
+			background: transparent;
+			color:rgba(0, 0, 0, 0.43);
+			border:0;
+			margin-top: 8px;
+			font-weight: 400;
+			&::before{
+				content: unset;
+			}
+		}
+		.ant-table-pagination{
+			position: absolute;
+			right:0;
+			bottom:0;
+			margin: 0;
+			.ant-pagination-options-size-changer.ant-select{
+				margin-right: 0;
+			}
+			.ant-pagination-options-quick-jumper{
+				input:hover,input:focus{
+					border-color: @primary-color2;
+				}
+				margin-left: @pagination-item-margin;
+			}
+			.ant-pagination-item-active{
+				background-color:@primary-color2;
+				border-color:@primary-color2;
+				color:#fff;
+				&:hover{
+					a {
+						color :#fff;
+					}
+				}
+				a{
+					color:#fff;
+				}
+			}
+		}
+		.ant-pagination-prev, .ant-pagination-next, .ant-pagination-jump-prev, .ant-pagination-jump-next {
+			line-height: @pagination-item-line-height;
+			height:@pagination-item-height;
+			min-width: @pagination-item-minwidth;
+			.ant-pagination-item-link{
+				&:hover{
+					border-color: @primary-color2 ;
+					color :rgba(0, 0, 0, 0.65);
+				}
+			
+			}
+			
+		}
+		.ant-pagination-jump-next {
+			&:hover {
+				.ant-pagination-item-link{
+					.ant-pagination-item-container {
+						i{
+							color:@primary-color2;
+						}
+					}
+				}
+
+			}
+		}
+		.ant-pagination-prev, .ant-pagination-jump-prev, .ant-pagination-jump-next{
+			margin-right: @pagination-item-margin;
+		}
+		.ant-pagination-item{
+			line-height: @pagination-item-line-height;
+			height:@pagination-item-height;
+			min-width: @pagination-item-minwidth;
+			margin-right: @pagination-item-margin;
+			&:hover{
+				border-color: @primary-color2;
+				a{
+					color : rgba(0, 0, 0, 0.65);
+				}
+			}
+		}
+	}
+	.ant-table-filter-dropdown{
+		.nebula-dropdown{
+			max-width: 300px;
+		}
+		.nebula-table-column-filter{
+			max-height: 200px;
+			overflow: auto;
+			.ant-menu-item{
+				&:hover{
+					background-color: #e6f7ff;
+					color:@primary-color2;
+				}
+			}
+		}
+	}
+	&-funcgroup{
+		display: flex;
+	}
+	&-buttons{
+		flex:1;
+		&.nebula-table-search-btns{
+			flex:unset;
+			width: 260px;
+			text-align: right;
+		}
+		.ant-btn{
+			margin-right: 8px;
+			font-size: @font-size-base;
+			margin-bottom:8px;
+			&:last-child{
+				margin-right: 0;
+			}
+			&.nebula-table-search-btn-expand{
+				border: 0;
+				color: @primary-color2;
+				margin-right: 0;	
+				box-shadow: none;
+				&::after{
+					display: none;
+				}
+				.icon{
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	&-header {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		box-sizing: border-box;
+		&-collapsed{
+			height: 80px;
+			overflow: hidden;
+		}
+		&-expand{
+			height: initial;
+			overflow:initial;
+		}
+		.nebula-table-search {
+			width: 100%;
+			.nebula-form-items{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+			}
+			.nebula-form-item {
+				width:calc((100% - 108px)/3);
+				margin:0 0 8px 54px;
+				&:nth-child(3n+1){
+					margin-left:0;
+				}
+				.nebula-form-text{
+					padding-right: 0;
+				}
+			}
+		}
+		.nebula-table-buttons {
+			width: 60%;
+			text-align: right;	
+			.ant-btn {
+				margin-left: 1rem;
+				height: 2.8rem !important;
+				width: auto !important;
+				font-size: @font-size-base;
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+	.ant-table-pagination {
+		margin: 5px 0;
+	}
+	.ant-table {
+		font-size: @table-font-size;
+		.ant-table-fixed-right{
+			.ant-table-fixed{
+				tr.nebula-expande-row-defined{
+					> td{
+						> *{
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+		table{
+			table-layout: initial!important;
+		}
+		table > colgroup {
+			display: none;
+		}
+		.ant-table-fixed-right {
+			.ant-table-thead > tr > th {
+				&:first-child {
+					border-radius: 0;
+				}
+			}
+		}
+		.ant-table-fixed-left {
+			.ant-table-thead > tr > th {
+				&:last-child {
+					border-radius: 0;
+				}
+			}
+		}
+		.ant-table-thead{
+			font-size: @table-thead-font-size;
+		}
+		.ant-table-tbody {
+			font-size:@table-tbody-font-size;
+			background-color: @table-tbody-bg ;
+		}
+	}
+	.ant-table-thead > tr > th,
+	.ant-table-tbody > tr > td {
+		padding:@table-padding;
+		vertical-align: middle;
+		&.ant-table-selection-column{
+			width: 50px;
+			padding-left: 3px;
+			padding-right: 3px;
+			text-align: center!important;
+		}
+	}
+	.ant-table-tbody > tr.nebula-expande-row-item{
+		cursor: pointer;
+	}
+	.ant-table-tbody > tr.nebula-expande-row-defined > td{
+		> *{
+			display: inline-block;
+		}
+		&.ant-table-selection-column{
+			display: none;
+		}
+	}
+	.ant-table-thead > tr > th {
+		color: @table-thead-color;
+		height: @table-th-height;
+		background-color: @table-thead-bg ;
+		border-bottom: if((@table-border = none), @table-tbody-border-bottom,@table-border);
+		border-right: @table-thead-border-right;
+		border-top : @table-border;
+		line-height: @table-td-line-height;
+		font-weight: @table-thead-font-weight;
+		text-align: @table-thead-text-align !important;
+		&:first-child{
+			border-left: @table-border;
+			border-top-left-radius: @table-border-radius;
+		}
+		&:last-child{
+			border-right: @table-border;
+			border-top-right-radius: @table-border-radius;
+		}
+		.ant-table-header-column{
+			display: inline-block;
+			position: relative;
+		}
+		.ant-table-column-title{
+			display:inline-block;
+		}
+		.ant-table-column-sorter {
+			right: unset;
+			left: unset;
+			display: inline-block;
+			&-inner{
+				margin-left: 5px;
+				margin-top: -1px;
+			}
+		}
+	}
+	.ant-table-tbody > tr > td {
+		color:  @table-tbody-color;
+		height: @table-td-height;
+		border-bottom: if((@table-border = none),@table-tbody-border-bottom,@table-border);
+		border-right:@table-tbody-border-right;
+		line-height: @table-td-line-height;
+		text-align: @table-tbody-text-align !important;
+		&:first-child {
+			border-left: @table-border
+		}
+		&:last-child {
+			border-right:@table-border
+		}
+		.nebula-table-row-expand-icon{
+			display: inline-block;
+			margin-right: 8px;
+			color: inherit;
+			font-size: @table-tbody-font-size;
+			> .anticon{
+				margin-left: 8px;
+				&.nebula-icon-empty{
+					visibility: hidden;
+				}
+				&.anticon-file{
+					font-size: @table-tbody-font-size;
+				}
+				&.nebula-icon-expand{
+					cursor: pointer;
+				}
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+			&+.nebula-table-td-cell{
+				display: inline;
+				white-space: initial;
+			}
+		}
+		.ant-table-row-expand-icon+.nebula-table-td-cell{
+			display: inline;
+			white-space: initial;
+		}
+		.ant-table-row-expand-icon:hover{
+			color: @primary-color2;
+		}
+		.ant-radio-wrapper-checked {
+			.ant-radio-checked {
+				.ant-radio-input:focus{
+					border-color: @primary-color1 !important;
+				}
+			}
+		}
+		.nebula-table-td-cell{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: inline-block;
+			white-space: nowrap;
+			vertical-align: middle;
+			width: 100%;
+		}
+		.nebula-table-col-btn {
+			color:@primary-color2;
+			cursor: pointer;
+			margin-right: 5px;
+			&.btn-disabled {
+				color: #bcbcbc;
+				cursor: no-drop;
+			}
+			&.btn-disabled-none {
+				display: none;
+			}
+			.btn-text{
+				display: inline-block;
+				> .icon{
+					transform: rotate(90deg);
+					display: inline-block;
+					height: 12px;
+					width: 12px;
+					font-size: 12px;
+					margin-left: 10px;
+				}
+			}
+			.btn-split-line{
+				padding: 0 0 0 5px;
+				border-left: solid 1px #ddd;
+			}
+			&:first-child{
+				.btn-split-line{
+					border-left: 0;
+					padding: 0;
+				}
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		.nebula-column-choose{
+			height: 22px;
+			line-height: 22px;
+			.nebula-column-choose-icon{
+				font-size:24px;
+			}
+		}
+		// .btn-type {
+		// 	.btnType();
+		// }
+		.nebula-table-col-btngroup {
+			color: #ffffff;
+			background-color:  @primary-color1;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			font-size: 1.6rem;
+			cursor: pointer;
+			line-height: 1.8rem;
+			margin-left: 5px;
+			> .anticon {
+				font-size: 1.6rem;
+				font-weight: bold;
+			}
+		}
+		tr.ant-table-expanded-row {
+			> td {
+				padding: 0;
+			}
+			.ant-table-wrapper {
+				margin: 0;
+			}
+		}
+	}
+	.ant-table-tbody {
+		tr.ant-table-row {
+			// update: 2020-06-22 注释掉 原因： 背景色会导致tr 上设置的class背景色被覆盖
+			// td {
+			// 	background-color: #ffffff;
+			// }
+			&.nebula-table-active {
+				> td {
+					background-color: tint(@primary-color, 88%);
+				}
+				&.ant-table-row-hover {
+					> td{
+						background-color: @table-tbody-hover-bg;
+					}
+				}
+				&:hover{
+					> td{
+						background-color: @table-tbody-hover-bg;
+					}
+				}
+			}
+			&.ant-table-row-hover {
+				> td{
+					background-color: @table-tbody-hover-bg;
+				}
+			}
+			&:hover{
+				> td{
+					background-color: @table-tbody-hover-bg;
+				}
+			}
+		}
+		&:hover{
+			> td{
+				background-color: @table-tbody-hover-bg;
+			}
+		}
+		&.ant-table-row-hover {
+			> td{
+				background-color: @table-tbody-hover-bg;
+			}
+		}
+	}
+}

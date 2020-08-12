@@ -1,0 +1,46 @@
+//输入框控件
+.ant-input,.ant-input-number-input {
+  border-color: @input-border;
+  color: @input-color;
+  background-color: @input-bg;
+  border: 1px solid @input-border;
+  border-radius: @input-border-radius;
+  height:@input-height - 2px;
+  line-height:@input-line-height;
+  font-size:@input-size;
+  padding:@input-padding;
+  margin:@input-margin;
+}
+
+.ant-input-group-addon {
+  padding: @ant-input-group-padding;
+  font-size: @ant-input-group-size;
+  color: @ant-input-group-color;
+  text-align: @ant-input-group-text-align;
+  background-color: @ant-input-group-bg;
+  border: @ant-input-group-border;
+  border-radius: @ant-input-group-border-radius;
+}
+
+.ant-input:hover,.ant-input-number-input:hover {
+  border-color: @input-border-hover !important;
+}
+
+.ant-input:focus,.ant-input-number-input:focus {
+  border-color: @input-border-hover;
+  box-shadow: @input-box-shadow;
+}
+
+.ant-input::-moz-placeholder {
+  color: @input-placeholder;
+}
+
+.ant-input:-ms-input-placeholder {
+  color: @input-placeholder;
+}
+
+.ant-input::-webkit-input-placeholder {
+  color: @input-placeholder;
+}
+
+@import './input-message.less';

@@ -70,6 +70,7 @@
     "css-loader": "^0.28.11",
     "biz-nebula-ui": "^1.0.0",
     "dva": "^2.4.1",
+    "antd": "^3.26.6",
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^4.0.0-beta.5",
