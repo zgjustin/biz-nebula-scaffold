@@ -3,7 +3,7 @@
  * @Author: justin
  * @Date: 2019-12-03 11:19:57
  * @LastEditors: justin
- * @LastEditTime: 2020-08-06 14:20:13
+ * @LastEditTime: 2020-08-13 14:31:42
  */
 // const fs = require('fs')
 const merge = require('webpack-merge')
@@ -19,7 +19,7 @@ const devConf = {
 }
 const openHost = `http://localhost:${devConf.port}`
 const proxyHost = 'http://139.9.236.174:5900'
-const rootPath =  '';
+const rootPath =  '/';
 const env = 'development';
 module.exports = merge(config(env), {
   // 模式
