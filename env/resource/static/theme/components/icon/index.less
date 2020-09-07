@@ -1,0 +1,58 @@
+
+.nebula-icon{
+  &-button{
+      //height: 2.67rem;
+      display: flex;
+      align-items: center;
+      .nebula-icon-class{
+        font-size: 3rem;
+        display: inline-block;
+        padding: 0 0 0 5px;
+      }
+      input{
+          width: 80%;
+      }
+  }
+
+  &-class{
+      font-size: inherit;
+      display: inline-block;
+      padding: 0 .1rem;
+  }
+
+  &-select{
+      display: flex;
+      flex-direction: column;
+      width: 90px;
+      margin: 15px 10px 0px 5px;
+      align-items: center;
+      >span.desc{
+          width: 90px;
+          text-align: center;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+      }
+      :hover{
+          cursor: pointer;
+      }
+  }
+
+  &-board{
+      display: flex;
+      flex-wrap: wrap;
+      width: 580px;
+      height: 265px;
+      overflow-y: auto;
+      border: @global-border;
+      border-radius: 10px;
+      padding: unset;
+  }
+
+  &-cancel{
+      cursor: pointer;
+      :hover{
+          color: @primary-color3;
+      }
+  }
+}

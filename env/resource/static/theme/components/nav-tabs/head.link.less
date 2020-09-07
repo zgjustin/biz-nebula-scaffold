@@ -1,0 +1,71 @@
+.head-links {
+  // flex布局 管理按钮之间的排版
+  display: flex;
+  align-items: @head-position;
+  height: 100%;
+  background-color: @head-bg;
+  &-text{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__close{
+    position: static;
+    top: unset;
+    transform: unset;
+    right: unset;
+    margin-left: @head-item-close-left;
+    font-size: @head-item-close-font-size;
+  }
+
+  &-link {
+    border-radius:@head-item-border-radius;
+    height: @head-item-height;
+    line-height: @head-item-line-height;
+    padding: @head-item-padding;
+    display: flex;
+    align-items: center;
+    color:@head-item-color;
+    background-color: @head-item-bg;
+    font-size: @head-item-font-size;
+    margin:@head-item-margin;
+    position: relative;
+    cursor: pointer;
+    i.anticon {
+      position: static;
+      top: unset;
+      right: unset;
+      font-size: @head-item-close-font-size;
+    }
+
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+  }
+  &-active {
+    background-color: @head-item-active-bg;
+    color: @head-item-active-color;
+    border-radius: @head-item-active-border-radius;
+  }
+}
+@media screen and (max-width:1280px) {
+  .head-links {
+    &-link {
+      height: ~`px('@{head-item-height}','-16')`;
+      line-height: ~`px('@{head-item-height}','-16')`;
+    }
+  }
+}
+@media screen and (max-width:1440px) {
+  .head-links {
+    &-link {
+      height: ~`px('@{head-item-height}','-10')`;
+      line-height: ~`px('@{head-item-height}','-10')`;
+    }
+  }
+}
