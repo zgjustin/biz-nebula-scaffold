@@ -1,7 +1,7 @@
 {
   "name": "Nebula2.2",
   "displayName": "Nebula业务构建平台",
-  "version": "nebula-2.2.0.6",
+  "version": "nebula-2.2.0.10",
   "env": "development",
   "rootPath":"",
   "isMock":false,
