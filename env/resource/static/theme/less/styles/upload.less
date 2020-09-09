@@ -1,0 +1,110 @@
+.ant-upload {
+  font-family: @font-family;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+}
+
+.ant-upload.ant-upload-select {
+  .ant-btn {
+    border-radius: @upload-border-radius;
+  }
+}
+
+
+.ant-upload.ant-upload-select-picture-card {
+  border: @upload-border;
+  border-radius: @upload-border-radius;
+  background-color: @upload-bg;
+}
+
+
+.ant-upload.ant-upload-select-picture-card:hover {
+  border-color: @upload-hover-border-color;
+}
+
+.ant-upload.ant-upload-drag {
+  border: @upload-border;
+  border-radius: @upload-border-radius;
+  background: @upload-bg;
+}
+
+.ant-upload.ant-upload-drag.ant-upload-drag-hover:not(.ant-upload-disabled) {
+  border: 2px dashed @upload-hover-border-color;
+}
+
+.ant-upload.ant-upload-drag:not(.ant-upload-disabled):hover {
+  border-color: @upload-hover-border-color;
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-drag-icon .anticon {
+  color: @upload-hover-border-color;
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-text {
+  color: @text-color;
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-hint {
+  color: @gray;
+}
+
+.ant-upload.ant-upload-drag .anticon-plus {
+  color: @disabled-color;
+}
+
+.ant-upload.ant-upload-drag .anticon-plus:hover {
+  color: @gray;
+}
+
+.ant-upload.ant-upload-drag:hover .anticon-plus {
+  color: @gray;
+}
+
+.ant-upload-list {
+  font-family: @font-family;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+}
+
+.ant-upload-list-item-info .anticon-loading,
+.ant-upload-list-item-info .anticon-paper-clip {
+  font-size: @font-size-base;
+  color: @gray;
+}
+
+.ant-upload-list-item .anticon-close {
+  color: @gray;
+}
+
+:root .ant-upload-list-item .anticon-close {
+  font-size: @font-size-small;
+}
+
+.ant-upload-list-item .anticon-close:hover {
+  color: @text-color;
+}
+
+.ant-upload-list-item:hover .ant-upload-list-item-info {
+  background-color: @primary-color9;
+}
+
+.ant-upload-list-item-error,
+.ant-upload-list-item-error .anticon-paper-clip,
+.ant-upload-list-item-error .ant-upload-list-item-name {
+  color: @error-color;
+}
+
+.ant-upload-list-item-error .anticon-close {
+  color: @error-color !important;
+}
+
+.ant-upload-list-picture .ant-upload-list-item-error,
+.ant-upload-list-picture-card .ant-upload-list-item-error {
+  border-color: @error-color;
+}
+
+.ant-upload-list .ant-upload-success-icon {
+  color: @success-color;
+}

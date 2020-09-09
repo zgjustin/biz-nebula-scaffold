@@ -1,0 +1,59 @@
+.nebula-exportIn {
+  &-line {
+    display: table;
+    width: 100%;
+    padding-bottom: 80px;
+    &-btn {
+      float: left;
+      width: 10%;
+      .ant-btn-circle {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+      }
+    }
+    &-text {
+      float: left;
+      width: 70%;
+      font-size: 1.4rem;
+      &:nth-child(1){
+        font-weight: bolder;
+        font-size: 1.6rem;
+      }
+    }
+    &-download {
+      float: right;
+      width: 20%;
+      text-align: right;
+    }
+  }
+  &-upload {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 20px 20px;
+    font-size: 1.4rem;
+    &>div {
+      float: left;
+      margin-right: 10px;
+    }
+    .ant-upload-select-text {
+      float: left;
+    }
+    .ant-upload-list-text {
+      float: left;
+    }
+    .ant-upload-list-item {
+      margin-top: 0;
+    }
+    &-btn {
+      color: @primary-color1;
+      cursor: pointer;
+      :HOVER{
+        color: @primary-color2;
+      }
+    }
+  }
+}

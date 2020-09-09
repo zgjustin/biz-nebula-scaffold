@@ -1,0 +1,11 @@
+{
+  "name": "Nebula2.2",
+  "displayName": "Nebula业务构建平台",
+  "version": "nebula-2.2.0.6",
+  "env": "development",
+  "rootPath":"",
+  "isMock":false,
+  "projectName":"表单引擎移动端",
+  "companyName":"博智表单引擎",
+  "companySite":""
+}
