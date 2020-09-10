@@ -6,7 +6,7 @@
  * @FilePath: /biz.nebula/nebula.scaffold/found/utils/router.ts
  * @Description: 路由跳转
  */ 
-import {HistoryInstance} from 'nebula-ui/lib/_data/historyStore'
+import {HistoryInstance} from 'biz-nebula-ui/lib/_data/historyStore'
 /**
  * 路由跳转统一控制
  */

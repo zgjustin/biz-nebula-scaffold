@@ -1,7 +1,7 @@
 import React from 'react'
-import FormModal from 'nebula-ui/lib/modal'
-import Input from 'nebula-ui/lib/input'
-import message from 'nebula-ui/lib/message'
+import FormModal from 'biz-nebula-ui/lib/modal'
+import Input from 'biz-nebula-ui/lib/input'
+import message from 'biz-nebula-ui/lib/message'
 import LoginInfo from '../../../data/loginInfo'
 import RESTFUL from '../../../restful'
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import Dropdown from 'nebula-ui/lib/dropdown/antDropdown'
-import Icon, { IconLib } from 'nebula-ui/lib/icon'
-import Menu from 'nebula-ui/lib/menu/antMenu'
-import message from 'nebula-ui/lib/message'
+import Dropdown from 'biz-nebula-ui/lib/dropdown/antDropdown'
+import Icon, { IconLib } from 'biz-nebula-ui/lib/icon'
+import Menu from 'biz-nebula-ui/lib/menu/antMenu'
+import message from 'biz-nebula-ui/lib/message'
 // 引入存储操作
 import LoginInfo from '../../data/loginInfo'
 import RESTFUL from '../../restful'

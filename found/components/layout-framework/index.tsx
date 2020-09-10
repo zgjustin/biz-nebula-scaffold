@@ -1,14 +1,14 @@
 import React,{PureComponent,ReactNode} from 'react'
-import ConfigLocal from 'nebula-ui/lib/config-provider'
-import {PageLayout,PageLayoutType} from 'nebula-ui/lib/layout'
-import NavTabs from 'nebula-ui/lib/nav-tabs'
+import ConfigLocal from 'biz-nebula-ui/lib/config-provider'
+import {PageLayout,PageLayoutType} from 'biz-nebula-ui/lib/layout'
+import NavTabs from 'biz-nebula-ui/lib/nav-tabs'
 import Router from '../../utils/router'
 import UserInfo from '../user-info'
 import LoginInfo from '../../data/loginInfo'
 import TogglePosition from '../toggle-position'
 import './style/index.less'
 import {appendPath} from '../../utils/path'
-import CacheTableProvider from 'nebula-ui/lib/_data/cacheTableProvider'
+import CacheTableProvider from 'biz-nebula-ui/lib/_data/cacheTableProvider'
 
 const defaultLogo = require('../../assert/images/logo.png')
 export interface LayoutMenuItem{

@@ -1,4 +1,4 @@
-import NebulaRestFul from 'nebula-ui/lib/_restful'
+import NebulaRestFul from 'biz-nebula-ui/lib/_restful'
 import User from './module/user'
 import Position from './module/position'
 import Router from '../utils/router'

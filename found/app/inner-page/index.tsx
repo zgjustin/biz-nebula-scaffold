@@ -10,7 +10,7 @@ import {connect} from 'dva'
 import ThemeManage from '../../data/theme'
 import CodeEditor from '../../components/code-editor'
 import { appendPath } from'../../utils/path'
-import {UtilsBox} from 'nebula-ui'
+import {UtilsBox} from 'biz-nebula-ui'
 import {baseURL} from '../../http'
 /**
  * 基础home页面

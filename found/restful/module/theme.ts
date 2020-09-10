@@ -6,7 +6,7 @@
  * @FilePath: /biz.nebula/nebula.scaffold/found/restful/module/theme.ts
  * @Description: 主题相关API接口
  */ 
-import RestFulDecorator,{RestFulMethod,RestFulBase} from 'nebula-ui/lib/_restful/decorator'
+import RestFulDecorator,{RestFulMethod,RestFulBase} from 'biz-nebula-ui/lib/_restful/decorator'
 
 @RestFulDecorator.RestFul('nebula/theme')
 export default class User extends RestFulBase{

@@ -8,7 +8,7 @@
  */ 
 import RESTFUL from '../restful'
 import LoginInfo from '../data/loginInfo'
-import AuthorizationProvider from 'nebula-ui/lib/_data/authorization'
+import AuthorizationProvider from 'biz-nebula-ui/lib/_data/authorization'
 export default {
     namespace: 'userAuth',
     state: {

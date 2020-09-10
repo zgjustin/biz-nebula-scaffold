@@ -123,7 +123,7 @@ module.exports = {
   },
   externals:{
     react:'window["nebulaLib-react"]',
-    'nebula-ui':'window["nebulaLib-nebula"]',
+    'biz-nebula-ui':'window["nebulaLib-nebula"]',
     lodash:'window["nebulaLib-lodash"]',
     dva:'window["nebulaLib-dva"]',
     'react-monaco-editor':'window["nebulaLib-codeEditor"]'
@@ -132,7 +132,7 @@ module.exports = {
     new webpack.DefinePlugin({
       packEnv:JSON.stringify('ssr')
     }),
-    new IgnorePlugin(/\.(css|less)$/, /nebula-ui/),
+    new IgnorePlugin(/\.(css|less)$/, /biz-nebula-ui/),
     createHappyPlugin('happy-babel', [
       {
         loader: 'babel-loader',

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Dropdown from "nebula-ui/lib/dropdown/antDropdown";
-import Menu from "nebula-ui/lib/menu/antMenu";
-import Icon, { IconLib } from "nebula-ui/lib/icon";
+import Dropdown from "biz-nebula-ui/lib/dropdown/antDropdown";
+import Menu from "biz-nebula-ui/lib/menu/antMenu";
+import Icon, { IconLib } from "biz-nebula-ui/lib/icon";
 import { Version, SelfSetting, ChangePassword, Logout } from "./lib";
 import "./style/index.less";
 

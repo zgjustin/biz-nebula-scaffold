@@ -1,10 +1,10 @@
 import React from 'react';
-import Icon, { IconLib } from 'nebula-ui/lib/icon'
-import message from 'nebula-ui/lib/message'
+import Icon, { IconLib } from 'biz-nebula-ui/lib/icon'
+import message from 'biz-nebula-ui/lib/message'
 import BgAnimation from './bgAnimation'
 import RestFul from '../../restful'
 import './assert/index.less'
-import {HistoryInstance} from 'nebula-ui/lib/_data/historyStore'
+import {HistoryInstance} from 'biz-nebula-ui/lib/_data/historyStore'
 import {appendPath} from '../../utils/path'
 
 /**

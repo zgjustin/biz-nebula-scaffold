@@ -1,4 +1,4 @@
-import RestFulDecorator,{RestFulMethod,RestFulContentType,RestFulBase} from 'nebula-ui/lib/_restful/decorator'
+import RestFulDecorator,{RestFulMethod,RestFulContentType,RestFulBase} from 'biz-nebula-ui/lib/_restful/decorator'
 /**
  * Nebula 中涉及当户相关的模块
  */

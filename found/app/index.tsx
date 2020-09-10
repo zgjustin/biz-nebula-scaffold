@@ -5,8 +5,8 @@ import InnerPage from './inner-page'
 import SinglePage from './single-page'
 import Login from './login';
 // import appRoute from '../config/route'
-import 'nebula-ui/lib/style'
-import {HistoryInstance} from 'nebula-ui/lib/_data/historyStore'
+import 'biz-nebula-ui/lib/style'
+import {HistoryInstance} from 'biz-nebula-ui/lib/_data/historyStore'
 const routes: any[] = [
     {
         path: '/build',

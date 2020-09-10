@@ -1,5 +1,5 @@
 import React from 'react'
-import ErrorPage from 'nebula-ui/lib/error-page'
+import ErrorPage from 'biz-nebula-ui/lib/error-page'
 import Router from '../../utils/router'
 /**
  * 404页面

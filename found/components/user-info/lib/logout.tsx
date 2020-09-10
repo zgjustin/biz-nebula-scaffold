@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from 'nebula-ui/lib/modal'
+import Modal from 'biz-nebula-ui/lib/modal'
 import Restful from '../../../restful'
 /**
  * @description 登录组件

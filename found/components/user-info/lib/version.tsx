@@ -1,7 +1,7 @@
 // 获取所有的默认信息
 import AppJson from '../../../app.json'
 import React from 'react'
-import message from 'nebula-ui/lib/message'
+import message from 'biz-nebula-ui/lib/message'
 /**
  * @description 存放当前版本号的组件
  * @author yangrongxin

@@ -1,6 +1,6 @@
 import React,{PureComponent} from 'react'
 import ReactDOM from 'react-dom'
-import Spin from 'nebula-ui/lib/spin'
+import Spin from 'biz-nebula-ui/lib/spin'
 import './style/index.less'
 /**
  * 动态页面 加载状态组件

@@ -1,5 +1,5 @@
 import React,{PureComponent} from 'react';
-import Button from 'nebula-ui/lib/button'
+import Button from 'biz-nebula-ui/lib/button'
 import "./style/index.less";
 import Router from '../../utils/router'
 const img1 = require('../../assert/images/dashboard/1.png')
