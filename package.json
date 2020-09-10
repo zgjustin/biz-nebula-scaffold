@@ -39,6 +39,9 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
     "reflect-metadata": "^0.1.13",
+    "qrcode.react": "^1.0.0",
+    "cron-converter": "^1.0.0",
+    "cronstrue": "^1.100.0",
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
