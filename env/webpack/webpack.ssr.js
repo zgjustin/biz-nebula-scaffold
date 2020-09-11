@@ -12,17 +12,18 @@ const createHappyPlugin = (id, loaders) => {
     threadPool: happyThreadPool
   })
 }
+const appSetting = require('../../app.json')
 const WebpackBase = require('webpack');
 const IgnorePlugin = WebpackBase.IgnorePlugin;
 
 module.exports = {
   mode: 'production',
   entry: {
-    index: [resolve('src/ssrEntry/index.tsx')]
+    index: [resolve('src/index.tsx')]
   },
   output: {
     publicPath: '',
-    path: resolve('ssr-dist'),
+    path:resolve(`ssr-dist/${appSetting.name}`),
     chunkFilename: 'scripts/[name].js',
     filename: '[name].js'
   },

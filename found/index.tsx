@@ -1,5 +1,6 @@
 import dva from 'dva';
 import './assert/index.less'
+import appJson from '../app.json'
 
 const createBrowserHistory = require('history').createBrowserHistory;
 const history = createBrowserHistory();
@@ -20,6 +21,11 @@ const start = (models,routes)=>{
         return appEntry(props, routes);
     }
     app.router(entryRoute);
+    //生产环境 注入全局window中
+    if(process.env.NODE_ENV==='production'){
+        window[appJson.name] = app.start();
+        return;
+    }
     app.start('#app');
 }
 
