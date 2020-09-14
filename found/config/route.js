@@ -169,6 +169,76 @@
         app:"datasource"
     },
     {
+        path: "/flowcontrol",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowcontrol/edit",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowcontrol/inspection",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowcontrol/detail",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance/detail",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance/list",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance/copy",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance/waiting",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance/done",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance/launchBySelf",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/flowInstance/useableFlowTemp",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/operation",
+        app: "flow",
+        module: "Flow"
+    },
+    {
+        path: "/monitor",
+        app: "flow",
+        module: "Flow"
+    },
+    {
         path:'/',
         app:''
     }
