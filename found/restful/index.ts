@@ -21,8 +21,8 @@ function loginLose(url:string){
  * 接口请求
  */
 export class FoundRestFul extends NebulaRestFul{
-    constructor(){
-        super(baseURL,60000,loginLose,true);
+    constructor(url?:string,timeout?:number,fail?:(url:string)=>void){
+        super(typeof(url)==='undefined'?baseURL:url,timeout||60000,fail||loginLose,true);
     }
     User = new User().resetProperty();
     Position = new Position().resetProperty();
