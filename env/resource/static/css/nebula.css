@@ -1349,7 +1349,7 @@ div.engine-accountCardItem.org-card-item .content .box-icon span.middle {
 .menu .ant-menu-vertical-right .ant-menu-submenu-title,
 .menu .ant-menu-inline .ant-menu-submenu-title {
   padding: 0;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 40px;
   height: 40px;
   margin: 0;
@@ -2323,6 +2323,11 @@ body {
 .engine-control-modal .engine-layout-row-button .ant-btn i.anticon,
 .engine-control-modaltransfer .engine-layout-row-button .ant-btn i.anticon {
   color: #333;
+}
+.engine-layout .engine-layout-row-button .ant-btn > .icon,
+.engine-control-modal .engine-layout-row-button .ant-btn > .icon,
+.engine-control-modaltransfer .engine-layout-row-button .ant-btn > .icon {
+  margin-right: 4px;
 }
 .engine-layout .engine-layout-row-button .ant-btn:hover,
 .engine-control-modal .engine-layout-row-button .ant-btn:hover,
@@ -5374,6 +5379,9 @@ div.settingContent > i > svg {
 .ant-btn.ant-btn-link:hover {
   background: transparent;
 }
+.ant-btn > .icon {
+  margin-right: 4px;
+}
 .ant-btn:hover,
 .ant-btn:focus {
   color: #0091FF;
@@ -6252,7 +6260,7 @@ div.settingContent > i > svg {
   height: 40px;
   color: rgba(255, 255, 255, 0.7);
   background-color: inherit;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 40px;
   padding: 0;
   margin: 0;
@@ -6287,12 +6295,12 @@ div.settingContent > i > svg {
   padding: 0 25px !important;
 }
 .nebula-layout-side.ant-layout-sider-collapsed .ant-menu > .ant-menu-item .nebula-layout-menu-title {
-  width: 1.4rem;
+  width: 14px;
   overflow: hidden;
   display: block;
 }
 .nebula-layout-side.ant-layout-sider-collapsed .ant-menu-submenu-title > span {
-  width: 1.4rem;
+  width: 14px;
   overflow: hidden;
   display: block;
 }
@@ -6335,7 +6343,7 @@ div.settingContent > i > svg {
 }
 .nebula-layout-menu-popup.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item {
   padding: 0 2rem;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 40px;
   height: 40px;
   margin: 0px;
@@ -6776,6 +6784,7 @@ div.settingContent > i > svg {
 }
 .nebula-modal-close-x > i {
   margin-right: 5px;
+  cursor: pointer;
 }
 .ant-modal-close-x {
   width: 52px;
@@ -7258,6 +7267,20 @@ div.settingContent > i > svg {
   padding: 0;
 }
 .nebula-table-btn-dropdown .ant-dropdown-menu-item-active .nebula-table-col-btn {
+  color: #fff;
+}
+.nebula-table-opear-dropdown .ant-dropdown-menu-item {
+  padding: 2px 0;
+}
+.nebula-table-opear-dropdown .ant-btn {
+  width: 100%;
+  color: #33a7ff;
+  background-color: transparent;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+}
+.nebula-table-opear-dropdown .ant-btn:hover {
   color: #fff;
 }
 .nebula-form-group .nebula-table {

@@ -1,0 +1,415 @@
+{
+  "id": "2061194",
+  "name": "CRM",
+  "font_family": "crm-icon-font",
+  "css_prefix_text": "icon-crm-",
+  "description": "CRM 自用图标库",
+  "glyphs": [
+    {
+      "icon_id": "17121906",
+      "name": "JPG @3x",
+      "font_class": "jpg",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "17121907",
+      "name": "PNG @3x",
+      "font_class": "png",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "17121908",
+      "name": "下架  白色@3x",
+      "font_class": "undercarriage",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "17121910",
+      "name": "上架 白色@3x",
+      "font_class": "grounding",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "17121911",
+      "name": "全选（白色）@3x",
+      "font_class": "all-select",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "17121912",
+      "name": "产品层级   当前@3x",
+      "font_class": "product-level",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "17121913",
+      "name": "个性设置（白色）@3x",
+      "font_class": "person-setting",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "17121914",
+      "name": "保存 （白色）@3x",
+      "font_class": "file-save",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "17121915",
+      "name": "上传照片  默认@3x",
+      "font_class": "upload",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "17121917",
+      "name": "列表搜索@3x",
+      "font_class": "search",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "17121918",
+      "name": "向右展开工具（灰色）@3x",
+      "font_class": "unwind-right",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "17121919",
+      "name": "向左折回工具（灰色）@3x",
+      "font_class": "unwind-left",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "17121920",
+      "name": "取消（灰色）@3x",
+      "font_class": "cancel",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "17121921",
+      "name": "变更@3x",
+      "font_class": "change",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "17121922",
+      "name": "启用（白色）@3x",
+      "font_class": "enable",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "17121923",
+      "name": "商品管理 非当前@3x",
+      "font_class": "product-manage",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "17121924",
+      "name": "客户信息  非当前@3x",
+      "font_class": "customer-info",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "17121927",
+      "name": "客户物料 当前@3x",
+      "font_class": "customer-material",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "17121928",
+      "name": "列表授权   白色@3x",
+      "font_class": "list-auth",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "17121930",
+      "name": "客户组织  当前@3x",
+      "font_class": "customer-org",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "17121933",
+      "name": "导入（白色）@3x",
+      "font_class": "import",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "17121934",
+      "name": "对象授权   白色@3x",
+      "font_class": "object-auth",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "17121935",
+      "name": "导出（白色）@3x",
+      "font_class": "export",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "17121936",
+      "name": "弹窗 删除（灰色）@3x",
+      "font_class": "delete",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "17121937",
+      "name": "数据权限（非当前）@3x",
+      "font_class": "data-permissions",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "17121939",
+      "name": "折叠菜单（ 右）展开状态用@3x",
+      "font_class": "menu-open",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "17121942",
+      "name": "新增 （蓝色）@3x",
+      "font_class": "add",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "17121943",
+      "name": "折叠菜单（ 左）收起状态用@3x",
+      "font_class": "menu-close",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "17121944",
+      "name": "日历选择  双右@3x",
+      "font_class": "arrow-double-right",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "17121945",
+      "name": "日历选择  单右@3x",
+      "font_class": "arrow-small-right",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "17121946",
+      "name": "日历选择  单左@3x",
+      "font_class": "arrow-small-left",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "17121947",
+      "name": "更多@3x",
+      "font_class": "more",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "17121948",
+      "name": "新增 （白色）@3x",
+      "font_class": "unlock",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "17121949",
+      "name": "日历选择  双左@3x",
+      "font_class": "arrow-double-left",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    },
+    {
+      "icon_id": "17121950",
+      "name": "日志（白色）@3x",
+      "font_class": "log",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "17121953",
+      "name": "更换组织 白色@3x",
+      "font_class": "customer-change",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "17121955",
+      "name": "替换对接职位   白色@3x",
+      "font_class": "customer-replace",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "17121959",
+      "name": "清空@3x",
+      "font_class": "empty",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "17121961",
+      "name": "删除（白色）@3x",
+      "font_class": "trash",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "17121963",
+      "name": "物料管理  非当前@3x",
+      "font_class": "material-manage",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "17121964",
+      "name": "用户管理（非当前）@3x",
+      "font_class": "customer-setting",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "17121965",
+      "name": "禁止（白色）@3x",
+      "font_class": "ban",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "17121968",
+      "name": "确定（白色）@3x",
+      "font_class": "ensure",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "17121970",
+      "name": "移除  白色@3x",
+      "font_class": "remove",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "17121973",
+      "name": "终端信息   当前@3x",
+      "font_class": "terminal-info",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "17121975",
+      "name": "组织管理（非当前）@3x",
+      "font_class": "org-manage",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "17121976",
+      "name": "编辑   白色@3x",
+      "font_class": "edit",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "17121977",
+      "name": "职位添加@3x",
+      "font_class": "add-circle",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "17121978",
+      "name": "翻页器  后@3x",
+      "font_class": "arrow-right",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "17121980",
+      "name": "职位级别（当前）@3x",
+      "font_class": "position-level",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "17121983",
+      "name": "角色管理（非当前）@3x",
+      "font_class": "role-manage",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "17121987",
+      "name": "输入框下拉（单箭头）@3x",
+      "font_class": "down-input",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "17121988",
+      "name": "选择负责任（白色）@3x",
+      "font_class": "customer-add",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "17121990",
+      "name": "翻页器  下选择@3x",
+      "font_class": "arrow-down",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "17121991",
+      "name": "解除关联  白色@3x",
+      "font_class": "unlink",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "17121992",
+      "name": "顶部栏   信息图标@3x",
+      "font_class": "message",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    },
+    {
+      "icon_id": "17121993",
+      "name": "重置（灰色）@3x",
+      "font_class": "reset",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "17121995",
+      "name": "翻页器 前@3x",
+      "font_class": "arrow-left",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    }
+  ]
+}
