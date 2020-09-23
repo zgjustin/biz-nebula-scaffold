@@ -1,0 +1,297 @@
+.nebula-form-group{
+    width:100%;
+    box-sizing: border-box;
+    font-size:@font-size-base;
+    .nebula-form-items{
+        width:100%;
+    }
+    &.nebula-form-search{
+        width:100%;
+    }
+    &.nebula-form-table{
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        .nebula-form-item{
+        width: 100%;
+        margin: 0.5rem auto;
+        .nebula-form-label{
+            position:absolute;
+            display:flex;
+            width:100px;
+            text-align: right;
+        }
+        .nebula-form-text{
+            width: 100%;
+            padding-left: 108px;
+            padding-right:20px;
+        }
+    }
+    }
+    // flex 流式布局
+    &.nebula-form-flex{
+        display: flex;
+        flex-direction: column;
+        .nebula-form-item{
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            height: auto;
+            .nebula-form-label {
+                position: static;
+                text-align: left;
+                width: auto;
+            }
+            .nebula-form-text {
+                width: auto;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .anticon {
+                right: -20px !important;    
+            }
+        }
+    }
+    &.nebula-form-col-two{
+        .nebula-form-item{
+            width:50%
+        }
+    }
+    &.nebula-form-flow{
+        width:100%;
+        .nebula-form-item{
+            float:left;
+            width:auto;
+        }
+    }
+    .nebula-form-item{
+        line-height: 32px;
+        display: inline-block;
+        height: 32px;
+        font-size:inherit;
+        box-sizing: border-box;
+        position: relative;
+        margin-bottom:1rem;
+        margin-left: 62px;
+        &:nth-child(3n+1){
+            margin-left: 0;
+        }
+        .nebula-form-label{
+            display:flex;
+            position:absolute;
+            text-align: right;
+            top: 50%;
+            transform: translateY(-50%);
+            width:90px;
+            height: 100%;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            > span{
+                line-height: 16px;
+                display:block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                &:first-child{
+                    position: relative;
+                    text-overflow: unset;
+                    white-space: unset;
+                    overflow: unset;
+                }
+            }
+        }
+        &.nebula-form-item-error{
+            position: relative;
+            .nebula-form-item-error-icon .anticon {
+                position: absolute;
+                display:inline-block;
+                right:0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            .nebula-form-text{
+                .ant-calendar-picker-input{
+                    border:1px solid @error-color;
+                    &:hover{
+                        border:1px solid @error-color !important;
+                    }
+                    input {
+                        border:none;
+                    }
+                }
+                input,select,textarea{
+                    border:1px solid @error-color;
+                }
+                .ant-select-selection{
+                    border:1px solid @error-color;
+                }
+                .ant-input-number{
+                    border:1px solid @error-color;
+                    input{
+                        border:0;
+                    }
+                }
+                .nebula-harmony-input{
+                    border:1px solid #f34036;
+                    textarea{
+                      border: none;
+                    }  
+                }
+            }
+        }
+        .nebula-form-label.nebula-form-valid-pre{
+            > span{
+                &:first-child{
+                    &::before{
+                        content:"*";
+                        color:red;
+                        margin-right:5px;
+                        vertical-align: middle;
+                        position: absolute;
+                        top: 2px;
+                        left: -8px;
+                    }
+                }
+            }
+        }
+        .nebula-form-text{
+            display: inline-block;
+            box-sizing: border-box;
+            padding-right:20px;
+            padding-left:108px;
+            width:100%;
+            &.nebula-form-fill{
+                width:100%;
+                padding: 0;
+            }
+            .ant-input-affix-wrapper{
+                font-size: inherit;
+            }
+            input,textarea{
+                padding:0 10px;
+                font-size:inherit;
+            }
+            input,select,textarea{
+                width:100%;
+                text-align: left;
+                font-size:inherit;
+            }
+            .ant-calendar-picker{
+                width:100%;
+                height: 32px;
+                font-size:inherit;
+                .ant-input{
+                    line-height: normal;
+                }
+                input.ant-calendar-range-picker-input{
+                    width:auto;
+                    text-align: center;
+                }
+            }
+            .ant-select{
+                width:100%;
+                font-size:inherit;
+                .ant-select-selection--single{
+                    height: inherit;
+                    .ant-select-selection__rendered{
+                        line-height: 32px;
+                    }
+                }
+            }
+            .ant-input{
+                height:32px;
+            }
+            textarea.ant-input{
+                height: auto;
+                padding-top:5px;
+                padding-bottom: 5px;
+            }
+            input{
+                height: 32px;
+            }
+            .design-upload{
+                position: relative;
+                width:100%;
+                height: 100%;
+                display: inline-block;
+                &-file{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    right:0;
+                    bottom:0;
+                    z-index: 1;
+                    opacity: 0;
+                }
+            }
+            .ant-input-number{
+                width:100%;
+                height: inherit;
+                font-size:inherit;
+            }
+            .ant-radio-group{
+                .ant-radio-wrapper{
+                    font-size:inherit;
+                    .ant-input{
+                        // 增加样式的自动自适应
+                        line-height: normal;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    input.ant-calendar-range-picker-input{
+                        // width:auto;
+                        text-align: center;
+                    }
+                }
+                .ant-radio{
+                    font-size:inherit;
+                }
+            }
+            span.ant-radio-inner,span.ant-checkbox-inner{
+                height:16px;
+                width:16px;
+            }
+            .nebula-form-file{
+                width: 1rem;
+                height: 32px;
+                border: 1px solid #A2A2A2;
+                position: relative;
+                background-size: .15rem;
+                background-repeat: no-repeat;
+                background-position: .1rem .1rem;
+                border-radius: .05rem;
+                color:@text-color;
+                padding-left:.3rem;
+                padding-top:.01rem;
+                input{
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    position: absolute;
+                }
+            }
+            .ant-btn{
+                width: 100%;
+                height:3rem;
+            }
+        }
+        &-error{
+            &-icon {
+                color: @error-color;
+                > .anticon {
+                    color: inherit;
+                }
+            }
+            .form-text{
+                input,select,textarea{
+                    border-color: @error-color;
+                }
+                .ant-calendar-picker,.ant-select-selection,.ant-radio-group{
+                    border-color: @error-color;
+                }
+            }
+        }
+    }
+}

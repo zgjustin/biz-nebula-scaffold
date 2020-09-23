@@ -1,0 +1,920 @@
+html, body {
+  font-size: 62.5%;
+  font-family: @font-family;
+  color:@text-color;
+}
+ul{
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  li{
+    list-style: none;
+  } 
+}  
+*::-webkit-scrollbar{
+  width:6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+  background:rgba(0,0,0,0.2);
+}
+*::-webkit-scrollbar-track{
+  box-shadow:unset;
+  border-radius:0;
+  background:unset;
+}
+a {
+  color: @link-color;
+}
+
+a:hover {
+  color: @link-hover-color;
+}
+
+.app {
+  background-color:@app-bg;
+  min-width:@app-min-width;
+  &.app-headlook {
+    .app-classical-left {
+      .menu-wrap {
+        height: @app-min-height;
+      }
+    }
+    .app-classical-right .content .ass, .app-mannered-content .ass, .app-excellent-content .ass {
+      height: @app-min-height;
+    }
+  }
+}
+
+.form-group{
+  .form-label, label {
+    color:@label-color;
+    font-size:@label-font-size;
+    font-weight: @label-font-weight;
+  }
+}
+
+
+//列表--输入框
+.form-panel .form-group {
+  height:@input-height;
+  .form-label {
+    height:@input-height;
+    line-height:@input-height;
+  }
+  input {
+    height:~`px('@{input-height}','-2')`;
+    line-height:~`px('@{input-line-height}','-2')`;
+  }
+}
+
+//页面主体部分
+.app-classical {
+  .menu {
+    background-color: @menu-bg;
+    width: @menu-width;
+    .menu-logo {
+      width: @menu-width;
+    }
+  }
+
+  &-left {
+    width: @menu-width;
+  }
+
+  &-right {
+    .content {
+      .ass {
+        padding: @ass-padding;
+        margin: @ass-margin;
+        border-radius: @ass-border-radius;
+        .content {
+          box-shadow: @ass-box-shadow;
+        }
+      }
+    }
+  }
+}
+
+.app-mannered, .app-excellent {
+  &-content {
+    .ass {
+      padding: @ass-padding;
+      margin: @ass-margin;
+      box-shadow: @ass-box-shadow;
+      border-radius: @ass-border-radius;
+    }
+  }
+  &-top {
+    background-color: @top-bg;
+    color: @top-color;
+    height: @top-menu-item-height;
+    .menu {
+      background-color: @top-menu-bg;
+      .menu-logo {
+        width: @menu-width;
+        background-color: @top-menu-logo-bg;
+      }
+      .menu-wrap {
+        box-shadow: @top-menu-box-shadow;
+        height: @top-menu-item-height;
+        line-height: @top-menu-item-line-height;
+        min-height:@top-menu-item-height;
+      }
+      .ant-menu-root {
+        color: @top-menu-item-text-color;
+        background-color: @top-menu-bg;
+      }
+
+      .ant-menu-sub {
+        color: @top-menu-item-text-color;
+        background-color: @primary-color;
+      }
+
+      .ant-menu-item {
+        height: @top-menu-item-height;
+        line-height: @top-menu-item-line-height;
+      }
+
+      .ant-menu-item:active,
+      .ant-menu-submenu-title:active {
+        background: @top-menu-item-bg-active;
+      }
+
+      .ant-menu-submenu-selected {
+        color: @top-menu-item-hover-color;
+      }
+
+      .ant-menu-item > a {
+        display: block;
+        color: @link-color;
+      }
+
+      .ant-menu-item > a:hover {
+        color: @link-color;
+      }
+
+      .nebula-icon-class {
+        font-size:@top-menu-item-icon-font-size;
+        padding:@top-menu-item-icon-padding;
+      }
+
+      .ant-menu-item:hover,
+      .ant-menu-item-active,
+      .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+      .ant-menu-submenu-active,
+      .ant-menu-submenu-title:hover {
+        color: @top-menu-item-hover-color;
+        background-color: @top-menu-item-bg-active;
+      }
+
+      .ant-menu-item-selected {
+        color: @top-menu-item-selected;
+        background-color: @top-menu-item-bg-selected;
+        border-style:solid;
+        border-color:@top-menu-item-selected;
+        border-width:@top-menu-item-border-width;
+      }
+
+      .ant-menu-item-selected > a,
+      .ant-menu-item-selected > a:hover {
+        color: @link-color;
+      }
+
+      .ant-menu-horizontal > .ant-menu-item:hover,
+      .ant-menu-horizontal > .ant-menu-submenu:hover,
+      .ant-menu-horizontal > .ant-menu-item-active,
+      .ant-menu-horizontal > .ant-menu-submenu-active,
+      .ant-menu-horizontal > .ant-menu-item-open,
+      .ant-menu-horizontal > .ant-menu-submenu-open,
+      .ant-menu-horizontal > .ant-menu-item-selected,
+      .ant-menu-horizontal > .ant-menu-submenu-selected {
+        color: @top-menu-item-selected;
+        background-color: @top-menu-item-bg-selected;
+      }
+
+      .ant-menu-horizontal > .ant-menu-item > a {
+        display: block;
+        color: @text-color;
+      }
+
+      .ant-menu-horizontal > .ant-menu-item > a:hover {
+        color: @primary-color;
+      }
+
+      .ant-menu-horizontal > .ant-menu-item-selected > a {
+        color: @primary-color;
+      }
+
+      .ant-menu-horizontal:after {
+
+      }
+
+      &.menu-sub {
+        color: rgba(0, 0, 0, 0.65);
+        background-color: #fff;
+
+        .ant-menu-root {
+          color: rgba(0, 0, 0, 0.65);
+          background-color: #fff;
+        }
+
+        .ant-menu-sub {
+          color: rgba(0, 0, 0, 0.65);
+          background-color: #fff;
+        }
+
+        .ant-menu-submenu-selected {
+          color: @primary-color;
+        }
+      }
+    }
+    .head-user {
+      height: @top-menu-item-height;
+    }
+  }
+}
+
+//页面右侧公共区域
+
+.Common {
+  &-breadcrumb {
+    height: @breadcrumb-height;
+    line-height: @breadcrumb-height;
+    color: @breadcrumb-color;
+
+    .ant-breadcrumb {
+      line-height: @line-height-base;
+      font-size: @breadcrumb-font-size;
+    }
+
+    .ant-breadcrumb > span:last-child {
+      color: @breadcrumb-major-color;
+      font-size: @breadcrumb-font-size;
+    }
+
+    .back {
+      color: @breadcrumb-active-color;
+    }
+  }
+
+  &-search {
+    background-color:@list-search-bg;
+    padding:@list-search-padding;
+    margin:@list-search-margin;
+    box-shadow:@list-search-box-shadow;
+    border-radius:@list-search-border-radius;
+    border:@list-search-border;
+  }
+
+  &-content {
+    background-color:@list-content-bg;
+    padding:@list-content-padding;
+    margin:@list-content-margin;
+    box-shadow:@list-content-box-shadow;
+    border-radius:@list-content-border-radius;
+    border:@list-content-border;
+  }
+
+
+
+  &-form-view {
+    box-shadow:none;
+  }
+
+  &-search-do {
+    .ant-btn {
+      color: @primary-color;
+      border-color: @btn-primary-border-color;
+    }
+    .ant-btn-primary {
+      color: @btn-primary-color;
+    }
+  }
+
+  //创建模版
+  .Create-content-modal {
+    .active {
+      .Create-content-modal-type-top {
+        background-color: @primary-color;
+        span {
+          color: #fff
+        }
+      }
+      .Create-content-modal-type-bottom {
+        background-color: @primary-color9;
+        p {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}
+.engine-listInstance,.Common {
+  .listTemp-search-btn {
+    padding:@list-content-btns-padding;
+    margin:@list-content-margin;
+    justify-content: @list-content-btns-align;
+    flex-wrap: @list-content-btns-warp;
+    button,.ant-btn {
+      margin:@list-content-btns-margin;
+      color:@list-content-btns-color;
+      background-color:@list-content-btns-bg;
+      border-color:@list-content-btns-border-color;
+      height:@list-content-btns-height;
+      line-height:@list-content-btns-line-height;
+      border-radius:@list-content-btns-border-radius;
+      padding:@list-content-btns-padding;
+      font-size:@list-content-btns-size;
+      box-shadow:@list-content-btns-box-shadow;
+
+      .icon {
+        font-size:@list-content-btns-icon-font-size
+      }
+
+      &:hover,&:focus{
+        color:@list-content-btns-hover-color;
+        background-color:@list-content-btns-hover-bg;
+        border-color:@list-content-btns-hover-border-color;
+        box-shadow:@list-content-btns-hover-box-shadow
+      }
+    }
+  }
+  .listTemp-optbtn-icon,.listTemp-optbtn-text {
+    span {
+      color: @primary-color;
+    }
+  }
+}
+//列表模版编辑器
+.engine-listTemp-setting{
+  .engine-listTemp-setting {
+    &-content-section-header{
+      background-color: @primary-color1;
+    }
+    &-event{
+      .ant-tabs-tab-active{
+        color: @primary-color1;
+      }
+      .ant-tabs-ink-bar{
+        background-color: @primary-color1;
+      }
+      &-custom{
+        header{
+          background-color: @primary-color1;
+        }
+      }
+    }
+    // 左侧列表配置信息
+    &-content-section-option {
+      & > .engine-listLeft {
+        & .engine-listLeft-content {
+          // 左侧列表元素边框样式
+          & .engine-listLeft-content-item {
+            border-color: @primary-color1;
+          }
+        }
+      }
+    }
+  }
+  .engine-settingTable .ant-table table td .anticon{
+    color: @btn-primary-bg;
+  }
+}
+
+//流程编辑器
+.engine-flow-modal {
+  .flow-toolbar .toolbar-banner-container {
+    background-color: @primary-color1;
+  }
+  .box-btn {
+    &:active, &.active, &:hover {
+      background-color: @primary-color2;
+    }
+  }
+  .o-flow-property .ant-collapse .ant-collapse-header {
+    background-color: @primary-color1;
+  }
+}
+//右键上下文菜单
+.rightMenuContent.ant-menu.ant-menu-vertical{
+  >.ant-menu-submenu {
+    &-active {
+      background-color: @primary-color1;
+    }
+    &:hover{
+      >.ant-menu-submenu-title{
+        background-color: @primary-color1;
+      }
+    }
+  }
+  >.ant-menu-item{
+    &-active{
+      background-color: @primary-color1;
+    }
+
+    &:hover{
+      background-color: @primary-color1;
+    }
+  }
+}
+
+//模版编辑器
+.engine-design-modal, .flow-detail-wrap {
+  .engine-toolbar .engine-toolbar-tabs .engine-menu li:hover{
+    background: @primary-color3;
+    color: #fff;
+  }
+  .engine-toolbar, .flow-detail-toolbar {
+    .ant-tabs-bar {
+      background-color: @primary-color1;
+    }
+    .ant-tabs-nav .ant-tabs-tab:hover {
+      color: #fff;
+    }
+    .ant-tabs-nav .ant-tabs-tab:active {
+      color: #fff;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+      color: @primary-color1;
+    }
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+      background: @primary-color1;
+    }
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+      background: #fff;
+      color: @primary-color;
+    }
+  }
+
+  .engine-toolbar-buttons {
+    .engine-basebtn {
+      color: @btn-primary-color;
+      background-color: @primary-color1;
+      border-color: @btn-primary-border-color;
+    }
+    .engine-basebtn:hover {
+      background-color: @primary-color;
+    }
+  }
+
+  .flow-detail-info  .ant-tabs-left-bar .ant-tabs-tab-active{
+    background-color: @primary-color;
+    color:#fff;
+  }
+}
+//编辑弹框样式
+.engine-editor-modal {
+  .modal-box {
+    .box-title {
+      font-size: @modal-header-font-size;
+      font-weight: @modal-header-font-weight;
+      border-radius: @modal-header-border-radius;
+      background: @modal-header-bg;
+      color: @modal-header-color;
+      border-bottom: @modal-header-border-bottom;
+      padding: @modal-header-padding;
+      line-height: @modal-header-line-height;
+      .headline {
+        .btn-group {
+          .close-event-modal {
+            .engineIconFont {
+              font-size: @modal-close-font-size;
+            }
+          }
+          .close-event-modal:hover {
+            color: @modal-close-text-hover;
+          }
+        }
+      }
+      .title {
+        color: @modal-header-color;
+      }
+    }
+  }
+}
+
+// rbac中卡片的样式
+.engine-accountCardItem{
+  &:hover{
+    box-shadow: 0 2px 12px 0 @primary-color3;
+  }
+  >.engine-accountCardItem-header{
+    >.engine-accountCardItem-header-close{
+      .engine-rbac-addform{
+        color: @primary-color;
+      }
+    }
+  }
+  >.engine-accountCardItem-section{
+    >.engine-accountCardItem-userHead{
+      background-color: @primary-color2;
+    }
+  }
+  >.engine-accountCardItem-footer{
+    >.engine-accountCardItem-footerItem{
+      >i{
+        color: @primary-color2;
+      }
+    }
+  }
+}
+
+// rbac中html卡片的切换按钮样式
+button.ant-switch.engine-rbac-switch{
+  &[aria-checked="true"]{
+    background-color: @primary-color2;
+    &:after{
+      background-color: @primary-color2;
+    }
+  }
+}
+
+// rbac中独特的切换按钮样式
+.engine-rbac-addNew{
+  background-color: @primary-color2 !important;
+  box-shadow: 0 0 10px @primary-color2;
+  border-color: @primary-color2;
+  &:hover{
+    background-color: @primary-color2;
+  }
+}
+
+// 展示关联关系的icon样式
+div.iconItem{
+  color: @primary-color2;
+}
+
+// 展示自定义的扩展信息
+.engine-rbac-custom-extendInfo{
+  .engine-rbac-custom-extendInfo-icon{
+    >i.engineIconFont{
+      color: @primary-color2;
+    }
+  }
+  // 组织机构中卡片的样式
+  .engine-rbac-custom-extendInfo-position{
+    >.content{
+      >.connectIcon{
+        >h3{
+          color: @primary-color2;
+        }
+        // 展示组织机构的内容
+        >.orglist{
+          >.generationArr{
+            >.generationItem{
+              >.circle{
+                background-color: @primary-color2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 公共扩展信息的样式
+// .extendgenerationHeader{
+  .generationArr{
+    >.generationItem{
+      >.circle{
+        background-color: @primary-color2;
+      }
+    }
+  }
+// }
+
+// rbac中右侧抽屉中使用的公共样式
+.engine-rbac-positionManage-Card{
+  .ant-tabs-nav-wrap{
+    .ant-tabs-tab{
+      color: @primary-color2;
+      background-color: #fff;
+      border-color: @primary-color2 !important;
+      &-active{
+        color: #fff !important;
+        background-color: @primary-color2!important;
+      }
+    }
+  }
+}
+
+// rbac4.0改版中数据视图的选项
+.engine-checkBoxSelect-has{
+  background-color: @primary-color2;
+}
+.engine-checkBoxSelect-hasone{
+  background-color: @primary-color2;
+}
+.engine-checkBoxSelect-hastwo{
+  background-color: @primary-color2;
+}
+
+//卡片树
+.menu-card-tree {
+  .ant-tree-title {
+    .card-tree {
+      .sp2 {
+        color:@primary-color2;
+      }
+
+      &.active {
+        background-color: @primary-color9;
+        .sp0 {
+          color:@primary-color2;
+        }
+      }
+
+      &.half-active {
+        .sp0 {
+          .engineIconFont {
+            background-color:@primary-color2;
+            color:@primary-color2;
+          }
+        }
+      }
+    }
+  }
+}
+
+//卡片列表
+.card-item-list {
+  .card-box {
+    ul {
+      li {
+        &:hover {
+          box-shadow: 0 2px 12px 0 @primary-color9;
+        }
+        p {
+          color: @text-color;
+        }
+        .add{
+          color: @primary-color2;
+        }
+        .remove {
+          color: #999;
+        }
+      }
+    }
+  }
+  .card-box-white {
+    ul {
+      li {
+        .p1 {
+          background: @primary-color2;
+        }
+      }
+    }
+  }
+}
+
+//组织机构主题
+div.engine-accountCardItem.org-card-item .content .box-icon {
+  .box-icon-t {
+    color:@primary-color;
+  }
+
+  span .engineIconFont {
+    color:@primary-color;
+  }
+
+  span.middle {
+    border:5px solid @primary-color9;
+    background-color:@primary-color1;
+  }
+}
+
+.engine-org-table{
+  table{
+    .org-active-row{
+      background-color: @primary-color3;
+      color: @primary-color9;
+      a{
+        color: @primary-color9
+      }
+      td{
+        background-color: @primary-color3 !important;
+      }
+    }
+  }
+}
+//流程检测页面
+.flow-check {
+  .check-c-t {
+    background-color: @primary-color1;
+  }
+  .check-c-h {
+    .more {
+      color:@primary-color;
+    }
+    .check-c-ul {
+      li:hover {
+        background-color: @primary-color9;
+      }
+    }
+  }
+}
+
+.flow-check-info {
+  .info-c-content {
+    .check-c-t {
+      border-color:@primary-color;
+    }
+  }
+}
+
+//自定义弹框
+.dialog-footer {
+  position:fixed;
+  bottom:0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e8e8e8;
+  padding:10px 16px 0px;
+
+  & > button{
+    margin-right: 8px;
+  }
+}
+
+//模版编辑器
+.engine-editor{
+  .engine-toolbar .engine-toolbar-buttons .engine-basebtn{
+    color: @btn-primary-color;
+    background-color: @btn-primary-bg;
+    border-color: @btn-primary-border-color;
+    &:hover{
+      background-color: @btn-primary-hover-bg;
+      color: @btn-primary-hover-color;
+      border-color: @btn-primary-hover-border-color;
+    }
+  }
+  .engine-grid .engine-layout .ant-row-flex > div.active{
+    border-color: @input-border-hover;
+  }
+  .engine-grid .engine-layout .ant-row-flex > div:hover{
+    border-color: @input-border-hover;
+  }
+  .engine-basebtn-large:hover{
+    background-color: @btn-primary-hover-bg;
+    border-color: @btn-primary-hover-bg;
+  }
+  .engine-block-inline:hover > div.engine-basebtn-small,
+  .engine-basebtn-active-li:hover{
+    background-color: @btn-primary-hover-bg;
+  }
+  .engine-basebtn-active{
+    background-color: @btn-primary-hover-bg;
+    border-color: @btn-primary-hover-bg;
+  }
+  .engine-basebtn-split:hover{
+    background-color: @btn-primary-hover-bg;
+    border-color: @btn-primary-hover-bg;
+  }
+  .engine-basebtn-normall:hover{
+    background-color: @btn-primary-hover-bg;
+    border-color: @btn-primary-hover-bg;
+  }
+  .control-item-active{
+    background-color: @btn-primary-hover-bg;
+  }
+  .engine-toolbar-control > ul > li > div:hover{
+    background-color: @btn-primary-hover-bg;
+  }
+  .engine-toolbar .engine-toolbar-event .ant-btn.active, 
+  .engine-toolbar .engine-toolbar-event .ant-btn:hover, 
+  .engine-toolbar .engine-toolbar-event .ant-btn:active{
+    background-color: @btn-primary-hover-bg;
+    border-color: @btn-primary-hover-bg;
+  }
+  .engine-layout-visibility-buttons .propsBtn-active{
+    background-color: @btn-primary-hover-bg;
+    border-color:@btn-primary-hover-bg;
+  }
+  .engine-layout-visibility-buttons .propsBtn:hover{
+    background-color: @btn-primary-hover-bg;
+    border-color:@btn-primary-hover-bg;
+  }
+  .engine-layout-visibility-buttons .visibilityBtn-active{
+    background-color: @btn-primary-hover-bg;
+    border-color: @btn-primary-hover-bg;
+    color: #fff;
+  }
+  .engine-layout-visibility-buttons .visibilityBtn:hover{
+    background-color: @btn-primary-hover-bg;
+    border-color: @btn-primary-hover-bg;
+    color: #fff;
+  }
+  .engine-toolbar-insert .insert-btn:active, 
+  .engine-toolbar-insert .insert-btn.active, 
+  .engine-toolbar-insert .insert-btn:hover{
+    background-color: @btn-primary-hover-bg;
+  }
+} 
+.ant-modal-wrap{
+  .ant-modal{
+    padding-bottom:0;
+  }
+}
+.ant-modal{
+  &.engine-editor-modal-view .ant-modal-header{
+    background-color:@primary-color1;
+  }
+  .ant-modal-content .ant-modal-body .modal-loadding-tips-content > *{
+    color: @primary-color1;
+  }
+}
+
+.engine-editor-modal{
+  .ant-modal-body .modal-box .box-title{
+    background-color: @primary-color1;
+    .title{
+      color: #fff;;
+    }
+  }
+}
+.engine-variable-help{
+  text-align: right;
+  cursor: pointer;
+  color: @primary-color
+}
+.ant-spin-spinning{
+  &.ant-spin{
+    color: @primary-color;
+    .ant-spin-dot-item{
+      background-color: @primary-color;
+    }
+  }
+}
+.nebula-icon-button .ant-input-group-wrapper .ant-input-group-addon i.anticon{
+  color:@primary-color1;
+}
+.engine-dropdown{
+  .engine-table-column-filter{
+    .ant-menu-item-active,.ant-menu-item-active:hover{
+      background-color: @primary-color;
+      color: #fff;
+    }
+  }
+}
+.endine-btnAuth-bind {
+  >.left{
+    >.content{
+      >.card-item-list{
+        .menu-card-tree .engineIconFont.engine-rbac-checked{
+          color:@primary-color;
+        }
+      }
+    }
+  } 
+  >.right{
+    >.btn-list{
+      >.top{
+        .btn{
+          &:hover {
+            border-color:@primary-color2;
+          }
+        }
+        .active{
+          border-color:@primary-color2;
+        }
+      }
+    }
+  }
+}
+.eigine-changeLog {
+  &-content{
+    &-card {
+      &-left{
+        color:@primary-color;
+        &-year{
+          i{
+            background: @primary-color
+          }
+        }
+      }
+      &-right{
+        hearder{
+          i{
+            color:@primary-color;
+          }
+        }
+      }
+    }
+  }
+  .value-after{
+    color:@primary-color;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  html, body {
+    font-size: 12px;
+  }
+}
