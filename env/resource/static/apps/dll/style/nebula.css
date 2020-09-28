@@ -1,3 +1,10 @@
+.nebula-log-details {
+  max-height: 300px;
+  overflow-y: auto;
+  border: solid 1px #b1b1b1;
+  padding: 20px;
+  border-radius: 8px;
+}
 .nebula-cascader {
   width: 100%;
 }

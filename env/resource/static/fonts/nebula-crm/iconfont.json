@@ -6,6 +6,13 @@
   "description": "CRM 自用图标库",
   "glyphs": [
     {
+      "icon_id": "17402723",
+      "name": "禁用",
+      "font_class": "disable",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
       "icon_id": "17121906",
       "name": "JPG @3x",
       "font_class": "jpg",

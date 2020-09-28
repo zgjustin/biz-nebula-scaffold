@@ -6569,7 +6569,7 @@ div.settingContent > i > svg {
 .nebula-drawer.ant-modal {
   font-size: 1.4rem;
   width: 100%;
-  top: 80px!important;
+  top: 80px;
   padding-bottom: 0;
 }
 .nebula-modal .ant-modal-footer,
@@ -7928,4 +7928,22 @@ div.settingContent > i > svg {
 }
 .nebula-icon-board .nebula-icon-select .icon {
   font-size: 16px;
+}
+.nebula-formpanel {
+  width: 100%;
+  height: 100%;
+}
+.nebula-formpanel .ant-btn {
+  padding: 0 3px 0 10px;
+  width: auto!important;
+}
+.nebula-formpanel-item {
+  margin-top: 8px;
+  padding-right: 30px;
+  position: relative;
+}
+.nebula-formpanel-item-opearbtn {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
 }
