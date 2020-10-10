@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { RegisterComponent,Select } from 'nebula-ui'
+import { RegisterComponent,Select } from 'biz-nebula-ui'
 
 /**
  * 自定义nebula组件

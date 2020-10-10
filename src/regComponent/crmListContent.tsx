@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
-import { RegisterComponent,Button } from 'nebula-ui'
-import {HistoryInstance} from 'nebula-ui/lib/_data/historyStore'
+import { RegisterComponent,Button } from 'biz-nebula-ui'
+import {HistoryInstance} from 'biz-nebula-ui/lib/_data/historyStore'
 
 /**
  * 自定义nebula组件 用于列表弹框和页面
