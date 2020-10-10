@@ -21,6 +21,15 @@ const start = (models,routes)=>{
         return appEntry(props, routes);
     }
     app.router(entryRoute);
+    try{
+        let allRegCom = require.context('../src/regComponent',false,/\.tsx$/);
+        allRegCom = allRegCom.keys().map(key=>{
+            return allRegCom(key).default;
+        })
+    }catch(e){
+        //没有自定义组件，直接跳过
+        console.log('components',e)
+    }
     //生产环境 注入全局window中
     if(process.env.NODE_ENV==='production'){
         window[appJson.name] = app.start();
