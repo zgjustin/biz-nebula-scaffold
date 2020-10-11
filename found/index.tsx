@@ -31,10 +31,10 @@ const start = (models,routes)=>{
         console.log('components',e)
     }
     //生产环境 注入全局window中
-    if(process.env.NODE_ENV==='production'){
-        window[appJson.name] = app.start();
-        return;
-    }
+    // if(process.env.NODE_ENV==='production'){
+    //     window[appJson.name] = app.start();
+    //     return;
+    // }
     app.start('#app');
 }
 
