@@ -2297,6 +2297,13 @@ body {
   padding: 0.5rem 0;
   background-color: transparent;
   z-index: 99;
+  display: flex;
+  justify-content: center;
+}
+.engine-layout .engine-layout-button-group .engine-layout-col-empty,
+.engine-control-modal .engine-layout-button-group .engine-layout-col-empty,
+.engine-control-modaltransfer .engine-layout-button-group .engine-layout-col-empty {
+  display: none;
 }
 .engine-layout .engine-layout-row-button,
 .engine-control-modal .engine-layout-row-button,
@@ -6733,7 +6740,7 @@ div.settingContent > i > svg {
 }
 .nebula-modal .nebula-form-group .nebula-form-items,
 .nebula-drawer .nebula-form-group .nebula-form-items {
-  overflow: auto;
+  overflow: initial;
 }
 .nebula-modal .nebula-form-group .nebula-form-items .nebula-form-item:last-child,
 .nebula-drawer .nebula-form-group .nebula-form-items .nebula-form-item:last-child {

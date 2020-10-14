@@ -1,0 +1,866 @@
+/*
+* 提供给用户的扩展变量
+* 推荐字体大小、宽高、边距等使用rem为单位以达到自适应终端,使用px在不同终端可能会有较大差异
+* 1rem = 10px
+* 默认值使用normal
+*/
+//布局全局变量
+//布局控件只读背景色
+@LayoutReadOnlyBackground: #f1f1f1;
+//布局控件只读字体颜色
+@LayoutReadOnlyColor: #333;
+//布局容器的内边距
+@LayoutPadding: 0 1rem;
+//布局容器的右侧边距
+@LayoutRightPadding: 1rem;
+//布局容器的外边距
+@LayoutMargin: 0;
+//布局全局主体颜色
+@LayoutThemeColor: #40a9ff;
+//布局全局字体大小
+@LayoutGlobalFontSize: 14px;
+//布局全局字体颜色
+@LayoutGlobalColor: #333;
+//布局全局背景
+@LayoutGlobalBackground: #fff;
+//布局全局对齐方式
+@LayoutGlobalAlign: right;
+//布局全局控件宽度
+@LayoutGlobalWidth: 100%;
+//布局全局控件高度
+@LayoutGlobalHeight: auto;
+//布局全局控件外边距
+@LayoutGlobalMargin: 0;
+//布局全局控件内边距
+@LayoutGlobalPadding: 0;
+//布局全局边框
+@LayoutGlobalBorder: 0;
+//全局hover背景色
+@LayoutGlobalBgColor: #e6f7ff;
+//全局边框弧度
+@LayoutGlobalBorderRadius: 0;
+//单元行上边距
+@LayoutRowMarginTop: 0.2rem;
+//单元行下边距
+@LayoutRowMarginBottom: 0.2rem;
+//布局页面最小宽度
+@LayoutMinWidth: 53rem;
+
+//label控件变量
+//Label字体大小
+@LayoutLabelFontSize: normal;
+//Label字体颜色
+@LayoutLabelColor: normal;
+//Label背景
+@LayoutLabelBackground: normal;
+//Label对齐方式
+@LayoutLabelAlign: left;
+//Label 高度
+@LayoutLabelHeight: normal;
+//Label 行高
+@LayoutLabelLineHeight: normal;
+//Label 宽度
+@LayoutLabelWidth: normal;
+//Label 字体加粗
+@LayoutLabelBold: normal;
+//Label 内边距
+@LayoutLabelPadding: 0;
+//Label 外边距
+@LayoutLabelMargin: 0;
+
+//Title控件变量
+//Title字体大小
+@LayoutTitleFontSize: 14px;
+//Title字体颜色
+@LayoutTitleColor: #333;
+//Title背景
+@LayoutTitleBackground: #fff;
+//Title对齐方式
+@LayoutTitleAlign: left;
+//Title高度
+@LayoutTitleHeight: 4.4rem;
+//Title宽度
+@LayoutTitleWidth: 100%;
+//Title外边距
+@LayoutTitleMargin: 0;
+//Title内边距
+@LayoutTitlePadding: 0;
+//Title字体加粗
+@LayoutTitleBold: normal;
+
+//content 文本控件变量
+//Label字体大小
+@LayoutContentFontSize: normal;
+//Label字体颜色
+@LayoutContentColor: normal;
+//Label背景
+@LayoutContentBackground: normal;
+//Label对齐方式
+@LayoutContentAlign: right;
+//Label 高度
+@LayoutContentHeight: normal;
+//Label 行高
+@LayoutContentLineHeight: normal;
+//Label 宽度
+@LayoutContentWidth: normal;
+//Label 字体加粗
+@LayoutContentBold: normal;
+//Label 内边距
+@LayoutContentPadding: 0;
+//Label 外边距
+@LayoutContentMargin: 0;
+
+//Input控件变量
+//Input字体大小
+@LayoutInputFontSize: normal;
+//Input字体颜色
+@LayoutInputColor: normal;
+//Input背景
+@LayoutInputBackground: normal;
+//Input对齐方式
+@LayoutInputAlign: normal;
+//Input高度
+@LayoutInputHeight: 3.2rem;
+//Input行高
+@LayoutInputLineHeight: normal;
+//Input宽度
+@LayoutInputWidth: normal;
+//Input外边距
+@LayoutInputMargin: 0;
+//Input内边距
+@LayoutInputPadding: 0 10px;
+//Input字体加粗
+@LayoutInputBold: normal;
+//Input边框
+@LayoutInputBorder: solid 1px #d9d9d9;
+//Input边框弧度
+@LayoutInputBorderRadius: 0;
+//Input移上边框颜色
+@LayoutInputHoverBorderColor: #d9d9d9;
+//Input选中阴影
+@LayoutInputBoxShadow: none; //0 0 0 1px rgba(24, 144, 255, 0.2);
+//Input图标颜色
+@LayoutInputIconColor: rgba(0, 0, 0, 0.25);
+
+//calendar控件变量
+//calendar字体大小
+@LayoutCalendarFontSize: normal;
+//calendar字体颜色
+@LayoutCalendarColor: normal;
+//calendar背景
+@LayoutCalendarBackground: normal;
+//Calendar对齐方式
+@LayoutCalendarAlign: normal;
+//calendar高度
+@LayoutCalendarHeight: 3.2rem;
+//calendar行高
+@LayoutCalendarLineHeight: normal;
+//calendar宽度
+@LayoutCalendarWidth: normal;
+//calendar外边距
+@LayoutCalendarMargin: 0;
+//calendar内边距
+@LayoutCalendarPadding: 0 10px;
+//calendar字体加粗
+@LayoutCalendarBold: normal;
+//calendar边框
+@LayoutCalendarBorder: solid 1px #d9d9d9;
+//calendar边框弧度
+@LayoutCalendarBorderRadius: 0;
+//calendar移上边框颜色
+@LayoutCalendarHoverBorderColor: #d9d9d9;
+//calendar选中阴影
+@LayoutCalendarBoxShadow: none; //0 0 0 1px rgba(24, 144, 255, 0.2);
+//calendar图标颜色
+@LayoutCalendarIconColor: rgba(0, 0, 0, 0.25);
+
+//select控件变量
+//select字体大小
+@LayoutSelectFontSize: normal;
+//select字体颜色
+@LayoutSelectColor: normal;
+//select背景
+@LayoutSelectBackground: normal;
+//Select对齐方式
+@LayoutSelectAlign: normal;
+//select高度
+@LayoutSelectHeight: 3.2rem;
+//select行高
+@LayoutSelectLineHeight: 3.2rem;
+//select宽度
+@LayoutSelectWidth: normal;
+//select外边距
+@LayoutSelectMargin: 0;
+//select内边距
+@LayoutSelectPadding: 0 10px;
+//select字体加粗
+@LayoutSelectBold: normal;
+//select边框
+@LayoutSelectBorder: solid 1px #d9d9d9;
+//select边框弧度
+@LayoutSelectBorderRadius: 0;
+//select移上边框颜色
+@LayoutSelectHoverBorderColor: #d9d9d9;
+//select选中阴影
+@LayoutSelectBoxShadow: none; //0 0 0 1px rgba(24, 144, 255, 0.2);
+//select图标颜色
+@LayoutSelectIconColor: rgba(0, 0, 0, 0.25);
+
+//select 列表设置
+//select 列表字体大小
+@LayoutSelectListFontSize: normal;
+//select 列表背景颜色
+@LayoutSelectListBackground: #fff;
+//select 列表内边距
+@LayoutSelectListPadding: normal;
+//select 列表对齐方式
+@LayoutSelectListAlign: normal;
+//select 列表边框
+@LayoutSelectListBorder: solid 1px #e8e8e8;
+//select 列表项颜色
+@LayoutSelectListItemColor: normal;
+//select 列表项加粗
+@LayoutSelectListItemBold: normal;
+//select 列表项背景
+@LayoutSelectListItemBackground: normal;
+//select 列表项行高
+@LayoutSelectListItemLineHeight: 3.2rem;
+//select 列表项内编辑
+@LayoutSelectListItemPadding: 0 0.4rem;
+//select 列表项选中字体加粗
+@LayoutSelectListItemSelectBold: normal;
+//select 列表项选中字体颜色
+@LayoutSelectListItemSelectColor: #fff;
+//select 列表项选中背景色
+@LayoutSelectListItemSelectBackground: #e1e1e1;
+
+//button变量
+//button 行高
+@LayoutButtonLineHeight: 3rem;
+//button 内边距
+@LayoutButtonPadding: 0 8px;
+//button 外边距
+@LayoutButtonMargin: normal;
+//button 字体大小
+@LayoutButtonFontSize: normal;
+//button 字体颜色
+@LayoutButtonColor: normal;
+//button 宽度
+@LayoutButtonWidth: normal;
+//button 高度
+@LayoutButtonHeight: 3.2rem;
+//button 背景色
+@LayoutButtonBackground: #d9d9d9;
+//button 边框颜色
+@LayoutButtonBorderColor: #d9d9d9;
+//button 移上背景
+@LayoutButtonHoverBackground: #f1efefb0;
+//button 移上边框颜色
+@LayoutButtonHoverBorderColor: #f1efefb0;
+//button Icon颜色
+@LayoutButtonIconColor: normal;
+//button hover字体大小
+@LayoutButtonHoverFontSize: normal;
+
+//buttonprimary 字体颜色
+@LayoutPrimaryButtonColor: #ffffff;
+//buttonprimary 背景颜色
+@LayoutPrimaryButtonBackground: normal;
+//buttonprimary 边框颜色
+@LayoutPrimaryButtonBorderColor: normal;
+//buttonprimary 移上背景
+@LayoutPrimaryButtonHoverBackground: #6ebcfc;
+//buttonprimary 移上边框颜色
+@LayoutPrimaryButtonHoverBorderColor: #6ebcfc;
+//buttonprimary Icon颜色
+@LayoutPrimaryButtonIconColor: normal;
+//buttonprimary hover字体大小
+@LayoutPrimaryButtonHoverFontSize: normal;
+
+//FileUpload控件样式由btn样式控制
+
+//FileUpload列表样式变量
+//FileList字体颜色
+@LayoutFileListColor: normal;
+//FileList字体大小
+@LayoutFileListFontSize: normal;
+//FileList字体粗细
+@LayoutFileListFontWeight: normal;
+//FileList行内边距
+@LayoutFileListPadding: 0;
+//FileList行外边距
+@LayoutFileListMargin: 0.5rem 0 0.5rem 1rem;
+//FileList行宽度
+@LayoutFileListWidth: auto;
+//FileList行高度
+@LayoutFileListHeight: 2.2rem;
+//FileList行鼠标移入背景色
+@LayoutFileListHoverBgColor: normal;
+
+//PicUpload控件变量
+//PicUpload字体颜色
+@LayoutPicUploadColor: normal;
+//PicUpload字体大小
+@LayoutPicUploadFontSize: normal;
+//PicUpload字体粗细
+@LayoutPicUploadFontWeight: normal;
+//PicUpload背景
+@LayoutPicUploadBgColor: #fafafa;
+//PicUpload内边距
+@LayoutPicUploadPadding: 0;
+//PicUpload外边距
+@LayoutPicUploadMargin: 0;
+//PicUpload高度
+@LayoutPicUploadHeight: 11rem;
+//PicUpload宽度
+@LayoutPicUploadWidth: 11rem;
+//PicUpload边框
+@LayoutPicUploadBorder: 1px dashed #D9D9D9;
+//PicUpload边框弧度
+@LayoutPicUploadBorderRadius: normal;
+//PicUpload鼠标移入边框
+@LayoutPicUploadHoverBorder: 1px dashed @LayoutThemeColor;
+//PicUpload鼠标移入背景
+@LayoutPicUploadHoverBgColor: #fafafa;
+
+//PicItem图片上传控件单项参数
+//PicItem宽度
+@LayoutPicItemWidth: @LayoutPicUploadWidth;
+//PicUploadItem高度
+@LayoutPicItemHeight: @LayoutPicUploadHeight;
+//PicUploadItem外边距
+@LayoutPicItemMargin: 0 .5rem;
+//PicUploadItem内边距
+@LayoutPicItemPadding: .7rem;
+//PicUploadItem边框
+@LayoutPicItemBorder: 1px solid #D9D9D9;
+//PicUploadItem边框弧度
+@LayoutPicItemBorderRadius: normal;
+//PicUploadItem鼠标移入边框
+@LayoutPicItemHoverBorder: 1px solid @LayoutThemeColor;
+
+//CheckBox复选框控件变量
+//CheckBox字体颜色
+@LayoutCheckBoxColor: normal;
+//CheckBox字体大小
+@LayoutCheckBoxFontSize: normal;
+//CheckBox系统粗细
+@LayoutCheckBoxFontWeight: normal;
+//CheckBox高度
+@LayoutCheckBoxHeight: normal;
+//CheckBox外边距
+@LayoutCheckBoxMargin: 0;
+//CheckBox颜色
+@LayoutCheckBoxDefaultColor: normal;
+//CheckBox选中颜色
+@LayoutCheckBoxSelectColor: normal;
+
+//Radio单选框控件变量
+//Radio字体颜色
+@LayoutRadioColor: normal;
+//Radio字体大小
+@LayoutRadioFontSize: normal;
+//Radio系统粗细
+@LayoutRadioFontWeight: normal;
+//Radio高度
+@LayoutRadioHeight: normal;
+//Radio外边距
+@LayoutRadioMargin: 0;
+//Radio颜色
+@LayoutRadioDefaultColor: normal;
+//Radio选中颜色
+@LayoutRadioSelectColor: normal;
+
+//Transfer控件变量
+//Transfer字体颜色
+@LayoutTransferColor: normal;
+//Transfer字体大小
+@LayoutTransferFontSize: normal;
+//Transfer字体粗细
+@LayoutTransferFontWeight: normal;
+//Transfer对齐方式
+@LayoutTransferTextAlign: normal;
+//Transfer穿梭框高度(最小值30)
+@LayoutTransferHeight: 30rem;
+//Transfer内边距
+@LayoutTransferPadding: 4rem 0 0 0;
+//Transfer外边距
+@LayoutTransferMargin: 0;
+//Transfer边框
+@LayoutTransferBorder: 1px solid #D9D9D9;
+//Transfer图标颜色
+@LayoutTransferIconColor: normal;
+//Transfer边框弧度
+@LayoutTransferBorderRadius: 4px;
+//Transfer标题背景
+@LayoutTransferTitleBgColor: normal;
+//Transfer标题字体颜色
+@LayoutTransferTitleColor: normal;
+//Transfer选项高度
+@LayoutTransferItemHeight: 3.2rem;
+//Transfer选项内边距
+@LayoutTransferItemPadding: 0 0 0 .5rem;
+//Transfer选项外边距
+@LayoutTransferItemMargin: 0;
+
+//Table控件变量
+//Table对齐方式
+@LayoutTableAlign: left;
+//Table 表头对齐方式
+@LayoutTableThAlign: center;
+//Table 行内容对齐方式
+@LayoutTableTdAlign: center;
+//table 行内按钮字体大小
+@LayoutTableThBtnFontSize: normal;
+//table 行内按钮内边距
+@LayoutTableThBtnPadding: 0 0.5rem;
+//table 行内按钮背景色
+@LayoutTableThBtnBackground: normal;
+//table 行内按钮高度
+@LayoutTableThBtnHeight: 2rem;
+//table 行内按钮边框
+@LayoutTableThBtnBorder: 0;
+//table 行内按钮颜色
+@LayoutTableThBtnColor: red;
+//table 行内按钮外边距
+@LayoutTableThBtnMargin: normal;
+//table 行内按钮移上字体大小
+@LayoutTableThBtnHoverFontSize: normal;
+//table 行内按钮移上字体颜色
+@LayoutTableThBtnFontHoverColor: red;
+//table 行内按钮移上背景色
+@LayoutTableThBtnHoverBackground: normal;
+//table 行内按钮移上字体大小
+@LayoutTableThBtnHoverBorder: 0;
+//Table表头字体颜色
+@LayoutTableHeadColor: normal;
+//Table表头字体大小
+@LayoutTableHeadFontSize: normal;
+//Table表头字体粗细
+@LayoutTableHeadFontWeight: normal;
+//Table表头背景色
+@LayoutTableHeadBgColor: #eeeeee;
+//Table表头行高
+@LayoutTableHeadHeight: 2.8rem;
+//Table字体颜色
+@LayoutTableColor: normal;
+//Table字体大小
+@LayoutTableFontSize: normal;
+//Table字体粗细
+@LayoutTableFontWeight: normal;
+//Table行高
+@LayoutTableHeight: normal;
+//Table行内边距
+@LayoutTablePadding: 0.4rem;
+//Table行移上背景
+@LayoutTableHoverBgColor: normal;
+//Table奇数行背景颜色
+@LayoutTableOddRowBgColor: normal;
+//Table偶数行背景颜色
+@LayoutTableEvenRowBgColor: normal;
+//Table外边距
+@LayoutTableMargin: normal;
+//Table边框
+@LayoutTableBorder: 1px solid #d9d9d9;
+//Table边框弧度
+@LayoutTableBorderRadius: 4px;
+//Table最小高度
+@LayoutTableMinHeight: inherit;
+
+//Table按钮控件变量
+//TableButton 行高
+@LayoutTableBtnLineHeight: 3rem;
+//TableButton 内边距
+@LayoutTableBtnPadding: 0 8px;
+//TableButton 外边距
+@LayoutTableBtnMargin: 0 1rem 1rem 0;
+//TableButton 字体大小
+@LayoutTableBtnFontSize: normal;
+//TableButton 字体颜色
+@LayoutTableBtnColor: normal;
+//TableButton 高度
+@LayoutTableBtnHeight: 3.2rem;
+//TableButton 边框弧度
+@LayoutTableBtnBorderRadius: 0.5rem;
+//TableButton 背景色
+@LayoutTableBtnBackground: #d9d9d9;
+//TableButton 边框颜色
+@LayoutTableBtnBorderColor: #d9d9d9;
+//TableButton 移上背景
+@LayoutTableBtnHoverBackground: #f1efefb0;
+//TableButton 移上边框颜色
+@LayoutTableBtnHoverBorderColor: #f1efefb0;
+//TableButton 移上字体大小
+@LayoutTableBtnHoverFontSize: normal;
+//TableButton 移上按钮颜色
+@LayoutTableBtnHoverColor: normal;
+
+//Table buttoprimary控件变量
+//Table buttonprimary 字体颜色
+@LayoutTablePrimaryButtonColor: #ffffff;
+//Table buttonprimary 背景颜色
+@LayoutTablePrimaryButtonBackground: normal;
+//Table buttonprimary 边框颜色
+@LayoutTablePrimaryButtonBorderColor: normal;
+//Table buttonprimary 移上背景
+@LayoutTablePrimaryButtonHoverBackground: #6ebcfc;
+//Table buttonprimary 移上边框颜色
+@LayoutTablePrimaryButtonHoverBorderColor: #6ebcfc;
+//Table buttonprimary 移上字体大小
+@LayoutTablePrimaryButtonHoverFontSize: normal;
+//Table buttonprimary 移上字体颜色
+@LayoutTablePrimaryButtonHoverColor: normal;
+//Table pagination 位置
+@LayoutTablePaginationPosition: center;
+
+//Table pagination 分页配置
+//Table 分页外边距
+@LayoutPageMargin: 0;
+//Table 分页字体大小
+@LayoutPageFontSize: normal;
+//Table 分页字体颜色
+@LayoutPageColor: #333;
+//Table 分页项外边距
+@LayoutPageLiMargin: 0 1rem 0 0;
+//Table 分页项高度
+@LayoutPageLiHeight: 3.2rem;
+//Table 分页项宽度
+@LayoutPageLiWidth: 3.2rem;
+//Table 分页项边框
+@LayoutPageLiBorder: solid 1px #d9d9d9;
+//Table 分页项边框弧度
+@LayoutPageLiBorderRadius: 4px;
+//Table 分页项背景色
+@LayoutPageLiBackground: #fff;
+//Table 分页页码字体大小
+@LayoutPageNumberFontSize: 1.2rem;
+//Table 分页页码字体颜色
+@LayoutPageNumberColor: #00000040;
+//Table 分页当前页边框颜色
+@LayoutPageCurrentNumberBorderColor: normal;
+//Table 分页当前页字体颜色
+@LayoutPageCurrentNumberColor: normal;
+
+//Editor控件变量
+//Editor字体颜色
+@LayoutEditorColor: normal;
+//Editor字体大小
+@LayoutEditorFontSize: normal;
+//Editor字体粗细
+@LayoutEditorFontWeight: normal;
+//Editor外边距
+@LayoutEditorMargin: 0;
+//Editor内边距
+@LayoutEditorPadding: 0 1rem;
+//Editor编辑器的宽度
+@LayoutEditorWidth: inherit;
+//Editor编辑器的高度
+@LayoutEditorHeight: inherit;
+//Editor边框
+@LayoutEditorBorder: 1px solid #d9d9d9;
+//EditorToolBar下边框
+@LayoutEditorToolBarBorderBottom: 1px solid #d9d9d9;
+//EditorMain 左边距
+@LayoutEditorMianMarginLeft: 10px;
+//EditorMain 高度
+@LayoutEditorMianHeight: calc(100% - 4rem);
+//Editor边框弧度
+@LayoutEditorBorderRadius: 0;
+//Editor图标颜色
+@LayoutEditorIconColor: #999;
+//Editor最小高度
+@LayoutEditorMinHeight: normal;
+
+//Modal控件变量
+//Modal字体颜色
+@LayoutModalColor: normal;
+//Modal字体大小
+@LayoutModalFontSize: normal;
+//Modal字体粗细
+@LayoutModalFontWeight: normal;
+//Modal对齐方式
+@LayoutModalTextAlign: normal;
+//Modal宽度
+@LayoutModalWidth: normal;
+//Modal高度
+@LayoutModalHeight: 3.2rem;
+//Modal内边距
+@LayoutModalPadding: 0 10px;
+//Modal外边距
+@LayoutModalMargin: normal;
+
+//Modal弹出内容变量
+//Modal标题背景颜色
+@LayoutModalTitleBgColor: normal;
+//Modal标题字体颜色
+@LayoutModalTitleColor: normal;
+//Modal标题字体大小
+@LayoutModalTitleFontSize: 1.6rem;
+//Modal标题字体粗细
+@LayoutModalTitleFontWeight: 500;
+//Modal标题底部边框
+@LayoutModalTitleBorderBottom: 1px solid #e8e8e8;
+//ModalTable对齐方式
+@LayoutModalTableTextAlign: center;
+//ModalTable表头字体颜色
+@LayoutModalTableHeadColor: normal;
+//ModalTable表头字体大小
+@LayoutModalTableHeadFontSize: normal;
+//ModalTable表头字体粗细
+@LayoutModalTableHeadFontWeight: normal;
+//ModalTable表头背景色
+@LayoutModalTableHeadBgColor: #fafafa;
+//ModalTable表头行高
+@LayoutModalTableHeadHeight: normal;
+//ModalTable字体颜色
+@LayoutModalTableColor: normal;
+//ModalTable字体大小
+@LayoutModalTableFontSize: normal;
+//ModalTable字体粗细
+@LayoutModalTableFontWeight: normal;
+//ModalTable行高
+@LayoutModalTableHeight: 2rem;
+//ModalTable行内边距
+@LayoutModalTablePadding: 8px 16px;
+//ModalTable行移上背景
+@LayoutModalTableHoverBgColor: normal;
+//ModalTable奇数行背景颜色
+@LayoutModalTableOddRowBgColor: normal;
+//ModalTable偶数行背景颜色
+@LayoutModalTableEvenRowBgColor: normal;
+//ModalTable边框
+@LayoutModalTableBorder: 1px solid #e8e8e8;
+//ModalTable分页位置
+@LayoutModalTablePaginationPosition: center;
+
+//Tabs控件变量
+//Tabs字体颜色
+@LayoutTabsColor: normal;
+//Tabs字体大小
+@LayoutTabsFontSize: 1.4rem;
+//Tabs字体粗细
+@LayoutTabsFontWeight: normal;
+//Tabs标题字体颜色
+@LayoutTabsTitleColor: normal;
+//Tabs标题字体大小
+@LayoutTabsTitleFontSize: 1.4rem;
+//Tabs标题字体粗细
+@LayoutTabsTitleFontWeight: normal;
+//Tabs标题选中字体颜色
+@LayoutTabsTitleSelectColor: #1890ff;
+//Tabs外边距
+@LayoutTabsMargin: 1rem 0 0 0;
+//TabsTable对齐方式
+@LayoutTabsTableTextAlign: normal;
+//TabsTable表头字体颜色
+@LayoutTabsTableHeadColor: normal;
+//TabsTable表头字体大小
+@LayoutTabsTableHeadFontSize: normal;
+//TabsTable表头字体粗细
+@LayoutTabsTableHeadFontWeight: normal;
+//TabsTable表头背景色
+@LayoutTabsTableHeadBgColor: #fafafa;
+//TabsTable表头行高
+@LayoutTabsTableHeadHeight: normal;
+//TabsTable字体颜色
+@LayoutTabsTableColor: normal;
+//TabsTable字体大小
+@LayoutTabsTableFontSize: normal;
+//TabsTable字体粗细
+@LayoutTabsTableFontWeight: normal;
+//TabsTable行高
+@LayoutTabsTableHeight: 2rem;
+//TabsTable行内边距
+@LayoutTabsTablePadding: 8px 16px;
+//TabsTable行移上背景
+@LayoutTabsTableHoverBgColor: normal;
+//TabsTable奇数行背景颜色
+@LayoutTabsTableOddRowBgColor: normal;
+//TabsTable偶数行背景颜色
+@LayoutTabsTableEvenRowBgColor: normal;
+//TabsTable边框
+@LayoutTabsTableBorder: 1px solid #e8e8e8;
+//TabsTable分页位置
+@LayoutTabsTablePaginationPosition: center;
+
+//气泡确认框
+//气泡确认框背景色
+@LayoutPopconfirmBackground: #fff;
+//气泡确认框内边距
+@LayoutPopconfirmPadding: 1.2rem 1.6rem;
+//气泡确认框字体颜色
+@LayoutPopconfirmColor: #000000a6;
+//气泡确认框字体颜色
+@LayoutPopconfirmFontSize: 1.2rem;
+//气泡确认框标题信息内边距
+@LayoutPopconfirmTitlePadding: 0 0 1.4rem 1.2rem;
+//气泡确认框标题信息行高
+@LayoutPopconfirmTitleLineHeight: 2.2rem;
+//气泡确认框标题信息Icon颜色
+@LayoutPopconfirmTitleIconColor: #faad14;
+//气泡确认框标题信息Icon字体大小
+@LayoutPopconfirmIconFontSize: 1.4rem;
+//气泡确认框按钮字体大小
+@LayoutPopconfirmBtnFontSize: 1.2rem;
+//气泡确认框按钮字体颜色
+@LayoutPopconfirmBtnColor: #000000a6;
+//气泡确认框按钮背景色
+@LayoutPopconfirmBtnBackground: #fff;
+//气泡确认框按钮边框
+@LayoutPopconfirmBtnBorder: solid 1px #ccc;
+
+//气泡确认框确定按钮字体颜色
+@LayoutPopconfirmPrimaryBtnColor: #fff;
+//气泡确认框确定按钮背景色
+@LayoutPopconfirmPrimaryBtnBackground: #1890ff;
+//气泡确认框确定按钮边框
+@LayoutPopconfirmPrimaryBtnBorder: solid 1px #1890ff;
+
+//表单操作按钮组 位置设置
+//是否绝对定位 false 默认非绝对定位 不启用此状态 定位不会生效
+@LayoutButtonGroupIsPosition: normal;
+//表单操作按钮组 定位类型
+@LayoutButtonGroupPosition: normal;
+//表单操作按钮组 高度
+@LayoutButtonGroupHeight: 4rem;
+//表单操作按钮组 内边距
+@LayoutButtonGroupPadding: 0;
+//表单操作按钮组 边框
+@LayoutButtonGroupBorder: 0;
+//表单操作按钮组 背景色
+@LayoutButtonGroupBackground: unset;
+//表单操作按钮组 顶部距离 一般 Top和bottom设置一个
+@LayoutButtonGroupTop: unset;
+//表单操作按钮组 底部距离 一般 Top和bottom设置一个
+@LayoutButtonGroupBottom: unset;
+//表单操作按钮组 对齐位置 默认居右
+@LayoutButtonGroupAlign: right;
+//表单操作按钮组 每个按钮容器的宽度 默认normal 建议使用百分比
+@LayoutButtonGroupItemWidth: normal;
+
+//控件弹框
+//控件弹框宽度
+@LayoutControlModalWidth: 90rem;
+//控件弹框头部高度
+@LayoutControlModalHeaderHeight: 4rem;
+//控件弹框头部字体大小
+@LayoutControlModalHeaderFontSize: 1.4rem;
+//控件弹框头部字体颜色
+@LayoutControlModalHeaderColor: #fff;
+//控件弹框头部背景
+@LayoutControlModalHeaderBackground: #1890ff;
+//控件弹框头部内边距
+@LayoutControlModalHeaderPadding: 0 1.75rem;
+//控件弹框头部边框弧度
+@LayoutControlModalHeaderBorderRadius: 4px 4px 0 0;
+//控件弹框内容内边距
+@LayoutControlModalBodyPadding: 1.5rem;
+//控件弹框内容字体大小
+@LayoutControlModalBodyFontSize: 1.2rem;
+//控件弹框内容颜色
+@LayoutControlModalBodyColor: #333;
+//控件弹框内容背景色
+@LayoutControlModalBodyBackground: #fff;
+//控件弹框底部边框弧度
+@LayoutControlModalFooterBorderRadius: 0 0 4px 4px;
+//控件弹框底部内边距
+@LayoutControlModalFooterPadding: 10px 15px;
+//控件弹框底部内容对齐方式
+@LayoutControlModalFooterAlign: right;
+//控件弹框底部按钮边框
+@LayoutControlModalFooterBtnBorder: solid 1px #ccc;
+//控件弹框底部按钮外边距
+@LayoutControlModalFooterBtnMargin: 0 1rem 0 0;
+//控件弹框底部按钮高度
+@LayoutControlModalFooterBtnHeight: 2.8rem;
+//控件弹框底部按钮行高
+@LayoutControlModalFooterBtnLineHeight: 1.6rem;
+//控件弹框底部按钮背景色
+@LayoutControlModalFooterBtnBackground: #fff;
+//控件弹框底部按钮字体大小
+@LayoutControlModalFooterBtnFontSize: 1.4rem;
+//控件弹框底部按钮内边距
+@LayoutControlModalFooterBtnPadding: 5px 10px;
+//控件弹框底部按钮边框弧度
+@LayoutControlModalFooterBtnBorderRadius: 5px;
+//控件弹框底部按钮字体颜色
+@LayoutControlModalFooterBtnColor: #333;
+//控件弹框底部按钮移上边框
+@LayoutControlModalFooterBtnHoverBorder: solid 1px #ccc;
+//控件弹框底部按钮移上背景色
+@LayoutControlModalFooterBtnHoverBackground: #eee;
+//控件弹框底部按钮移上字体大小
+@LayoutControlModalFooterBtnHoverFontSize: 1.4rem;
+//控件弹框底部按钮移上字体颜色
+@LayoutControlModalFooterBtnHoverColor: #333;
+//控件弹框底部确认按钮边框
+@LayoutControlModalFooterPrimaryBtnBorder: solid 1px #428bca;
+//控件弹框底部确认按钮背景色
+@LayoutControlModalFooterPrimaryBtnBackground: #1890ff;
+//控件弹框底部确认按钮字体颜色
+@LayoutControlModalFooterPrimaryBtnColor: #fff;
+//控件弹框底部确认按钮移上边框
+@LayoutControlModalFooterPrimaryBtnHoverBorder: solid 1px #1890ff;
+//控件弹框底部确认按钮移上背景色
+@LayoutControlModalFooterPrimaryBtnHoverBackground: #1890ff;
+//控件弹框底部确认按钮移上字体大小
+@LayoutControlModalFooterPrimaryBtnHoverFontSize: 1.4rem;
+//控件弹框底部确认按钮移上字体颜色
+@LayoutControlModalFooterPrimaryBtnHoverColor: #fff;
+//控件弹框搜索栏内边距
+@LayoutControlModalSearchPadding: 0;
+//控件弹框搜素栏外边距
+@LayoutControlModalSearchMargin: 0;
+//控件弹框搜索栏搜索项高度
+@LayoutControlModalSearchFormHeight: 2.8rem;
+
+// 穿梭弹窗控件样式
+@LayoutControlModalTransferWidth: 95rem;
+
+//气泡样式 配置
+//气泡字体大小
+@LayoutPopoverFontSize: normal;
+//气泡字体颜色
+@LayoutPopoverColor: #333;
+//气泡边框颜色
+@LayoutPopoverBackground: #1890ff;
+//气泡边框弧度
+@LayoutPopoverBorderRadius: 0.4rem;
+//气泡标题字体大小
+@LayoutPopoverTitleFontSize: 1.4rem;
+//气泡标题字体颜色
+@LayoutPopoverTitleColor: #fff;
+//气泡标题内边距
+@LayoutPopoverTitlePadding: 4px 16px 4px;
+//气泡标题边框
+@LayoutPopoverTitleBorder: 1px solid #e8e8e8;
+//气泡标题字体加粗
+@LayoutPopoverTitleBold: normal;
+//气泡内容背景色
+@LayoutPopoverContentBackground: #f3f2f2;
+//气泡内容内边距
+@LayoutPopoverContentPadding: 12px 16px;
+//气泡内容最大宽度
+@LayoutPopoverContentMaxWidth: 500px;
+//气泡内容最小宽度
+@LayoutPopoverContentMinWidth: 300px;
+//气泡内容列表Label内边距
+@LayoutPopoverContentListLabelPadding: 0 5px 0 0;
+//气泡内容列表Label字体颜色
+@LayoutPopoverContentListLabelColor: #1890ff;
+//气泡内容列表Label字体加粗
+@LayoutPopoverContentListLabelBold: bold;
+//气泡内容列表Text字体加粗
+@LayoutPopoverContentListTextBold: normal;
+//气泡内容列表Text字体颜色
+@LayoutPopoverContentListTextColor: #333;
+//气泡内容列表Text内边距
+@LayoutPopoverContentListTextPadding: 0;
+
+//tags控件配置
+//tags标签背景颜色
+@LayoutTagsItemBackground: #1890ff;
+@LayoutTagsItemColor: #fff;
+
+//导入样式设置
+@import './styles/form/mobile.base.less';
