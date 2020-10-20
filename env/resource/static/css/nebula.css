@@ -7954,3 +7954,30 @@ div.settingContent > i > svg {
   right: 0;
   bottom: 5px;
 }
+.icon-wrapper {
+  border-radius: 2px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  border: 1px dashed #e5e5e5;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.icon-wrapper:first-child {
+  margin-right: 8px;
+}
+.icon-wrapper.not-allow {
+  cursor: not-allowed;
+  background-color: white;
+  border-style: solid;
+}
+.icon-wrapper.disable {
+  background-color: #e42726;
+  color: white;
+}
+.icon-wrapper.enable {
+  background-color: #52c41a;
+  color: white;
+}
