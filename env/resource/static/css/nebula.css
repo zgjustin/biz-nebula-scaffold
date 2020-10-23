@@ -1788,6 +1788,12 @@ html,
 body {
   scroll-behavior: smooth;
 }
+#__next,
+#app,
+.ant-spin-nested-loading,
+.ant-spin-container {
+  height: inherit;
+}
 .ant-modal-content .Common-form-view {
   min-height: 0;
 }
@@ -4361,13 +4367,25 @@ div.settingContent > i > svg {
   width: '100%';
 }
 @media print {
+  #app,
+  #__next,
+  .ant-modal-header,
+  .ant-modal-mask,
+  .ant-modal-footer,
+  .ant-modal-close {
+    display: none !important;
+  }
+  .ant-modal {
+    top: 0px !important;
+  }
   .engine-layout {
     min-width: unset !important;
     width: auto !important;
   }
   html,
   body,
-  #root {
+  #app,
+  #__next {
     width: auto !important;
     height: auto !important;
   }
@@ -4377,9 +4395,6 @@ div.settingContent > i > svg {
   body {
     overflow: auto !important;
   }
-  #root {
-    display: none !important;
-  }
   div.ant-modal-mask {
     display: none !important;
     height: auto !important;
@@ -4388,8 +4403,8 @@ div.settingContent > i > svg {
     height: auto !important;
     position: static !important;
   }
-  #root {
-    display: none !important;
+  div.ant-modal-content {
+    box-shadow: none !important;
   }
   .ant-modal.engine-print-modal .ant-modal-body {
     padding: 0 !important;
@@ -6365,6 +6380,7 @@ div.settingContent > i > svg {
 }
 .nebula-layout-horizontal.nebula-layout .nebula-layout-header .ant-menu {
   flex: 1;
+  min-width: 10rem;
 }
 .nebula-layout-horizontal.nebula-layout .nebula-layout-header .ant-menu .icon {
   font-size: 12px;
@@ -6399,6 +6415,7 @@ div.settingContent > i > svg {
   }
   .nebula-layout-logo {
     width: 196px;
+    max-width: 196px;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -6430,6 +6447,7 @@ div.settingContent > i > svg {
   }
   .nebula-layout-logo {
     width: 206px;
+    min-width: 206px;
   }
 }
 .menu {
@@ -6889,6 +6907,10 @@ div.settingContent > i > svg {
 }
 .nebula-drawer .nebula-drawer-content .nebula-modal-content {
   padding: 0 24px;
+}
+.nebula-drawer .nebula-drawer-content .nebula-modal-content .ant-spin-nested-loading,
+.nebula-drawer .nebula-drawer-content .nebula-modal-content .ant-spin-container {
+  height: inherit;
 }
 .nebula-drawer .nebula-modal-error {
   margin: 0 24px;
@@ -7700,6 +7722,13 @@ div.settingContent > i > svg {
 }
 .nebula-table .ant-table-tbody.ant-table-row-hover > td {
   background-color: #e6f4ff;
+}
+.nebula-table .table-virtarl-real-table .ant-table .ant-table-content .ant-table-body {
+  overflow-y: hidden!important;
+}
+.nebula-table .table-virtarl-real-table .ant-table .ant-table-fixed-left .ant-table-body-outer .ant-table-body-inner,
+.nebula-table .table-virtarl-real-table .ant-table .ant-table-fixed-right .ant-table-body-outer .ant-table-body-inner {
+  overflow-y: hidden!important;
 }
 /*
 * @Author: zhouzhong
