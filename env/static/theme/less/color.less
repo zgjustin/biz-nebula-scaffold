@@ -1,0 +1,553 @@
+.theme(@primary-color:rgba(3,105,243,1)) when (iscolor(@primary-color)) {
+  @primary-color1: tint(@primary-color, 10%); // 主题背景色
+  @primary-color2: tint(@primary-color, 20%); // hover,active
+  @primary-color3: tint(@primary-color, 30%); // 主题背景色--按钮，小图标
+  @primary-color9: tint(@primary-color, 90%); // 表格背景色
+  //链接色
+  @link-color: @primary-color;
+  //移入链接色
+  @link-hover-color: @primary-color;
+
+  @success-color: #52c41a; // 成功色
+  @warning-color: #faad14; // 警告色
+  @error-color: #f5222d; // 错误色
+
+  // 主字号
+  @font-size-base: 1.4rem;
+  @font-size-large: 1.6rem;
+  @font-size-small: 1.2rem;
+
+  //灰色1（禁用色）
+  @disabled-color: rgba(0, 0, 0, 0.25);
+  //灰色2 （描边）
+  @gray:rgba(0, 0, 0, 0.45);
+  //灰色3 （分割线）
+  @split-line: #f0f0f0;
+
+  //正常文本色
+  @text-color: #333;
+  //主要标题
+  @text-major-color: #666;
+  //次要文字
+  @text-minor-color: #999;
+
+  //边框
+  @global-border:solid 1px #d9d9d9;
+
+  // 字体定义
+  @font-family:  "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "ST Heiti", SimHei, sans-serif;
+  // h1-h6 字体大小
+  @h1-font-size:  @font-size-base * 2;
+  @h2-font-size:  @font-size-base * 1.74;
+  @h3-font-size:  @font-size-base * 1.51;
+  @h4-font-size:  @font-size-base * 1.32;
+  @h5-font-size:  @font-size-base * 1.14;
+  @h6-font-size:  @font-size-base;
+  //行高
+  @line-height-base:  1.5;
+
+  //主背景色
+  @app-bg: #f0f2f5;
+  //主最小宽度
+  @app-min-width: 1024px;
+  //主最小高度
+  @app-min-height: calc(100vh - 4.8rem);
+
+  //主辅助内边距
+  @ass-padding:0 2.4rem;
+  //主辅助外边距
+  @ass-margin: 0;
+  //主辅助阴影
+  @ass-box-shadow: 0px 0px 16px rgba(146,146,146,0.73);
+  //主辅助圆角
+  @ass-border-radius: 4px;
+
+  //面包屑
+  @breadcrumb-height: 44px;
+  @breadcrumb-color: @text-color;
+  @breadcrumb-major-color: @text-major-color;
+  @breadcrumb-active-color: @primary-color1;
+  @breadcrumb-font-size: @font-size-small;
+
+  //输入框
+  @input-bg: rgba(255, 255, 255, 1);
+  @input-border: @global-border;
+  @input-border-radius: 4px;
+  @input-color: @text-color;
+  @input-border-hover: @primary-color;
+  @input-box-shadow: 0 0 0 1px rgba(24, 144, 255, 0.2);
+  @input-height:32px;
+  @input-line-height:@line-height-base;
+  @input-size:@font-size-base;
+  @input-padding:4px 11px;
+  @input-margin:0px;
+  @input-placeholder:#bfbfbf;
+
+  //输入框组合
+  @ant-input-group-padding:0 11px;
+  @ant-input-group-size: @input-size;
+  @ant-input-group-color: @input-color;
+  @ant-input-group-text-align: center;
+  @ant-input-group-bg:#fafafa;
+  @ant-input-group-border:1px solid #d9d9d9;
+  @ant-input-group-border-radius:@input-border-radius;
+  //下拉框
+  @select-height: 32px;
+  @select-line-height: 32px;
+  @select-border-radius:4px;
+  @select-size:@font-size-base;
+  @select-margin: 0px 30px 0px 10px;
+  @select-color: @text-color;
+
+  @select-selection-bg: #fff;
+  @select-selection-hover-bg: @primary-color1;
+  @select-selection-hover-color:#fff;
+  @select-selection-active-bg: @primary-color1;
+  @select-selection-line-height:22px;
+  @select-selection-padding:5px 12px;
+  @select-selection-border-radius:@select-border-radius;
+  @select-selection-box-shadow:0 2px 8px rgba(0, 0, 0, 0.15);
+
+  //tag
+  @tag-color: @text-color;
+  @tag-font-size: @font-size-base;
+  @tag-height:22px;
+  @tag-line-height:20px;
+  @tag-padding: 0 7px;
+  @tag-border-radius: 4px;
+  @tag-border: 1px solid #d9d9d9;
+  @tag-bg: #fafafa;
+
+  @tag-hover-color:@primary-color;
+  @tag-acitve-bg:@primary-color;
+
+  @tag-icon-font-size:12px;
+  @tag-icon-color:rgba(0, 0, 0, 0.45);
+  @tag-icon-font-weight:bold;
+  @tag-icon-hover-color: rgba(0, 0, 0, 0.85);
+
+  //默认按钮
+  @btn-color: @primary-color2;
+  @btn-bg: rgba(255, 255, 255, 1);
+  @btn-border-color: #d9d9d9;
+  @btn-hover-color: @primary-color;
+  @btn-hover-bg: rgba(255, 255, 255, 1);
+  @btn-hover-border-color: @primary-color;
+  @btn-height: 32px;
+  @btn-min-width: 32px;
+  @btn-line-height:1.5;
+  @btn-border-radius:4px;
+  @btn-padding:0 15px;
+  @btn-size:@font-size-base;
+  @btn-icon-font-margin:4px;//图标与文字之间的距离
+  @btn-box-shadow:0 1px 0 rgba(0, 0, 0, 0.015);
+  @btn-hover-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.015);
+  @btn-icon-font-size:@font-size-base;
+
+  //form-label， label
+  @label-color:@text-color;
+  @label-font-size:@font-size-base;
+  @label-font-weight:normal;
+
+  //主题按钮
+  @btn-primary-color: rgba(255, 255, 255, 1);
+  @btn-primary-bg: @primary-color2;
+  @btn-primary-border-color: @primary-color2;
+
+  @btn-primary-hover-color: rgba(255, 255, 255, 1);
+  @btn-primary-hover-bg: @primary-color;
+  @btn-primary-hover-border-color: @primary-color;
+
+
+  //日期，日期范围
+  @calendar-width: 280px;
+  @calendar-border: 1px solid #fff;
+  @calendar-border-radius: 4px;
+  @calendar-font-size: @font-size-base;
+  @calendar-color: @text-color;
+  @calendar-text-align: left;
+  @calendar-bg: #fff;
+  @calendar-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  @calendar-input-box-height: 34px;
+  @calendar-input-height: 32px;
+  @calendar-input-padding: 6px 10px;
+  @calendar-input-border-bottom: 1px solid #e8e8e8;
+  @calendar-input-color: rgba(0, 0, 0, 0.65);
+  @calendar-input-bg: #fff;
+
+  @calendar-header-height: 40px;
+  @calendar-header-line-height: 40px;
+  @calendar-header-text-align: center;
+  @calendar-header-border-bottom: 1px solid #e8e8e8;
+  @calendar-header-color: rgba(0, 0, 0, 0.85);
+  @calendar-header-hover-color: @primary-color2;
+  @calendar-header-padding: 0 2px;
+  @calendar-header-font-weight:500;
+  @calendar-header-btn-color: rgba(0, 0, 0, 0.45);
+  @calendar-header-btn-padding: 0 5px;
+
+  @calendar-table-padding: 8px 12px;
+
+  @calendar-table-th-line-height:18px;
+  @calendar-table-th-width:33px;
+  @calendar-table-th-padding:6px 0;
+  @calendar-table-th-text-align:center;
+
+  @calendar-table-td-box-padding:3px 0;
+  @calendar-table-td-box-height:30px;
+  @calendar-table-td-width:24px;
+  @calendar-table-td-height:24px;
+  @calendar-table-td-line-height:22px;
+  @calendar-table-td-padding:0;
+  @calendar-table-td-text-align:center;
+  @calendar-table-td-color: rgba(0, 0, 0, 0.65);
+  @calendar-table-td-border-radius: 2px;
+  @calendar-table-td-border: 1px solid transparent;
+  @calendar-table-td-bg: transparent;
+  @calendar-table-td-hover-bg: @primary-color9;
+  @calendar-table-td-active-bg: @primary-color1;
+  @calendar-table-td-active-border-color: @primary-color;
+  @calendar-table-td-active-color:#fff;
+  @calendar-table-td-disable-color:#bcbcbc;
+  @calendar-table-td-disable-bg:#f5f5f5;
+  @calendar-table-td-disable-border-color:d9d9d9;
+
+  @calendar-footer-border-top:1px solid #e8e8e8;
+  @calendar-footer-line-height:38px;
+  @calendar-footer-padding:0 12px;
+
+  @calendar-range-width: 552px;
+
+
+  //tabs
+  @tabs-height:40px;
+  @tabs-line-height:40px;
+  @tabs-border: 1px solid #e8e8e8;
+  @tabs-margin:0 0 16px 0;
+  @tabs-content-padding: 0px;
+
+
+  @tabs-card-padding:0 16px;
+  @tabs-card-margin:0 0 0 2px;
+  @tabs-card-border-width: 1px;
+  @tabs-card-border-color: #e8e8e8;
+  @tabs-card-border-radius: 4px;
+  @tabs-card-bg: #fafafa;
+  @tabs-card-line-height:38px;
+
+  @tabs-card-active-bg: @primary-color2;
+  @tabs-card-active-color: #fff;
+  @tabs-card-active-border-color: @primary-color2;
+  @tabs-card-hover-color: @primary-color2;
+
+  @tabs-card-vertical-padding:8px 24px;
+  @tabs-card-vertical-margin:0 0 16px 0;
+
+  @tabs-inline-padding:12px 16px;
+  @tabs-inline-margin:0 32px 0 0;
+  @tabs-inline-active-color: @primary-color;
+  @tabs-inline-hover-color: @primary-color2;
+  @tabs-inline-vertical-padding:8px 24px;
+  @tabs-inline-vertical-margin:0;
+
+  @tabs-arrow-size: 32px;
+  @tabs-arrow-color: @gray;
+  @tabs-arrow-hover-color: @text-color;
+
+  @tabs-ink-bar-bg: @primary-color;
+  @tabs-ink-bar-height: 2px;
+  @tabs-ink-bar-width: 2px;
+
+  //upload
+  @upload-border-radius:4px;
+  @upload-border: 1px solid #d9d9d9;
+  @upload-hover-border-color: @primary-color1;
+  @upload-bg:#fafafa;
+
+  //顶部
+  @top-bg: #fff;
+  @top-color: @text-major-color;
+  @top-menu-item-color: rgba(255, 255, 255, 1);
+  @top-menu-bg: @primary-color1;
+  @top-menu-logo-bg: @primary-color1;
+  @top-menu-box-shadow: 0 0 10px 0 rgba(58,164,219,0.20);
+  @top-menu-item-text-color:  @text-major-color;
+  @top-menu-item-hover-color: @menu-item-color;
+  @top-menu-item-selected: @menu-item-color;
+  @top-menu-item-bg: @primary-color;
+  @top-menu-item-bg-active: @primary-color3;
+  @top-menu-item-bg-selected: @primary-color9;
+  @top-menu-item-height:40px;
+  @top-menu-item-size: @font-size-base;
+  @top-menu-item-line-height:40px;
+  @top-menu-item-padding: 0 2rem;
+  @top-menu-item-margin: 0px;
+  @top-menu-item-border-width: 0;
+  @top-menu-item-icon-font-size: 1.2rem;
+  @top-menu-item-icon-padding: 0 0.8rem;
+  @top-menu-item-arrow-right: 1.6rem;
+
+  //头部
+  @head-bg: #fff;
+  @head-height: 4.6rem;
+  @head-position: center;
+  @head-color: @text-color;
+
+  @head-item-font-size: 14px;
+  @head-item-bg: #f3f3f3;
+  @head-item-color: #666;
+  @head-item-border-radius: 4px;
+  @head-item-height: 38px;
+  @head-item-line-height: 38px;
+  @head-item-padding:0 12px;
+  @head-item-margin: 0px;
+
+  @head-item-active-bg: @primary-color2;
+  @head-item-active-color: rgba(255, 255, 255, 1);
+  @head-item-active-border-radius: @head-item-border-radius;
+
+  //弃用
+  @head-item-close-top: 0.6rem;
+  //弃用
+  @head-item-close-right:1rem;
+  //新增close图标左边距
+  @head-item-close-left:8px;
+  @head-item-close-font-size:  @head-item-font-size;
+
+  //左侧-垂直菜单
+  @menu-item-color: rgba(255, 255, 255, 1);
+  @menu-width: 256px;
+  //新增 菜单折叠宽度
+  @menu-collapsed-width:6.4rem;
+  @menu-bg: @primary-color2;
+  @menu-logo-bg: @primary-color1;
+  //弃用
+  @menu-logo-height: 4.8rem;
+  //新增logo宽度
+  @menu-logo-width:@menu-width;
+  //新增logo的padding
+  @menu-logo-padding:0 10px;
+  //新增logo背景填充方式
+  @menu-logo-bg-repeat:no-repeat;
+  @menu-logo-bg-size: 90%;
+  @menu-logo-bg-position: center;
+  @menu-box-shadow: unset;
+  @menu-item-text-color: rgba(255, 255, 255, 0.7);
+  @menu-item-hover-color: #fff;
+  @menu-item-selected: @menu-item-color;
+  @menu-item-bg: @primary-color;
+  @menu-item-bg-active: @primary-color2;
+  @menu-item-bg-selected: @primary-color2;
+  @menu-item-height:40px;
+  @menu-item-size: 14px;
+  @menu-item-line-height:40px;
+  @menu-item-padding: 0;
+  @menu-item-margin: 0;
+  @menu-item-border-width: 0;
+  @menu-item-icon-font-size: 14px;
+  @menu-item-icon-padding: 0 1px;
+  @menu-item-arrow-right: 16px;
+  @menu-item-arrow-color: #fff;
+  @menu-item-arrow-hover-color: #fff;
+
+  //内容区域 新增
+  @content-page-padding-left-right:32px;
+  @content-page-padding-top:16px;
+  @content-page-padding-bottom:0px;
+  @content-page-margin-top:0px;
+  @content-page-margin-left-right:24px;
+  @content-page-margin-bottom:24px;
+  @content-page-border-radius:4px;
+  @content-page-bg-color:#fff;
+
+
+  //分页
+  @pagination-font-size: 1.4rem;
+  @pagination-color: @text-color;
+
+  @pagination-item-bg:#fff;
+  @pagination-item-border:1px solid #d9d9d9;
+  @pagination-item-border-radius:4px;
+  @pagination-item-hover-border-color: @primary-color2;
+  @pagination-item-hover-color: @primary-color2;
+  @pagination-item-active-border-color: @primary-color;
+  @pagination-item-active-color: @primary-color;
+  @pagination-item-font-size:1.2rem;
+  @pagination-item-minwidth:32px;
+  @pagination-item-height:32px;
+  @pagination-item-line-height:32px;
+  @pagination-item-margin: 8px;
+
+  //表格
+  @table-padding:8px 16px;
+  @table-button-group-padding:0 8px 8px 0;
+  @table-border-radius:4px;
+  @table-border:none;
+  @table-color:#333;
+  @table-font-size:1.4rem;
+
+  @table-thead-bg:#f3f3f3;
+  @table-thead-color:#333;
+  @table-thead-line-color:#fff;
+  @table-thead-border-bottom:1px solid #e0e0e0;
+  @table-thead-border-right:@table-border;
+  @table-thead-font-size:@table-font-size;
+  @table-thead-font-weight:600;
+  @table-thead-text-align:left;
+  @table-thead-icon-font-size:12px;
+  @table-thead-icon-color:#bfbfbf;
+  @table-thead-icon-width:28px;
+
+  @table-tbody-bg:#fff;
+  @table-tbody-even-bg:@primary-color9;
+  @table-tbody-hover-bg:@primary-color9;
+  @table-tbody-border-bottom:1px solid #e0e0e0;
+  @table-tbody-border-right:@table-border;
+  @table-tbody-text-align:left;
+  @table-tbody-font-size:@table-font-size;
+  @table-tbody-color:#736c69;
+  @table-footer-align:left;
+
+  @table-th-height:36px;
+  @table-td-height:34px;
+  @table-td-line-height:@table-td-height / 2;
+
+  //弹框
+  @modal-header-font-size:1.6rem;
+  @modal-header-line-height:22px;
+  @modal-header-font-weight:500;
+  @modal-header-bg:#fff;
+  @modal-header-padding:16px 24px;
+  @modal-header-border-radius: 4px 4px 0 0;
+  @modal-header-color:rgba(0, 0, 0, 0.65);
+  @modal-header-border-bottom:1px solid #e8e8e8;
+
+  @modal-close-width:52px;
+  @modal-close-height:52px;
+  @modal-close-line-height:36px;
+  @modal-close-font-size:1.6rem;
+  @modal-close-text-hover:#444;
+
+  @modal-body-padding:24px;
+  @modal-body-font-size:14px;
+
+  @modal-content-bg:#fff;
+  @modal-content-border-radius:4px;
+  @modal-content-box-shadow:0 4px 12px rgba(0, 0, 0, 0.15);
+
+  @modal-footer-border-top:1px solid #e8e8e8;
+  @modal-footer-padding:10px 16px;
+  @modal-footer-text-align:right;
+  @modal-footer-border-radius:0 0 4px 4px;
+  @modal-footer-button-margin:8px;
+
+  //列表
+  @list-search-bg:#fff;
+  @list-search-padding:1rem 0 0 0;
+  @list-search-margin:0;
+  @list-search-box-shadow:none;
+  @list-search-border-radius: 4px 4px 0 0;
+  @list-search-border: none;
+
+  @list-content-bg:#fff;
+  @list-content-padding:1rem 0 0 0;
+  @list-content-margin:0;
+  @list-content-box-shadow:none;
+  @list-content-border-radius: 0 0 4px 4px;
+  @list-content-border: none;
+
+  @list-content-btns-align: flex-end;
+  @list-content-btns-warp: wrap;
+  @list-content-btns-margin: 0;
+  @list-content-btns-color: rgba(0, 0, 0, 0.65);
+  @list-content-btns-bg: rgba(255, 255, 255, 1);
+  @list-content-btns-border-color: #fff;
+  @list-content-btns-hover-color: @primary-color;
+  @list-content-btns-hover-bg: rgba(255, 255, 255, 1);
+  @list-content-btns-hover-border-color: @primary-color;
+  @list-content-btns-height: 32px;
+  @list-content-btns-line-height:1.5;
+  @list-content-btns-border-radius:4px;
+  @list-content-btns-padding:0 1rem;
+  @list-content-btns-size:@font-size-base;
+  @list-content-btns-box-shadow:0 1px 0 rgba(0, 0, 0, 0.015);
+  @list-content-btns-hover-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.015);
+  @list-content-btns-icon-font-size:@font-size-base;
+
+}
+.theme(@primary-color);
+//计算 数值 需要进行单位换算  全部转为基础单位px
+//第一个参数为原始计算值，第二个或多个为操作值，携带操作符号
+.remMixin(){
+  @functions: ~`(function() {
+      //剥离单位
+      this.unit = function(value){
+          var initNumber = 0;
+          if(typeof value === 'number') {
+              return value;
+          }
+          if(!isNaN(value)){
+              return Number(value);
+          }
+          if(value.indexOf('rem')!==-1){
+              initNumber = Number(value.replace('rem',''));
+              initNumber = initNumber * 10;
+              return initNumber;
+          }
+          if(value.indexOf('em')!==-1){
+              initNumber = Number(value.replace('em',''));
+              initNumber = initNumber * 10;
+              return initNumber;
+          }
+          if(value.indexOf('px')!==-1){
+              return Number(value.replace('px',''));
+          }
+          return value;
+      }
+      this.oper = function(value){
+          if(typeof value!=='string'){
+              return '+';
+          }
+          if(value.indexOf('*')===0){
+              return '*';
+          }
+          if(value.indexOf('/')===0){
+              return '/';
+          }
+          if(value.indexOf('%')===0){
+              return '%';
+          }
+          return '+';
+      }
+      //减数值，不足返回原值
+      this.minus = function(initValue,minusValue){
+        var valueOrigin = this.unit(initValue);
+        var valueMinus = this.unit(minusValue);
+        if(valueOrigin>valueMinus){
+            return (valueOrigin - valueMinus)+'px';
+        }
+        return valueOrigin + 'px';
+      }
+      //计算px
+      this.px = function(initValue,...operValue){
+          if(operValue.length<1) return initValue;
+          var initNumber = this.unit(initValue);
+          for(var i=0;i<operValue.length;i++){
+            if(typeof operValue[i] === 'number'){
+              initNumber+=operValue[i];
+            }else{
+              switch(this.oper(operValue[i])){
+                case '*': initNumber*= this.unit(operValue[i].replace('*',''));break;
+                case '/': initNumber/= this.unit(operValue[i].replace('/',''));break;
+                case '%': initNumber%= this.unit(operValue[i].replace('%',''));break;
+                default: initNumber+= this.unit(operValue[i]);break;
+              }
+            }
+          }
+          return initNumber+'px';
+      }
+  })()`;
+  }
+.remMixin();
+

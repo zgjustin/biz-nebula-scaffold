@@ -101,6 +101,10 @@ module.exports = function (env) {
         {
           from: './found/http/webSiteConfig.js',
           to: './siteConfig.js'
+        },
+	{
+          from: './src/assert',
+          to: './resource/styles'
         }
       ]),
       createHappyPlugin('happy-babel', [

@@ -1,0 +1,114 @@
+
+  // button按钮
+.ant-btn {
+  box-shadow: @btn-box-shadow;
+  color: @btn-color;
+  background-color: @btn-bg;
+  border-color: @btn-border-color;
+  border-radius: @btn-border-radius;
+  height: @btn-height;
+  line-height: @btn-line-height;
+  font-size: @btn-size;
+  padding: @btn-padding;
+  &.ant-btn-link{
+    border:none;
+    background: transparent;
+    &:hover{
+      background: transparent;
+    }
+  }
+  &>.icon{
+    margin-right:@btn-icon-font-margin;
+    line-height: 1;
+  }
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  color: @btn-hover-color;
+  background-color: @btn-hover-bg;
+  border-color: @btn-hover-border-color;
+  box-shadow: @btn-hover-box-shadow;
+}
+
+.ant-btn:active,
+.ant-btn.active {
+  color: @btn-hover-color;
+  background-color: @btn-hover-bg;
+  border-color: @btn-hover-border-color;
+}
+
+.ant-btn > .anticon {
+  line-height: @line-height-base;
+  font-size: @btn-icon-font-size;
+}
+
+.ant-btn-primary {
+  color: @btn-primary-color;
+  background-color: @btn-primary-bg;
+  border-color: @btn-primary-border-color;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: @btn-primary-hover-bg;
+  color: @btn-primary-hover-color;
+  border-color: @btn-primary-hover-border-color;
+}
+
+.ant-btn-primary:active
+.ant-btn-primary.active {
+  background-color: @btn-primary-hover-bg;
+  color: @btn-primary-hover-color;
+  border-color: @btn-primary-hover-border-color;
+}
+
+.ant-btn-ghost {
+  color: @btn-primary-bg;
+  background-color: transparent;
+  border-color: @btn-primary-bg;
+}
+
+.ant-btn-ghost:hover,
+.ant-btn-ghost:focus {
+  color: @btn-primary-hover-bg;
+  background-color: transparent;
+  border-color: @btn-primary-hover-bg;
+}
+
+.ant-btn-ghost:active,
+.ant-btn-ghost.active {
+  color: @btn-primary-hover-bg;
+  background-color: transparent;
+  border-color: @btn-primary-hover-bg;
+}
+
+// 处理当前文件中定义的样式会覆盖 button 中 shape 为circle的样式
+.ant-btn-circle, 
+.ant-btn-circle-outline {
+  height: auto;
+  min-width: @btn-min-width;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+
+// 处理当前文件中定义的样式会覆盖 button 中 type 为danger的样式
+.ant-btn-danger {
+  color: #fff;
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+.ant-btn-danger:hover,
+.ant-btn-danger:focus {
+  color: #fff;
+  background-color: #ff7875;
+  border-color: #ff7875;
+}

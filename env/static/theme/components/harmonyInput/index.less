@@ -1,0 +1,32 @@
+.nebula-harmony-input{
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: @global-border;
+  border-radius: @input-border-radius;
+  input,
+  textarea {
+    flex: 1;
+    border: none;
+  }
+
+  textarea{
+    padding-bottom: 30px;
+  }
+
+  &__tip{
+    display: inline-block;
+    min-width: 30px;
+    padding: 0 5px;
+    white-space: nowrap;
+    color: @text-major-color;
+  }
+
+  &__textarea-tip{
+    line-height: 20px;
+    color: @text-major-color;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+}
