@@ -1,0 +1,25 @@
+.nebula-layout-header {
+  height: @head-height;
+  background-color: @head-bg;
+  color:@head-color;
+  font-size:@font-size-base;
+  .toolbar-banner-container {
+    align-items: @head-position;
+    height: inherit;
+    .toolbar-banner-prev,
+    .toolbar-banner-next {
+      height:@head-item-height;
+      &.toolbar-banner-arrow-show {
+        .engineIconFont {
+          color: @head-item-color;
+        }
+      }
+    }
+  }
+}
+
+.head-user {
+  .engine-version {
+    color: @menu-item-color;
+  }
+}
