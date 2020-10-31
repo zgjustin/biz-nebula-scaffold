@@ -4372,7 +4372,8 @@ div.settingContent > i > svg {
   .ant-modal-header,
   .ant-modal-mask,
   .ant-modal-footer,
-  .ant-modal-close {
+  .ant-modal-close,
+  .ant-modal:not(.engine-print) {
     display: none !important;
   }
   .ant-modal {
