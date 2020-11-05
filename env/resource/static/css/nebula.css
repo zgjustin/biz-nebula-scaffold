@@ -7375,7 +7375,7 @@ div.settingContent > i > svg {
 }
 .nebula-table .ant-spin-container .ant-table-footer {
   border-radius: 0;
-  height: 32px;
+  height: auto;
   padding: 0;
   text-align: left;
   line-height: 32px;
