@@ -117,7 +117,7 @@ class InnerPage extends PureComponent<any, any> {
   }
   
   render() {
-    let {systemLayout={},location,userMenus=[],history} = this.props;
+    let {systemLayout={},location,userMenus=[],history,framework=true} = this.props;
     let {Component,loadingPage} = this.state;
     let menus = userMenus;
     let appRoute = {
@@ -128,12 +128,18 @@ class InnerPage extends PureComponent<any, any> {
       }
     }
     return  (
+      framework
+      ?
         <LayoutFramework menu={menus} currPath={appRoute.path} smallLogo={systemLayout.small_logo} logo={systemLayout.logo} layoutType={systemLayout.frame}>
           <DynamicLoading isComplate={!loadingPage}>
             {Component?<Component history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
           </DynamicLoading>
           <UtilsBox/>
         </LayoutFramework>
+      :
+      <DynamicLoading isComplate={!loadingPage}>
+        {Component?<Component history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
+      </DynamicLoading>
     )
   }
 }
