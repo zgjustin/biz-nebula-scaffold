@@ -96,6 +96,20 @@ class InnerPage extends PureComponent<any, any> {
     }
   }
   /**
+   * 预加载 所有的应用
+   * 用于缓存数据
+   */
+  preLoadApps(){
+    LoadScriptHelper.loadChunks(['dva','nebula','lodash'],()=>{
+      //加载account应用
+      LoadScriptHelper.loadExecScript('account','index')
+      //加载page应用
+      LoadScriptHelper.loadExecScript('page','index')
+      //加载数据中心应用
+      LoadScriptHelper.loadExecScript('datasource','index')
+    })
+  }
+  /**
    * 获取当前登录人初始信息
    */
   async getInitData(){
@@ -106,6 +120,7 @@ class InnerPage extends PureComponent<any, any> {
     this.getComponent(pathname);
   }
   componentDidMount(){
+    this.preLoadApps();
     this.getInitData();
     //动态加载代码编辑器
     if(!window['nebulaLib-codeEditor']){

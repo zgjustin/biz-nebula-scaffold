@@ -3,7 +3,7 @@
  * @Author: yangrongxin
  * @Date: 2020-07-08 16:24:15
  * @LastEditors: justin
- * @LastEditTime: 2020-08-20 09:55:02
+ * @LastEditTime: 2020-11-12 16:29:23
  */ 
 import appSetting from '../app.json'
 import {appendPath} from './path'
@@ -57,7 +57,7 @@ export const loadManifest = function(app:string){
 /* 
  * 动态加载对应的脚本文件
  */
-export const loadExecScript = function(app:string,module:string,_path:string,callback?:Function){
+export const loadExecScript = function(app:string,module:string,_path?:string,callback?:Function){
     // let scriptUrl = `/static/apps/${app}/scripts/${module}.js`;
     let scriptUrl = appendPath(`/resource/static/apps/${app}/${module}.js`);
     let moduleId = module==='index'?`${app}`: `${app}_${module}`;
