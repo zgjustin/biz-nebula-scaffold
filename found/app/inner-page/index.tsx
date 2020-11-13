@@ -130,9 +130,22 @@ class InnerPage extends PureComponent<any, any> {
       window['nebulaLib-react'] = React;
     }
   }
-  
+  /**
+   * 遍历所有的route.js中的配置信息 找到当前路径的配置
+   * @param pathName 
+   */
+  getCurrPathData(pathName:string){
+    // 遍历所有的route.js中的配置信息 找到当前路径的配置
+    const curPathRoute = RouteSetting.find(v=>{
+      // 截取当前路径中的请求参数
+      let paramStartIndex = pathName.indexOf('?');
+      let comparePath = paramStartIndex>=0?pathName.substring(0,paramStartIndex):pathName;
+      return appendPath(v.path)===comparePath
+    });
+    return curPathRoute;
+  }
   render() {
-    let {systemLayout={},location,userMenus=[],history,framework=true} = this.props;
+    let {systemLayout={},location,userMenus=[],history,framework} = this.props;
     let {Component,loadingPage} = this.state;
     let menus = userMenus;
     let appRoute = {
@@ -141,6 +154,10 @@ class InnerPage extends PureComponent<any, any> {
       push:(url:string)=>{
         Router.push(url);
       }
+    }
+    let currPath = this.getCurrPathData(location.pathname||'/');
+    if(typeof framework === 'undefined'){
+      framework  = typeof (currPath && currPath.framework) === 'undefined'?true:(currPath && currPath.framework);
     }
     return  (
       framework

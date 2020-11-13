@@ -292,6 +292,29 @@
         module: "district"
     },
     {
+        path: "/ruleTemplate",
+        module: "rules",
+        app:'rules',
+        framework:false
+      },
+      {
+        path: "/rulelist",
+        module: "rules",
+        app:'rules'
+        
+      },
+      {
+        path: "/rule/definitions",
+        module: "rules",
+        app:'rules'
+      },
+      {
+        path: "/demo-user-filter",
+        module: "rules",
+        app:'rules',
+        framework:false
+      },
+    {
         path:'/',
         app:''
     }
