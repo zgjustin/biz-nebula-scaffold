@@ -7370,6 +7370,17 @@ div.settingContent > i > svg {
 .nebula-table-container {
   height: 100%;
 }
+.nebula-table.nebula-fill-table .ant-table-scroll {
+  position: relative;
+}
+.nebula-table.nebula-fill-table .ant-table-scroll .ant-table-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  border: 0;
+}
 .nebula-table .ant-spin-container {
   position: relative;
 }
@@ -8013,10 +8024,10 @@ div.settingContent > i > svg {
 }
 .nebula-icon-board .nebula-icon-select {
   margin: 8px 3px 1px 8px;
-  padding: 5px;
+  padding: 2px;
   border: solid 1px #dddddd;
-  width: 37px;
-  height: 37px;
+  width: 42px;
+  height: 42px;
   cursor: pointer;
 }
 .nebula-icon-board .nebula-icon-select:hover,
@@ -8024,7 +8035,7 @@ div.settingContent > i > svg {
   background-color: #33a7ff;
 }
 .nebula-icon-board .nebula-icon-select .icon {
-  font-size: 16px;
+  font-size: 20px;
 }
 .nebula-formpanel {
   width: 100%;

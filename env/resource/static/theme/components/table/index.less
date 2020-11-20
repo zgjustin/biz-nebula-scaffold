@@ -91,6 +91,19 @@
 	&-container{
 		height: 100%;
 	}
+	&.nebula-fill-table{
+		.ant-table-scroll{
+			position: relative;
+			.ant-table-placeholder{
+				position: absolute;
+				top: 50%;
+				left:0;
+				right: 0;
+				transform: translateY(-50%);
+				border: 0;
+			}
+		}
+	}
 	.ant-spin-container{
 		position: relative;
 		.ant-table-footer{
@@ -553,4 +566,5 @@
 		}
 	}
 }
+
 @import './scrollTable.less';
