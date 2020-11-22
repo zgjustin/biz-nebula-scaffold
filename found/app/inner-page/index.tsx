@@ -96,6 +96,20 @@ class InnerPage extends PureComponent<any, any> {
     }
   }
   /**
+   * 预加载 所有的应用
+   * 用于缓存数据
+   */
+  preLoadApps(){
+    LoadScriptHelper.loadChunks(['dva','nebula','lodash'],()=>{
+      //加载account应用
+      LoadScriptHelper.loadExecScript('account','index')
+      //加载page应用
+      LoadScriptHelper.loadExecScript('page','index')
+      //加载数据中心应用
+      LoadScriptHelper.loadExecScript('datasource','index')
+    })
+  }
+  /**
    * 获取当前登录人初始信息
    */
   async getInitData(){
@@ -106,6 +120,7 @@ class InnerPage extends PureComponent<any, any> {
     this.getComponent(pathname);
   }
   componentDidMount(){
+    this.preLoadApps();
     this.getInitData();
     //动态加载代码编辑器
     if(!window['nebulaLib-codeEditor']){
@@ -115,9 +130,22 @@ class InnerPage extends PureComponent<any, any> {
       window['nebulaLib-react'] = React;
     }
   }
-  
+  /**
+   * 遍历所有的route.js中的配置信息 找到当前路径的配置
+   * @param pathName 
+   */
+  getCurrPathData(pathName:string){
+    // 遍历所有的route.js中的配置信息 找到当前路径的配置
+    const curPathRoute = RouteSetting.find(v=>{
+      // 截取当前路径中的请求参数
+      let paramStartIndex = pathName.indexOf('?');
+      let comparePath = paramStartIndex>=0?pathName.substring(0,paramStartIndex):pathName;
+      return appendPath(v.path)===comparePath
+    });
+    return curPathRoute;
+  }
   render() {
-    let {systemLayout={},location,userMenus=[],history} = this.props;
+    let {systemLayout={},location,userMenus=[],history,framework} = this.props;
     let {Component,loadingPage} = this.state;
     let menus = userMenus;
     let appRoute = {
@@ -127,13 +155,23 @@ class InnerPage extends PureComponent<any, any> {
         Router.push(url);
       }
     }
+    let currPath = this.getCurrPathData(location.pathname||'/');
+    if(typeof framework === 'undefined'){
+      framework  = typeof (currPath && currPath.framework) === 'undefined'?true:(currPath && currPath.framework);
+    }
     return  (
+      framework
+      ?
         <LayoutFramework menu={menus} currPath={appRoute.path} smallLogo={systemLayout.small_logo} logo={systemLayout.logo} layoutType={systemLayout.frame}>
           <DynamicLoading isComplate={!loadingPage}>
             {Component?<Component history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
           </DynamicLoading>
           <UtilsBox/>
         </LayoutFramework>
+      :
+      <DynamicLoading isComplate={!loadingPage}>
+        {Component?<Component history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
+      </DynamicLoading>
     )
   }
 }

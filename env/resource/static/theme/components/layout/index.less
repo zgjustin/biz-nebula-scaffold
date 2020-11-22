@@ -127,7 +127,7 @@
       }
       .ant-menu{
         box-shadow: @menu-box-shadow;
-        background: @menu-logo-bg;
+        background: @menu-bg;
         color:  @menu-item-text-color;
         border: 0;
         font-size: @head-item-font-size;
@@ -312,12 +312,71 @@
        color : rgba(255, 255, 255, 0.7) !important;
        .ant-menu{
          flex: 1;
+         min-width: 10rem;
          .icon{
            font-size: 12px;
            margin-right: 5px;
          }
        }
      }
+    .nebula-layout-side{
+      .ant-menu {
+        background:@upLeft-menu-bg-color;
+        >.ant-menu-item.ant-menu-item-selected{
+          color:@upLeft-menu-item-select-color !important;
+        }
+        .ant-menu-item:hover{
+          color:@upLeft-menu-item-hover-color !important;
+        }
+        .ant-menu-item .ant-menu-item-active{
+          .nebula-layout-menu-title{
+            color:@upLeft-menu-item-hover-color;
+          }
+        }
+        &-submenu,
+        .ant-menu-item{
+          color:@upLeft-menu-text-color;
+          background-color:@upLeft-menu-bg-color !important;
+          &-selected{
+            color:#333 !important;
+            background-color:  @upLeft-menu-item-select-bg !important;
+            .ant-menu-item{
+              &-selected{
+                color:@upLeft-menu-item-select-color !important;
+              }
+            }
+          }
+        }
+        .ant-menu-submenu-active .ant-menu-submenu-title:hover{
+          color:@upLeft-menu-item-hover-color;
+          
+        }
+        .ant-menu-submenu-active .ant-menu-submenu-title:hover{
+          .ant-menu-submenu-arrow{
+            &:before,&:after{
+              background:  @upLeft-menu-item-hover-color;
+            }
+          }
+        }
+
+        .ant-menu-submenu .ant-menu-submenu-title .ant-menu-submenu-arrow{
+          &:before,&:after{
+            background:  @upLeft-menu-text-color;
+          }
+        }
+        .ant-menu-submenu-selected .ant-menu-submenu-title .ant-menu-submenu-arrow{
+          &:before,&:after{
+            background: #333;
+          }
+        }
+        
+      }
+      .ant-menu-inline{
+        .ant-menu-submenu-title{
+          background-color:@upLeft-menu-bg-color !important;
+        }
+      }
+    }
    }
  }
 
@@ -353,6 +412,7 @@
     }
     &-logo{
       width: @menuWidth1280;
+      max-width: @menuWidth1280;
     }
   }
 }
@@ -388,6 +448,7 @@
     }
     &-logo{
       width: @menuWidth1440;
+      min-width: @menuWidth1440;
     }
   }
 }

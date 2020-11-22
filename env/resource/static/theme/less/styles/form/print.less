@@ -94,6 +94,14 @@
 }
 
 @media print{
+  #app, #__next, .ant-modal-header, .ant-modal-mask, .ant-modal-footer, .ant-modal-close, .ant-modal:not(.engine-print){
+    display: none !important;
+  }
+
+  .ant-modal {
+    top: 0px !important;
+  }
+
   // 处理缩放的时候 不能打印完整数据 设置了最小宽短的影响
   .engine-layout{
     min-width: unset !important;
@@ -102,7 +110,7 @@
 
   // 打印的时候 为了浏览器能够获取到当前页面的滚动条所有绝对定位元素 需要变成静态元素
   // 打印的时候 可以进行缩放
-  html, body, #root {
+  html, body, #app, #__next {
     width: auto !important;
     height: auto !important;
   }
@@ -115,20 +123,20 @@
     overflow: auto !important;
   }
 
-  #root{
-    display: none !important;
-  }
   div.ant-modal-mask{
     display: none !important;
     height: auto !important;
   }
+
   div.ant-modal-wrap {
     height: auto !important;
     position: static !important;
   }
-  #root{
-    display: none !important;
+
+  div.ant-modal-content {
+    box-shadow: none !important;
   }
+
   .ant-modal.engine-print-modal{
     .ant-modal-body{
       padding: 0 !important;

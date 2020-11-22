@@ -91,11 +91,24 @@
 	&-container{
 		height: 100%;
 	}
+	&.nebula-fill-table{
+		.ant-table-scroll{
+			position: relative;
+			.ant-table-placeholder{
+				position: absolute;
+				top: 50%;
+				left:0;
+				right: 0;
+				transform: translateY(-50%);
+				border: 0;
+			}
+		}
+	}
 	.ant-spin-container{
 		position: relative;
 		.ant-table-footer{
 			border-radius:0;
-			height: 32px;
+			height: auto;
 			padding:0;
 			text-align:@table-footer-align;
 			line-height: 32px;
@@ -412,13 +425,13 @@
 				}
 			}
 			&+.nebula-table-td-cell{
-				display: inline;
 				white-space: initial;
+				width: auto;
 			}
 		}
 		.ant-table-row-expand-icon+.nebula-table-td-cell{
-			display: inline;
 			white-space: initial;
+			width: auto;
 		}
 		.ant-table-row-expand-icon:hover{
 			color: @primary-color2;
@@ -553,3 +566,5 @@
 		}
 	}
 }
+
+@import './scrollTable.less';

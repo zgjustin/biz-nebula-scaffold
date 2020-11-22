@@ -60,13 +60,13 @@ function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|
             }else{
                 curComponent = component;
             }
-            if(outerPage){
-                fullRoute.push({path:path,lazyComponent:curComponent})
-            }else{
-                fullRoute.push({path:path,lazyComponent:(props)=>{
-                    return <InnerPage {...props} definedComponent={curComponent} />
-                }})
-            }
+            // if(outerPage){
+            //     fullRoute.push({path:path,lazyComponent:curComponent})
+            // }else{
+            fullRoute.push({path:path,lazyComponent:(props)=>{
+                return <InnerPage {...props} framework={outerPage?false:true} definedComponent={curComponent} />
+            }})
+            // }
         })
     }
     fullRoute.push({

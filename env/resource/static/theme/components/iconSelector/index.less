@@ -1,7 +1,7 @@
 .nebula-icon-button {
   >span {
     position: relative;
-
+    width: 100%;
     >p {
       position: absolute;
     }
@@ -9,24 +9,41 @@
   .ant-input-group-addon {
       width: 40px;
   }
+  .ant-tabs-nav {
+    .ant-tabs-tab{
+      padding:5px 10px;
+    }
+  }
+  .ant-tabs-bar{
+    margin-bottom: 4px;
+  }
+  .nebula-icon-search{
+    padding-bottom: 4px;
+  }
+  .ant-popover-inner-content{
+    padding:0px 14px;
+  }
+  .nebula-icon-board{
+    padding-bottom: 4px;
+  }
 }
 
 .nebula-icon-board {
   width: 500px;
   background-color: white;
-  height: 230px;
+  max-height: 180px;
   .nebula-icon-select{
     margin: 8px 3px 1px 8px;
-    padding: 5px;
+    padding: 2px;
     border: solid 1px #dddddd;
-    width: 37px;
-    height: 37px;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
     &:hover,&.actived{
       background-color: #33a7ff;
     }
     .icon{
-      font-size: 16px;
+      font-size: 20px;
     }
   }
 }

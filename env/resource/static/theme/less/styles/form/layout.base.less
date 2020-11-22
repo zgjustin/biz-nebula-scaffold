@@ -1,6 +1,11 @@
 /*实例样式*/
 // 全局支持平滑滚动
 html, body { scroll-behavior:smooth; }
+
+#__next, #app, .ant-spin-nested-loading, .ant-spin-container {
+  height: inherit;
+}
+
 .ant-modal-content{
   .Common-form-view{
     min-height:0;
@@ -48,7 +53,10 @@ html, body { scroll-behavior:smooth; }
   justify-content: center;
 }
 
-.btn-group-align(@align,@width) {}
+.btn-group-align(@align,@width) {
+  display: flex;
+  justify-content:@align ;
+}
 
 .engine-layout, .engine-control-modal, .engine-control-modaltransfer {
   .engine-layout-row {
@@ -422,6 +430,9 @@ html, body { scroll-behavior:smooth; }
     background-color: @LayoutButtonGroupBackground;
     z-index: 99;
     .btn-group-align(@LayoutButtonGroupAlign, @LayoutButtonGroupItemWidth);
+    .engine-layout-col-empty{
+      display:none
+    }
   }
   .engine-layout-row-button {
     font-size: @LayoutButtonFontSize;
