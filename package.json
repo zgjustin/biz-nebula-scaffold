@@ -6,7 +6,7 @@
   "scripts": {
     "ready": "node env/server/ready.js",
     "start": "webpack-dev-server --config env/webpack/webpack.dev.js",
-    "publish": "node env/server/ready.js && webpack --config env/webpack/webpack.pro.js",
+    "publish": "webpack --config env/webpack/webpack.ssr.js && node env/publish/build.js && node ssr-publish/serv/server/pro.js",
     "build": "webpack --config env/webpack/webpack.pro.js"
   },
   "author": "",
