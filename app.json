@@ -1,11 +1,14 @@
 {
   "name": "scaffold",
   "displayName": "Nebula业务构建平台",
-  "version": "nebula-2.2.1",
   "env": "development",
   "rootPath":"",
-  "isMock":false,
-  "projectName":"表单引擎移动端",
-  "companyName":"博智表单引擎",
-  "companySite":""
+  "builversion":"2.2.0.7.1",
+  "title":"Nebula业务构建平台",
+  "keywords":"Nebula，业务构建，业务中台",
+  "description":"Nebula业务构建平台",
+  "company":"博智维讯信息技术有限公司",
+  "port":11001,
+  "proxy":"http://139.9.236.174:11000",
+  "proxyRootPath":"/v1"
 }

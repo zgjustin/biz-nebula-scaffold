@@ -176,6 +176,6 @@ class InnerPage extends PureComponent<any, any> {
   }
 }
 export default connect((state)=>{
-  const {userAuth} = state;
+  const {userAuth={}} = state;
   return userAuth;
 })(InnerPage)

@@ -3,7 +3,7 @@
  * @Author: justin
  * @Date: 2019-12-03 11:19:57
  * @LastEditors: justin
- * @LastEditTime: 2020-09-09 11:29:59
+ * @LastEditTime: 2020-11-23 11:21:19
  */
 // const fs = require('fs')
 const merge = require('webpack-merge')
@@ -59,6 +59,9 @@ module.exports = merge(config(env), {
   },
   devtool: 'cheap-module-eval-source-map',
   plugins: [
+    new webpack.DefinePlugin({
+      packEnv:JSON.stringify('')
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DllReferencePlugin({
       manifest: require('.././dll/manifest.json')

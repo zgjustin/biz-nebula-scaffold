@@ -1,12 +1,13 @@
 import React,{ReactNode} from "react"
 import { Route, Router, Switch } from 'dva/router';
-import {appendPath} from '../utils/path'
 import InnerPage from './inner-page'
 import SinglePage from './single-page'
 import Login from './login';
 // import appRoute from '../config/route'
-import 'biz-nebula-ui/lib/style'
 import {HistoryInstance} from 'biz-nebula-ui/lib/_data/historyStore'
+if(packEnv!=='ssr' && packEnv!=='starter'){
+    require('biz-nebula-ui/lib/style')
+}
 const routes: any[] = [
     {
         path: '/build',
@@ -47,9 +48,16 @@ const routes: any[] = [
  * @param props 
  */
 function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|string,outerPage?:boolean}>) {
-    let { history } = props;
-    HistoryInstance.set(history,appendPath(''));
-    let fullRoute = [].concat(routes);
+    let { history,route } = props;
+    let rootPath = '';
+    if(route){
+        if(route.rootPath) rootPath = route.rootPath;
+    }
+    HistoryInstance.set(history,rootPath);
+    let fullRoute = [];
+    if(packEnv!=='ssr' && packEnv !== 'starter'){
+        fullRoute = fullRoute.concat(routes);
+    }
     //追加用户自定义 路由组件
     if(extendRoute){
         extendRoute.forEach(v=>{
@@ -60,22 +68,24 @@ function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|
             }else{
                 curComponent = component;
             }
-            // if(outerPage){
-            //     fullRoute.push({path:path,lazyComponent:curComponent})
-            // }else{
-            fullRoute.push({path:path,lazyComponent:(props)=>{
-                return <InnerPage {...props} framework={outerPage?false:true} definedComponent={curComponent} />
-            }})
-            // }
+            if(packEnv==='ssr' || packEnv==='starter'){
+                fullRoute.push({path:path,lazyComponent:curComponent})
+            }else{
+                fullRoute.push({path:path,lazyComponent:(props)=>{
+                    return <InnerPage {...props} framework={outerPage?false:true} definedComponent={curComponent} />
+                }})
+            }
         })
     }
-    fullRoute.push({
-        path: '',
-        lazyComponent: InnerPage
-    })
+    if(packEnv!=='ssr' && packEnv!=='starter'){
+        fullRoute.push({
+            path: '',
+            lazyComponent: InnerPage
+        })
+    }
     return <Router history={HistoryInstance.get()}>
         <Switch>
-            {fullRoute.map(v=> <Route key={v.path} path={appendPath(v.path)} component={v.lazyComponent} />)}
+            {fullRoute.map(v=> <Route key={v.path} path={HistoryInstance.appendRootPrex(v.path)} component={v.lazyComponent} />)}
         </Switch>
     </Router>
 }

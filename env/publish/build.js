@@ -1,15 +1,20 @@
 /*
  * @Author: justin
  * @Date: 2020-11-22 21:04:04
- * @LastEditTime: 2020-11-23 06:45:46
+ * @LastEditTime: 2020-11-23 13:51:07
  * @LastEditors: justin
  * @FilePath: /nebula.first/env/publish/build.js
  * @Description: 发布编译脚本
  */
-const extendRoutes = require('../../src/route.js');
 const compressing = require("compressing");
+const { exec } = require('child_process')
 const fs = require('fs');
 const iconv = require('iconv-lite')
+const path = require('path')
+const os = require('os')
+const less = require('less')
+const appConfig = require('../../app.json')
+const extendRoutes = require('./routeConfig').default;
 
 //win 删除文件夹目录
 const winCommand = {
@@ -45,6 +50,25 @@ function unZip(fileName,folderPath){
         });
     })
 }
+/**
+ * 编译less文件到对应的文件
+ * @param {*} input less文本
+ * @param {*} fileName 输入文件名
+ */
+async function complieLess(input,fileName){
+    let outCss = await new Promise(resolve=>{
+        less.render(input,{javascriptEnabled:true},(error,out)=>{
+            if(error){
+                console.error('less render:',error);
+                resolve(false);
+                return;
+            }
+            resolve(out.css);
+        })
+    })
+    if(!outCss) return;
+    return await writeSettingFile(fileName,outCss);
+}
 //文件写入
 function writeSettingFile(file,data){
     return new Promise((resolve)=>{
@@ -56,6 +80,18 @@ function writeSettingFile(file,data){
             resolve(true);
         });
     }) 
+}
+//文件读取
+function readSettingFile(file){
+    return new Promise((resolve,reject)=>{
+        fs.readFile(file, function (err, data) {
+            if(err){
+                resolve();
+                return console.error('fileError',err);
+            }
+            return resolve(data.toString());
+        })
+    })
 }
 /**
  * 运行命令
@@ -106,28 +142,42 @@ function getComman(cmd,originSource,newSource){
     }
     return `${commandStr} ${originSource}${newSource?' '+newSource:''}`;
 }
-
+function execResult(result){
+    if(!result){
+        process.exit();
+        return;
+    }
+}
 //开始准备环境
 async function start(){
+    console.log('开始准备发布环境...');
     //创建发布环境文件夹
     if(!fs.existsSync(path.join(process.cwd(), `./ssr-publish`))){
-        return await runCommand(`${getComman('mkdir','./ssr-publish')}`,'./');
+        execResult(await runCommand(`${getComman('mkdir','./ssr-publish')}`,'./'))
     }
+    //清空发布文件夹
+    //清空build下所有文件
+    execResult(await runCommand(`${getComman('rm','ssr-publish')}`,'./'));
     //解压发布包
-    const ssrFiles = await unZip('./env/publish/ssr.zip','./ssr-publish/');
-    if(!ssrFiles) return;
+    execResult(await unZip('./env/publish/ssr.zip','./ssr-publish/'))
     //创建应用app路由文件
-    ssrFiles = await writeSettingFile(path.join(process.cwd(),`./ssr-publish/extend.route.json`),JSON.stringify(extendRoutes));
-    if(!ssrFiles) return;
+    if(extendRoutes && Array.isArray(extendRoutes)){
+        let routeConfig = extendRoutes.map(v=>({path:v.path,app:appConfig.name,framework:v.outerPage?false:true}))
+        execResult(await writeSettingFile(path.join(process.cwd(),`./ssr-publish/extend.route.json`),JSON.stringify(routeConfig,null,'\t')))
+    }else{
+        console.warn('没有配置路由,应用将不可用.')
+    }
+    //覆盖app配置文件
+    execResult(await writeSettingFile(path.join(process.cwd(),'./ssr-publish/app.json'),JSON.stringify(appConfig,null,'\t')));
     //移动编译后的ssr文件到发布包中
-    ssrFiles = await runCommand(`${getComman('mv','ssr-dist/*','ssr-publish/static/apps')}`,'./','拷贝环境执行代码');
-    if(!ssrFiles) return;
+    execResult(await runCommand(`${getComman('mv','ssr-dist/*','ssr-publish/static/apps')}`,'./','拷贝环境执行代码'));
     //拷贝自定义样式文件供ssr编译
     //copy 全局主题
-    let cpResult = await runCommand(`${getComman('cp','src/assert','ssr-publish/static/theme/')}`,'./');
-    if(!cpResult) return;
+    execResult(await runCommand(`${getComman('cp','src/assert','ssr-publish/static/theme/')}`,'./'))
     //修改全局主题文件夹名称
-    cpResult = await runCommand(`${getComman('rename','assert','extend')}`,'./ssr-publish/static/theme');
+    execResult(await runCommand(`${getComman('rename','assert','extend')}`,'./ssr-publish/static/theme'))
+    //重新生产新的扩展样式
+    execResult(await complieLess(`@import './ssr-publish/static/theme/less/default.less';@import './ssr-publish/static/theme/extend/index.less';`,path.join(process.cwd(), './ssr-publish/static/css/nebula.extend.css')));
     console.log('环境准备完成!');
 }
 //准备发布包

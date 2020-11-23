@@ -13,7 +13,12 @@ const app = dva({
 });
 // 批量加入models
 const start = (models,routes)=>{
-    const foundModels = require('./model').default;
+    let foundModels;
+    if(packEnv==='ssr'||packEnv==='starter'){
+        foundModels =[];
+    }else{
+        foundModels = require('./model').default;
+    }
     const appEntry = require('./app/index').default
     const allModels = foundModels.concat(models||[]);
     allModels.forEach((obj:any) => app.model(obj));
@@ -28,7 +33,12 @@ const start = (models,routes)=>{
         })
     }catch(e){
         //没有自定义组件，直接跳过
-        console.log('components',e)
+        console.log('no-definde-components',e)
+    }
+    //生产环境 注入全局window中
+    if(packEnv==='ssr'||packEnv==='starter'){
+        window[appJson.name] = app.start();
+        return;
     }
     //生产环境 注入全局window中
     // if(process.env.NODE_ENV==='production'){

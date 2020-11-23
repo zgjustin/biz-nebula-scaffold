@@ -12,6 +12,8 @@ const createHappyPlugin = (id, loaders) => {
     threadPool: happyThreadPool
   })
 }
+//获取命令行参数
+const packEnvValue = process.argv && process.argv.some(v=>v === '--packEnv=starter')?'starter':'ssr';
 const appSetting = require('../../app.json')
 const WebpackBase = require('webpack');
 const IgnorePlugin = WebpackBase.IgnorePlugin;
@@ -131,7 +133,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      packEnv:JSON.stringify('ssr')
+      packEnv:JSON.stringify(packEnvValue||'ssr')
     }),
     new IgnorePlugin(/\.(css|less)$/, /biz-nebula-ui/),
     createHappyPlugin('happy-babel', [

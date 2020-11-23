@@ -169,6 +169,30 @@
         app:"page"
     },
     {
+        path: '/build',
+        app:"page"
+    },
+    {
+        path: '/build.html',
+        app:"page"
+    },
+    {
+        path: '/main',
+        app:"page"
+    },
+    {
+        path: '/main.html',
+        app:"page"
+    },
+    {
+        path: '/list',
+        app:"page"
+    },
+    {
+        path: '/listInstance',
+        app:"page"
+    },
+    {
         path: '/instance/activity',
         app:"page"
     },

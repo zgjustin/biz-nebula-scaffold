@@ -71,6 +71,9 @@ module.exports = merge(config(env), {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      packEnv:JSON.stringify('')
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[id].[contenthash:8].css'

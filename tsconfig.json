@@ -6,7 +6,7 @@
             "es6",
             "dom"
         ],
-        "module": "esnext",
+        "module": "COMMONJS",
         "moduleResolution": "node",
         "jsx": "react",
         "traceResolution": true,
