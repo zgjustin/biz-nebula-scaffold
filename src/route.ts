@@ -1,19 +1,14 @@
 /*
  * @Author: justin
  * @Date: 2020-08-10 19:51:32
- * @LastEditTime: 2020-09-11 11:34:14
+ * @LastEditTime: 2020-11-23 18:49:41
  * @LastEditors: justin
- * @FilePath: /biz-nebula-scaffold/src/route.ts
+ * @FilePath: /nebula.first/src/route.ts
  * @Description: 路由配置
  */ 
 export default [
     {
         path:'/page1',
         component:'index'
-    },
-    {
-        path:'/page2',
-        component:'index',
-        outerPage:true // 不包含页面框架
     }
 ]

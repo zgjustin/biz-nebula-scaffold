@@ -271,51 +271,6 @@
         module: "Flow"
     },
     {
-        path: '/trans',
-        app: "district",
-        module: "district"
-    },
-    {
-        path:'/authority_manage',
-        app: "district",
-        module: "district"
-    },
-    {
-        path:'/customer_terminal',
-        app: "district",
-        module: "district"
-    },
-    {
-        path:'/user_manage',
-        app: "district",
-        module: "district"
-    },
-    {
-        path: '/admin_division',
-        app: "district",
-        module: "district"
-    },
-    {
-        path: '/default_role',
-        app: "district",
-        module: "district"
-    },
-    {
-        path: '/connect_job',
-        app: "district",
-        module: "district"
-    },
-    {
-        path:'/role_manage',
-        app: "district",
-        module: "district"
-    },
-    {
-        path:'/org_manage',
-        app: "district",
-        module: "district"
-    },
-    {
         path: "/ruleTemplate",
         module: "rules",
         app:'rules',

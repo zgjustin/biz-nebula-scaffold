@@ -1,15 +1,15 @@
 /*
  * @Author: justin
  * @Date: 2020-07-28 19:52:36
- * @LastEditTime: 2020-11-23 14:17:21
+ * @LastEditTime: 2020-08-10 16:34:50
  * @LastEditors: justin
- * @FilePath: /nebula.first/src/model/test.ts
+ * @FilePath: /biz.nebula/nebula.scaffold/src/model/test.ts
  * @Description: 此文件为示例说明文件，没有实际意义
  */ 
 import RESTFUL from 'restful'
 
 export default {
-    namespace: 'order1',
+    namespace: 'order',
     state: {
         data: {}
     },

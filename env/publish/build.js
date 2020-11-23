@@ -1,7 +1,7 @@
 /*
  * @Author: justin
  * @Date: 2020-11-22 21:04:04
- * @LastEditTime: 2020-11-23 13:51:07
+ * @LastEditTime: 2020-11-23 20:16:06
  * @LastEditors: justin
  * @FilePath: /nebula.first/env/publish/build.js
  * @Description: 发布编译脚本

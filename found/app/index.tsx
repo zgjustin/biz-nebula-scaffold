@@ -48,6 +48,7 @@ const routes: any[] = [
  * @param props 
  */
 function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|string,outerPage?:boolean}>) {
+    console.log('extend-route',extendRoute)
     let { history,route } = props;
     let rootPath = '';
     if(route){
@@ -62,9 +63,11 @@ function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|
     if(extendRoute){
         extendRoute.forEach(v=>{
             let {path,component,outerPage} = v;
+            console.log('scaffold-component-str',component);
             let curComponent;
             if(typeof component === 'string'){
                 curComponent = require(`../../src/app/${component}`).default;
+                console.log('scaffold-component',curComponent);
             }else{
                 curComponent = component;
             }
