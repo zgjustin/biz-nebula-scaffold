@@ -149,6 +149,9 @@ class InnerPage extends PureComponent<any, any> {
   render() {
     let {systemLayout={},location,userMenus=[],history,framework} = this.props;
     let {Component,loadingPage} = this.state;
+    let theme = systemLayout.color||{};
+    let themeColor = theme && theme.variables && theme.variables['@primary-color']
+    themeColor = themeColor||'#0091FF';
     let menus = userMenus;
     let appRoute = {
       path:location.pathname+location.search||''+location.hash||'',
@@ -166,13 +169,13 @@ class InnerPage extends PureComponent<any, any> {
       ?
         <LayoutFramework menu={menus} currPath={appRoute.path} smallLogo={systemLayout.small_logo} logo={systemLayout.logo} layoutType={systemLayout.frame}>
           <DynamicLoading isComplate={!loadingPage}>
-            {Component?<Component history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
+            {Component?<Component themeColor={themeColor} history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
           </DynamicLoading>
           <UtilsBox/>
         </LayoutFramework>
       :
       <DynamicLoading isComplate={!loadingPage}>
-        {Component?<Component history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
+        {Component?<Component themeColor={themeColor} history={history} route={appRoute}/>:<div style={{width:'100%',height:'100%'}}></div>}
       </DynamicLoading>
     )
   }

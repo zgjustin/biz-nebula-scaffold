@@ -5535,10 +5535,6 @@ div.settingContent > i > svg {
 .ant-radio-checked:after {
   border: 1px solid #0091FF;
 }
-.ant-radio-button-wrapper {
-  color: rgba(0, 0, 0, 0.65);
-  background: #fff;
-}
 .ant-radio-button-wrapper a {
   color: rgba(0, 0, 0, 0.65);
 }
@@ -5576,6 +5572,19 @@ div.settingContent > i > svg {
   -webkit-box-shadow: -1px 0 0 0 #0091FF;
   box-shadow: -1px 0 0 0 #0091FF;
   color: #0091FF;
+}
+.ant-radio-button-wrapper-disabled.ant-radio-button-wrapper:hover,
+.ant-radio-button-wrapper-disabled.ant-radio-button-wrapper:active {
+  border-color: #d9d9d9 !important;
+  -webkit-box-shadow: inherit !important;
+  box-shadow: inherit !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+.ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked::before {
+  background-color: #e6e6e6 !important;
+}
+.ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked:hover {
+  color: #fff;
 }
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
   background: #199cff !important;

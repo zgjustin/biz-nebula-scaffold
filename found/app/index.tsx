@@ -5,7 +5,7 @@ import SinglePage from './single-page'
 import Login from './login';
 // import appRoute from '../config/route'
 import {HistoryInstance} from 'biz-nebula-ui/lib/_data/historyStore'
-if(packEnv!=='ssr' && packEnv!=='starter'){
+if(packEnv!=='ssr' && packEnv!=='starter' && process.env.NODE_ENV!=='production'){
     require('biz-nebula-ui/lib/style')
 }
 const routes: any[] = [
