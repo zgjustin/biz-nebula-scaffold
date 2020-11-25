@@ -5561,6 +5561,9 @@ div.settingContent > i > svg {
 .ant-radio-button-wrapper-checked:first-child {
   border-color: #199cff;
 }
+.ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked:first-child {
+  border-color: #d9d9d9;
+}
 .ant-radio-button-wrapper-checked:hover {
   border-color: #33a7ff;
   -webkit-box-shadow: -1px 0 0 0 #33a7ff;
