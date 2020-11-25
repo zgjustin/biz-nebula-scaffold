@@ -1,9 +1,9 @@
 /*
  * @Author: justin
  * @Date: 2020-07-28 19:52:36
- * @LastEditTime: 2020-08-12 22:28:08
+ * @LastEditTime: 2020-11-25 14:20:10
  * @LastEditors: justin
- * @FilePath: /biz.nebula/nebula.scaffold/found/model/authenticate.ts
+ * @FilePath: /nebula.first/found/model/authenticate.ts
  * @Description: 鉴权数据托管
  */ 
 import RESTFUL from '../restful'
@@ -27,8 +27,9 @@ export default {
             let authMenuPromise = [];
             authMenuPromise.push(RESTFUL.GetApiPromise(RESTFUL.Nebula.CompetencesViewItemFindByCurrentUser));
             authMenuPromise.push(RESTFUL.GetApiPromise(RESTFUL.Nebula.ButtonsFindByCurrentUser));
+            authMenuPromise.push(RESTFUL.GetApiPromise(RESTFUL.Theme.FindTheme))
             //查询所有菜单和查询所有按钮权限
-            const [menus,buttons] = yield Promise.all(authMenuPromise);
+            const [menus,buttons,systemLayout] = yield Promise.all(authMenuPromise);
             const currAuthProvider = AuthorizationProvider.getInstance();
             //获取按钮和菜单权限并初始化数据缓存
             currAuthProvider.init(buttons,menus);
@@ -37,7 +38,8 @@ export default {
             const userData = {
                 userInfo,
                 userMenus:userMenus,
-                userButtons:userButtons
+                userButtons:userButtons,
+                systemLayout:systemLayout||{}
             }
             yield put({ type: "updateData", payload: userData });
         },

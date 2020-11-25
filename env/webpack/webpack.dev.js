@@ -3,7 +3,7 @@
  * @Author: justin
  * @Date: 2019-12-03 11:19:57
  * @LastEditors: justin
- * @LastEditTime: 2020-11-23 11:21:19
+ * @LastEditTime: 2020-11-25 11:27:04
  */
 // const fs = require('fs')
 const merge = require('webpack-merge')
@@ -15,7 +15,7 @@ const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 const appConfig = require('../../app.json')
 const devConf = {
   host: '0.0.0.0',
-  port: 9512
+  port: 9516
 }
 const openHost = `http://localhost:${devConf.port}`
 const proxyHost = 'http://139.9.236.174:11000'

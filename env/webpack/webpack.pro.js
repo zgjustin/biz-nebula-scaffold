@@ -1,6 +1,8 @@
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const resolve = require('../utils/paths')
 const config = require('./basic.config')
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
@@ -78,6 +80,24 @@ module.exports = merge(config(env), {
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[id].[contenthash:8].css'
     }),
+    new AddAssetHtmlPlugin([
+      {
+        publicPath: rootPath+'/resource/static/css',
+        outputPath: 'css',
+        hash:true,
+        filepath: resolve('env/resource/static/css/antd.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
+      {
+        publicPath: rootPath+'/resource/static/css',
+        outputPath: 'css',
+        hash:true,
+        filepath: resolve('env/resource/static/css/nebula.*.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      }
+    ]),
     new CleanWebpackPlugin(),
     new CompressionPlugin({
       filename: '[path].gz[query]',

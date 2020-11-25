@@ -7,7 +7,7 @@
     "ready": "node env/server/ready.js",
     "start": "webpack-dev-server --config env/webpack/webpack.dev.js",
     "publish": "webpack --config env/webpack/webpack.ssr.js && node env/publish/build.js && cd ssr-publish && npm i && node serv/server/pro.js",
-    "build": "webpack --config env/webpack/webpack.pro.js"
+    "build": "node env/publish/buildTheme.js && webpack --config env/webpack/webpack.pro.js"
   },
   "author": "",
   "license": "ISC",
@@ -35,8 +35,8 @@
     "moment": "^2.24.0",
     "progress-bar-webpack-plugin": "^1.12.1",
     "qs": "^6.9.4",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-draft-wysiwyg": "^1.14.5",
     "react-hot-loader": "^4.3.3",
     "react-loadable": "^5.5.0",

@@ -18,7 +18,7 @@ const start = (models,routes)=>{
     if(packEnv==='ssr'||packEnv==='starter'){
         foundModels =[];
     }else{
-        foundModels = require('./model/index.tsx').default;
+        foundModels = require('./model/index.ts').default;
     }
     const appEntry = require('./app/index.tsx').default;
     const allModels = foundModels.concat(models||[]);

@@ -115,7 +115,9 @@ class InnerPage extends PureComponent<any, any> {
   async getInitData(){
     const {location,dispatch} = this.props;
     await dispatch({type:'userAuth/findAuthAndMenu'});
-    ThemeManage.loadSystemLayout(this.props.systemLayout);
+    if(process.env.NODE_ENV!=='production'){
+      ThemeManage.loadSystemLayout(this.props.systemLayout);
+    }
     const {pathname='/'} = location;
     this.getComponent(pathname);
   }

@@ -201,74 +201,68 @@
         app:"datasource"
     },
     {
-        path: "/flowcontrol",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowcontrol",
+        app: "flow"
     },
     {
-        path: "/flowcontrol/edit",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowcontrol/edit",
+        app: "flow"
     },
     {
-        path: "/flowcontrol/inspection",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowcontrol/inspection",
+        app: "flow"
     },
     {
-        path: "/flowcontrol/detail",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowcontrol/detail",
+        app: "flow"
     },
     {
-        path: "/flowInstance",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance",
+        app: "flow"
     },
     {
-        path: "/flowInstance/detail",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance/detail",
+        app: "flow"
     },
     {
-        path: "/flowInstance/list",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance/list",
+        app: "flow"
     },
     {
-        path: "/flowInstance/copy",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance/copy",
+        app: "flow"
     },
     {
-        path: "/flowInstance/waiting",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance/waiting",
+        app: "flow"
     },
     {
-        path: "/flowInstance/done",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance/done",
+        app: "flow"
     },
     {
-        path: "/flowInstance/launchBySelf",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance/launchBySelf",
+        app: "flow"
     },
     {
-        path: "/flowInstance/useableFlowTemp",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/flowInstance/useableFlowTemp",
+        app: "flow"
     },
     {
-        path: "/operation",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/operation",
+        app: "flow"
     },
     {
-        path: "/monitor",
-        app: "flow",
-        module: "Flow"
+        path: "/flow/monitor",
+        app: "flow"
+    },
+    {
+        path:'/flowmain',
+        app:"page"
+    },
+    {
+        path:'/listChangeLog',
+        app:"page"
     },
     {
         path: "/ruleTemplate",

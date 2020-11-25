@@ -71,6 +71,7 @@ function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|
             }else{
                 curComponent = component;
             }
+            // if(typeof curComponent!=='function' || curComponent!==null) return;
             if(packEnv==='ssr' || packEnv==='starter'){
                 fullRoute.push({path:path,lazyComponent:curComponent})
             }else{

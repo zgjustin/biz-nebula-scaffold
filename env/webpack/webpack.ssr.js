@@ -126,6 +126,7 @@ module.exports = {
   },
   externals:{
     react:'window["nebulaLib-react"]',
+    // 'react-dom':'window["nebulaLib-reactDom"]',
     'biz-nebula-ui':'window["nebulaLib-nebula"]',
     lodash:'window["nebulaLib-lodash"]',
     dva:'window["nebulaLib-dva"]',
