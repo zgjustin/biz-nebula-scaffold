@@ -258,11 +258,13 @@
     },
     {
         path:'/flowmain',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path:'/listChangeLog',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path: "/ruleTemplate",
