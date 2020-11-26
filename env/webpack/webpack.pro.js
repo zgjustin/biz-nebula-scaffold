@@ -96,7 +96,64 @@ module.exports = merge(config(env), {
         filepath: resolve('env/resource/static/css/nebula.*.css'),
         includeSourcemap: false,
         typeOfAsset: 'css'
-      }
+      },
+      //添加字体解析
+      {
+        publicPath: rootPath+'/resource/static/fonts/engine-font',
+        outputPath: 'fonts',
+        hash:true,
+        filepath: resolve('env/resource/static/fonts/engine-font/iconfont.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
+      {
+        publicPath: rootPath+'/resource/static/fonts/nebula-apps',
+        outputPath: 'fonts',
+        hash:true,
+        filepath: resolve('env/resource/static/fonts/nebula-apps/iconfont.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
+      {
+        publicPath: rootPath+'/resource/static/fonts/nebula-crm',
+        outputPath: 'fonts',
+        hash:true,
+        filepath: resolve('env/resource/static/fonts/nebula-crm/iconfont.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
+      {
+        publicPath: rootPath+'/resource/static/fonts/nebula-font',
+        outputPath: 'fonts',
+        hash:true,
+        filepath: resolve('env/resource/static/fonts/nebula-font/iconfont.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
+      {
+        publicPath: rootPath+'/resource/static/fonts/nebula-rule',
+        outputPath: 'fonts',
+        hash:true,
+        filepath: resolve('env/resource/static/fonts/nebula-rule/iconfont.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
+      {
+        publicPath: rootPath+'/resource/static/fonts/nebula-sd',
+        outputPath: 'fonts',
+        hash:true,
+        filepath: resolve('env/resource/static/fonts/nebula-sd/iconfont.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
+      {
+        publicPath: rootPath+'/resource/static/fonts/nebula-setting-icon',
+        outputPath: 'fonts',
+        hash:true,
+        filepath: resolve('env/resource/static/fonts/nebula-setting-icon/iconfont.css'),
+        includeSourcemap: false,
+        typeOfAsset: 'css'
+      },
     ]),
     new CleanWebpackPlugin(),
     new CompressionPlugin({
