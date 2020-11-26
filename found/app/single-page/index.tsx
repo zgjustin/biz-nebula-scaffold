@@ -41,7 +41,7 @@ class InnerPage extends PureComponent<any, any> {
       // 得到当前路由所属的模块
       let curApp = curPathRoute.app;
       LoadScriptHelper.loadChunks(['dva','nebula','lodash'],()=>{
-        LoadScriptHelper.loadExecScript(curApp,'index',curPathRoute.path,(module)=>{
+        LoadScriptHelper.loadExecScript(curApp,'index',null,(module)=>{
           this.setState({loadingPage:false,Component:module});
         })
       })
