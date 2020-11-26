@@ -1,21 +1,36 @@
 /*
  * @Author: justin
  * @Date: 2020-07-29 16:49:10
- * @LastEditTime: 2020-09-08 12:55:41
+ * @LastEditTime: 2020-11-26 11:55:29
  * @LastEditors: justin
- * @FilePath: /biz.nebula/nebula.scaffold/found/data/theme.ts
+ * @FilePath: /nebula.first/found/data/theme.ts
  * @Description: 主题管理 加载主题
  */ 
 import Restful from '../restful'
 import {baseURL} from '../http'
 import {appendPath} from '../utils/path'
 import less from 'less'
+/**
+ * 拼接后端图片路径
+ */
+const appendImagePath=(url:string)=>{
+    if(!url) return;
+    return `${baseURL}/venus/images${url}`
+}
 class ThemeManage {
     /**
      * 从后端接口加载主题数据
      */
     static async getThemeData(){
-        return await Restful.GetApiPromise(Restful.Theme.FindTheme);
+        const themeData = await Restful.GetApiPromise(Restful.Theme.FindTheme);
+        if(themeData){
+            const {logo,small_logo,background,system_icon} = themeData;
+            themeData.system_icon = system_icon && appendImagePath(system_icon);
+            themeData.background = background && appendImagePath(background);
+            themeData.logo = logo && appendImagePath(logo);
+            themeData.small_logo = small_logo && appendImagePath(small_logo);
+        }
+        return themeData;
     }
     /**
      * 根据后端主题配置装载布局信息
@@ -39,14 +54,14 @@ class ThemeManage {
         if(system_icon){
             let sysIconElement = document.head.querySelector('link[rel]');
             if(sysIconElement){
-                sysIconElement.setAttribute('href',baseURL + '/venus/images' + system_icon);
+                sysIconElement.setAttribute('href',system_icon);
             }
         }
         //变更系统logo
         if(logo){
             let logoElement:any = document.body.querySelector('.nebula-layout-header .nebula-layout-logo');
             if(logoElement){
-                logoElement.style.setProperty('background-image', `url("${baseURL + '/venus/images' + logo}")`)
+                logoElement.style.setProperty('background-image', `url("${logo}")`)
             }
         }
         //变更主题
