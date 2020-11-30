@@ -5,6 +5,7 @@ const HappyPack = require('happypack')
 const os = require('os')
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 const chalk = require('chalk')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const createHappyPlugin = (id, loaders) => {
   return new HappyPack({
     id: id,
@@ -15,13 +16,12 @@ const createHappyPlugin = (id, loaders) => {
 //获取命令行参数
 const packEnvValue = process.argv && process.argv.some(v=>v === '--packEnv=starter')?'starter':'ssr';
 const appSetting = require('../../app.json')
-const WebpackBase = require('webpack');
-const IgnorePlugin = WebpackBase.IgnorePlugin;
+const IgnorePlugin = webpack.IgnorePlugin;
 
 module.exports = {
   mode: 'production',
   entry: {
-    index: [resolve('src/index.tsx')]
+    index: [resolve('found/umd.ts')]
   },
   output: {
     publicPath: '',
@@ -126,10 +126,18 @@ module.exports = {
   },
   externals:{
     react:'window["nebulaLib-react"]',
-    // 'react-dom':'window["nebulaLib-reactDom"]',
+    'react-dom':'window["nebulaLib-reactDom"]',
+    'react-is':'window["nebulaLib-reactIs"]',
+    // 'history':'window["nebulaLib-history"]',
+    'axios':'window["nebulaLib-axios"]',
+    'moment':'window["nebulaLib-moment"]',
+    'lodash':'window["nebulaLib-lodash"]',
+    'react-router-redux':'window["nebulaLib-reactRouterRedux"]',
+    'react-router-dom':'window["nebulaLib-reactRouterDom"]',
+    'less':'window["nebulaLib-less"]',
     'biz-nebula-ui':'window["nebulaLib-nebula"]',
-    lodash:'window["nebulaLib-lodash"]',
     dva:'window["nebulaLib-dva"]',
+    // '@ant-design/icons/lib/dist':'antd-icon',
     'react-monaco-editor':'window["nebulaLib-codeEditor"]'
   },
   plugins: [
@@ -137,6 +145,8 @@ module.exports = {
       packEnv:JSON.stringify(packEnvValue||'ssr')
     }),
     new IgnorePlugin(/\.(css|less)$/, /biz-nebula-ui/),
+    new IgnorePlugin(/^\.\/locale$/, /moment$/),
+    // new BundleAnalyzerPlugin(),
     createHappyPlugin('happy-babel', [
       {
         loader: 'babel-loader',

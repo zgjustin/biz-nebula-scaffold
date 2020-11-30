@@ -1,7 +1,7 @@
 /*
  * @Author: justin
  * @Date: 2020-11-22 21:04:04
- * @LastEditTime: 2020-11-23 20:16:06
+ * @LastEditTime: 2020-11-30 21:36:05
  * @LastEditors: justin
  * @FilePath: /nebula.first/env/publish/build.js
  * @Description: 发布编译脚本
@@ -14,7 +14,8 @@ const path = require('path')
 const os = require('os')
 const less = require('less')
 const appConfig = require('../../app.json')
-const extendRoutes = require('./routeConfig').default;
+// const extendRoutes = require('./routeConfig').default;
+const extendRoutes = require('./ssr.router.json')
 
 //win 删除文件夹目录
 const winCommand = {
@@ -156,8 +157,14 @@ async function start(){
         execResult(await runCommand(`${getComman('mkdir','./ssr-publish')}`,'./'))
     }
     //清空发布文件夹
-    //清空build下所有文件
-    execResult(await runCommand(`${getComman('rm','ssr-publish')}`,'./'));
+    //清空build下 指定的文件夹
+    // execResult(await runCommand(`${getComman('rm','ssr-publish')}`,'./'));
+    if(fs.existsSync(path.join(process.cwd(), `./ssr-publish/build`))){
+        execResult(await runCommand(`${getComman('rm','ssr-publish/build')}`,'./'));
+    }
+    if(fs.existsSync(path.join(process.cwd(), `./ssr-publish/static/apps/${appConfig.name}`))){
+        execResult(await runCommand(`${getComman('rm',`ssr-publish/static/apps/${appConfig.name}`)}`,'./'));
+    }
     //解压发布包
     execResult(await unZip('./env/publish/ssr.zip','./ssr-publish/'))
     //创建应用app路由文件

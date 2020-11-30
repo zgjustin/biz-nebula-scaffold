@@ -1,0 +1,887 @@
+[
+	{
+		"path": "/page1"
+	},
+	{
+		"path": "/page2",
+		"outerPage": true
+	},
+	{
+		"path": "/ceshi",
+		"outerPage": true
+	},
+	{
+		"path": "/mdoel/ManagementMdoel",
+		"outerPage": true
+	},
+	{
+		"path": "/first",
+		"outerPage": true
+	},
+	{
+		"path": "/liaisonAuditing",
+		"outerPage": true
+	},
+	{
+		"path": "/liaisonManagerAuditing",
+		"outerPage": true
+	},
+	{
+		"path": "/sfaReturnOrderDetail",
+		"outerPage": true
+	},
+	{
+		"path": "/standardReturnOrder",
+		"outerPage": true
+	},
+	{
+		"path": "/handleReturnOrder",
+		"outerPage": true
+	},
+	{
+		"path": "/handleAndStandardReturn",
+		"outerPage": true
+	},
+	{
+		"path": "/addSalesOrder",
+		"outerPage": false
+	},
+	{
+		"path": "/onlineOrderList",
+		"outerPage": false
+	},
+	{
+		"path": "/newOnlineOrder",
+		"outerPage": false
+	},
+	{
+		"path": "/onlineRules",
+		"outerPage": true
+	},
+	{
+		"path": "/loginPage",
+		"outerPage": true
+	},
+	{
+		"path": "/insideStockInfo",
+		"outerPage": true
+	},
+	{
+		"path": "/dealerStockInfo",
+		"outerPage": true
+	},
+	{
+		"path": "/stockControl",
+		"outerPage": false
+	},
+	{
+		"path": "/carrierHome",
+		"outerPage": false
+	},
+	{
+		"path": "/logisticsHome",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/carrierShow",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/logisticsDetail",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/expressDetail",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/eleReport",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/freightShow",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/commodityPriceAdd",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/newOnlineReturnOrder",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/newOnlineReturnOrderCheck",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/costControl",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/addQuestionnairActivity",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/combinedOrder",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/combinedOrderDetail",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/onlineOrderDetail",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/onlineOrderEdit",
+		
+		"outerPage": false
+	},
+
+	{
+		"path": "/viewResponseResults",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/LogisticsInformation",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/coupon",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/reissueOrderList",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/reissueOrderDetail",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/refundOrder",
+		
+		"outerPage": false
+	},
+	{
+		"path": "/advertising",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/timeDimension",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/interactiveGameScreen",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/NewMedia",
+		
+		"outerPage": true
+	}, {
+		"path": "/LotteryManagement",
+		
+		"outerPage": true
+	},
+	{
+		"path": "/DistributionMeal",
+		
+		"outerPage": false
+	}, {
+		"path": "/GameManagement",
+		
+		"outerPage": true
+	}, {
+		"path": "/CouponPack",
+		
+		"outerPage": true
+    },
+    {
+        "path":"/MaterialLibrary",
+        
+        
+        "outerPage":true
+	},
+	{
+        "path":"/market",
+        
+        "outerPage":true
+	},
+	{
+        "path":"/skuAdd",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/spuAdd",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/groupAdd",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/shopAdd",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/freight",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/select",
+        
+        
+        "outerPage":true
+	},
+	{
+        
+        "path":"/analysisOfStoreReviews",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/listOfCommerceProducts",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/commentTrendChart",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/orderingSchemeOfCloudStoreGoods",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/organizationLevel",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/publicSentimentCommerceReview",
+        
+        "outerPage":false
+    },
+    {
+        
+        "path":"/blockOrders",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/blockOrderList",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/commodityPriceManagement",
+        
+        "outerPage":false
+    },
+    {
+        
+        "path":"/commodityMaterialManagement",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/commodityAttributeManagement",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/CommodityClassificationManagement",
+        
+        "outerPage":true
+    },
+    {
+        
+        "path":"/orderCenterSplitting",
+        
+        "outerPage":true
+	},
+	{
+		"path": "/enterpriseUserManage",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/enterpriseUserManageAdd",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/enterpriseUserApproval",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/enterpriseMemberStateChange",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/enterpriseMemberGradeChange",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/coreMemberManage",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/coreMembersGroup",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/memberLabelDetails",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/coreMemberApproval",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/coreMemberStateChange",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/coreMemberGradeChange",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/normalAndPotentialUserManage",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/normalGradeChange",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/normalStateChange",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/normalMember/consumGrowthRuleAdd",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/normalMember/integralRuleAdd",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/labelMange",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/levelConfig",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/normalMember/paidMemberCardConfig",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/normalMember/RFMAnalysisModel",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/overallMemberKanban",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/coreMember/coreIntegralRuleAdd",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/labelClassification/details",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/paidMemberRecord",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/taskManage",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/taskContinueSignRule",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/holdAll",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path":"/kanban/coreMemberChannel",
+		
+		
+		"outerPage":true
+	},
+	{
+		"path":"/kanban/ecommerce",
+		
+		
+		"outerPage":true
+	},
+	{
+		"path":"/kanban/c2MChannel",
+		
+		
+		"outerPage":true
+	},
+	{
+        "path": "/marketStrategy/informTouch",
+        
+        
+        "outerPage": true
+	},
+	{
+        "path": "/eventConfigure",
+        
+        
+        "outerPage": true
+	},
+	{
+		"path": "/aliianceAgree",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/aliianceAgreePackage",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/aliianceAgreeTemplate",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/aliianceSaleManHandleRecord",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/taskManage",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/taskContinuousRule",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/distributorManage",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/associatedTerminal",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/distributorStarPane",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/salePointManage",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/channelCenter/contractDetail",
+		
+		
+		"outerPage": true 
+	},
+	{
+		"path": "/channelCenter/subAccountDetail"
+		
+		
+	},
+	{
+		"path": "/channelCenter/dealerRebateRule",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/channelCenter/dealerRebateCalc",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/channelCenter/labelAutomaticCreat",
+		
+		
+		"outerPage": true
+	},
+	{
+		"path": "/channelCenter/supplyManageAdd",
+		
+		
+		"outerPage": true
+	},
+	{
+        "path":"/ActivityHandle",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/ActivityHandleCode",
+        
+        
+        "outerPage":true
+	},
+	{
+        "path": "/OrderReturnMoney",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/SeckillActivity",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/YiyeHezuo",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/ManZeng",
+        
+        
+        "outerPage": true
+    }, {
+        "path": "/ManJian",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/ZheKou",
+        
+        
+        "outerPage": true
+    }, {
+        "path": "/YuShou",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/PinTuan",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/OrderActivity",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/HDActivity",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/DealerActivity",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/ForumComment",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/SmallPage",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/Forward",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/CouponData",
+        
+        
+        "outerPage": true
+    }, {
+        "path": "/DrawData",
+        
+        
+        "outerPage": true
+    },{
+        "path": "/EarlyWarning",
+        
+        
+        "outerPage": true
+    },{
+        "path": "/ActivityCalendar",
+        
+        
+        "outerPage": true
+    },{
+        "path": "/ActivityPlan",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/ActivityImg",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/handleActivityImg",
+        
+        
+        "outerPage": true
+	},
+	{
+        "path": "/SelfFirstPage",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/SlefSecondPage",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/SpecialFirstPage",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/SpecialSecondPage",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/MiccroblogFirstPage",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/MiccroblogSecondPage",
+        
+        
+        "outerPage": true
+    }, {
+        "path": "/WechatFirstPage",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/WechatSecondPage",
+        
+        
+        "outerPage": true
+	},
+	{
+		"path":"/sourceChannelManagement",
+		
+		
+		"outerPage":true
+	},
+	{
+        "path":"/nodeStart",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/labelManage",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/groupManage",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/sendReward",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/peopleSelect",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/sendGoods",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/shunt",
+        
+        
+        "outerPage":true
+    },
+    {
+        "path":"/effect",
+        
+        
+        "outerPage":true
+	},
+	{
+        "path": "/addDistributionMeal",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/viewDistributionMeal",
+        
+        
+        "outerPage": true
+    },
+    {
+        "path": "/editDistributionMeal",
+        
+        
+        "outerPage": true
+    }
+]

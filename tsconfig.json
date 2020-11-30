@@ -6,7 +6,7 @@
             "es6",
             "dom"
         ],
-        "module": "ES2015",
+        "module": "esnext",
         "moduleResolution": "node",
         "jsx": "react",
         "traceResolution": true,
