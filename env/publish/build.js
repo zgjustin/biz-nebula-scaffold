@@ -1,7 +1,7 @@
 /*
  * @Author: justin
  * @Date: 2020-11-22 21:04:04
- * @LastEditTime: 2020-11-30 21:36:05
+ * @LastEditTime: 2020-11-30 21:54:38
  * @LastEditors: justin
  * @FilePath: /nebula.first/env/publish/build.js
  * @Description: 发布编译脚本
@@ -164,6 +164,9 @@ async function start(){
     }
     if(fs.existsSync(path.join(process.cwd(), `./ssr-publish/static/apps/${appConfig.name}`))){
         execResult(await runCommand(`${getComman('rm',`ssr-publish/static/apps/${appConfig.name}`)}`,'./'));
+    }
+    if(fs.existsSync(path.join(process.cwd(), `./ssr-publish/static/theme/extend`))){
+        execResult(await runCommand(`${getComman('rm',`ssr-publish/static/apps/extend`)}`,'./'));
     }
     //解压发布包
     execResult(await unZip('./env/publish/ssr.zip','./ssr-publish/'))
