@@ -81,7 +81,7 @@ class InnerPage extends PureComponent<any, any> {
       this.setState({loadingPage:true})
       // 得到当前路由所属的模块
       let curApp = curPathRoute.app;
-      LoadScriptHelper.loadChunks(['dva','nebula','lodash'],()=>{
+      LoadScriptHelper.loadChunks(['nebulaLib','nebula'],()=>{
         LoadScriptHelper.loadExecScript(curApp,'index',null,(module)=>{
           this.setState({loadingPage:false,Component:module});
         })
@@ -100,7 +100,7 @@ class InnerPage extends PureComponent<any, any> {
    * 用于缓存数据
    */
   preLoadApps(){
-    LoadScriptHelper.loadChunks(['dva','nebula','lodash'],()=>{
+    LoadScriptHelper.loadChunks(['nebulaLib','nebula'],()=>{
       //加载account应用
       LoadScriptHelper.loadExecScript('account','index')
       //加载page应用
