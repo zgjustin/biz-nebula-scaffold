@@ -1,7 +1,7 @@
 /*
  * @Author: justin
  * @Date: 2020-11-22 21:04:04
- * @LastEditTime: 2020-12-01 14:51:56
+ * @LastEditTime: 2020-12-01 17:39:22
  * @LastEditors: justin
  * @FilePath: /nebula.first/env/publish/build.js
  * @Description: 发布编译脚本
@@ -130,7 +130,9 @@ function getComman(cmd,originSource,newSource){
             originSource = originSource.replace('*','.');
         }else{
             originSource = originSource.replace(/\//,"\\");
-            newSource = newSource.replace(/\//,'\\');
+            if(newSource){
+                newSource = newSource.replace(/\//,'\\');
+            }
         }
         commandTarget = winCommand;
     }else{
