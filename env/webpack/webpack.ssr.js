@@ -144,7 +144,7 @@ module.exports = {
     new webpack.DefinePlugin({
       packEnv:JSON.stringify(packEnvValue||'ssr')
     }),
-    new IgnorePlugin(/\.(css|less)$/, /biz-nebula-ui/),
+    // new IgnorePlugin(/\.(css|less)$/, /biz-nebula-ui/),
     new IgnorePlugin(/^\.\/locale$/, /moment$/),
     // new BundleAnalyzerPlugin(),
     createHappyPlugin('happy-babel', [
