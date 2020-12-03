@@ -135,8 +135,7 @@
     },
     {
         path: '/custom',
-        app:"page",
-        framework:false
+        app:"page"
     },
     {
         path:'/listCustomPage',
