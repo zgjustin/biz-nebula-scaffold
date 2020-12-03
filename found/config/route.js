@@ -130,11 +130,13 @@
     },
     {
         path: '/engineOutList',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path: '/custom',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path:'/listCustomPage',
@@ -170,23 +172,28 @@
     },
     {
         path: '/build',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path: '/build.html',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path: '/main',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path: '/main.html',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path: '/list',
-        app:"page"
+        app:"page",
+        framework:false
     },
     {
         path: '/listInstance',
