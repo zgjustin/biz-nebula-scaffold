@@ -68,6 +68,7 @@ module.exports = {
             options: {
               esModule: false,
               name: "[name].[hash:8].[ext]",
+              publicPath:`${packEnvValue==='ssr'?`/static/apps/${appSetting.name}/images/`:`${appConfig.rootPath||''}/resource/static/apps/${appSetting.name}/images/`}`,
               outputPath: "images/",
               limit: 10000
             }
@@ -161,7 +162,8 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[hash:8].[ext]',
-          outputPath: 'fonts/'
+          outputPath: 'fonts/',
+          publicPath:`${packEnvValue==='ssr'?`/static/apps/${appSetting.name}/fonts/`:`${appConfig.rootPath||''}/resource/static/apps/${appSetting.name}/fonts/`}`,
         }
       }
     ]),

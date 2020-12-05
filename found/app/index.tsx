@@ -11,7 +11,7 @@ if(process.env.NODE_ENV!=='production'){
  * 开发环境路由入口文件
  * @param props 
  */
-function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|string,outerPage?:boolean}>) {
+function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|string,outerPage?:boolean,loginPage?:boolean}>) {
     let fullRoute:Array<any> = [{//登录路由
         path: '/login',
         component: Login
@@ -19,13 +19,20 @@ function RouterConfig(props,extendRoute?:Array<{path:string,component:ReactNode|
     //追加用户自定义 路由组件
     if(extendRoute){
         extendRoute.forEach(v=>{
-            let {path,component,outerPage} = v;
-            fullRoute.push({
-                path:path,
-                component:(props)=>{
-                    return <InnerPage {...props} framework={outerPage?false:true} definedComponent={component} />
-                }
-            })
+            let {path,component,outerPage,loginPage} = v;
+            if(loginPage){
+                fullRoute.push({
+                    path:path,
+                    component:component
+                })
+            }else{
+                fullRoute.push({
+                    path:path,
+                    component:(props)=>{
+                        return <InnerPage {...props} framework={outerPage?false:true} definedComponent={component} />
+                    }
+                })
+            }
         })
     }
     fullRoute.push({
